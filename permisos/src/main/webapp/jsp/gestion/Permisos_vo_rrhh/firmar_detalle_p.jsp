@@ -35,7 +35,7 @@ String thisPage = request.getRequestURI();
 <link href="esquema.css" rel="stylesheet" type="text/css">
 <link href="apliweb.css" rel="stylesheet" type="text/css">
 <body>
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 <div>
 <ul id="tabh">
     <li ><a href="../../index_busqueda.jsp" id="current">Permisos/Ausencias</a></li>
@@ -130,7 +130,7 @@ String thisPage = request.getRequestURI();
         <% if ( v_id_tipo_permiso.equals("02000")  || v_id_tipo_permiso.equals("02015")   || v_id_tipo_permiso.equals("01015") ) { %> 
     <tr> <td colspan="7" ><table id="BOMBE">
             <tr><td colspan="5" >
-            <tr><td colspan="3" >Guardia: Fecha Inicio a las 14:00 hasta día siguiente a las 14:00.</td></tr>
+            <tr><td colspan="3" >Guardia: Fecha Inicio a las 14:00 hasta dï¿½a siguiente a las 14:00.</td></tr>
             <tr><td colspan="2" ><%=(((RSTIPO_PERMISO_data = RSTIPO_PERMISO.getObject("TURNO_1"))==null || RSTIPO_PERMISO.wasNull())?"":RSTIPO_PERMISO_data)%></td></tr>
             <tr><td colspan="2" ><%=(((RSTIPO_PERMISO_data = RSTIPO_PERMISO.getObject("TURNO_2"))==null || RSTIPO_PERMISO.wasNull())?"":RSTIPO_PERMISO_data)%></td></tr>
             <tr><td colspan="2" ><%=(((RSTIPO_PERMISO_data = RSTIPO_PERMISO.getObject("TURNO_3"))==null || RSTIPO_PERMISO.wasNull())?"":RSTIPO_PERMISO_data)%></td></tr>          
@@ -308,6 +308,7 @@ String thisPage = request.getRequestURI();
 
 </div>
 
+<%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
 </body>
 </html>
 <%

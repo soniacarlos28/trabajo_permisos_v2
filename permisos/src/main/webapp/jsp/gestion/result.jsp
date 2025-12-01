@@ -45,7 +45,7 @@ RSQUERY_SQL += " order by estado_baja, ape1,ape2,nombre";
 <%
 Driver DriverRSQUERY = (Driver)Class.forName(MM_RRHH_DRIVER).newInstance();
 Connection ConnRSQUERY = DriverManager.getConnection(MM_RRHH_STRING,MM_RRHH_USERNAME,MM_RRHH_PASSWORD);
-//PreparedStatement StatementRSQUERY = ConnRSQUERY.prepareStatement("SELECT ID_FUNCIONARIO, INITCAP(APE1) AS APE1, INITCAP(APE2) AS APE2, INITCAP(NOMBRE) AS NOMBRE, ID_FUNCIONARIO, FECHA_INGRESO, ACTIVO, JORNADA, NUMERO_SS, DECODE(TIPO_FUNCIONARIO,'N','Funcionario de la Administración','B','Bomberos','P','POLICIA',' ') as TIPO_FUNCIONARIO  FROM RRHH.PERSONAL  WHERE ID_FUNCIONARIO = '" + RSQUERY__MMColParam1 + "' AND APE1 LIKE '" + RSQUERY__MMColParam2 + "%' AND APE2 LIKE '" + RSQUERY__MMColParam3 + "%' AND NOMBRE LIKE '" + RSQUERY__MMColParam4 + "%' AND DNI = LPAD('" + RSQUERY__MMColParam5 + "',8,0) AND DNI_LETRA LIKE '" + RSQUERY__MMColParam6 + "%'");
+//PreparedStatement StatementRSQUERY = ConnRSQUERY.prepareStatement("SELECT ID_FUNCIONARIO, INITCAP(APE1) AS APE1, INITCAP(APE2) AS APE2, INITCAP(NOMBRE) AS NOMBRE, ID_FUNCIONARIO, FECHA_INGRESO, ACTIVO, JORNADA, NUMERO_SS, DECODE(TIPO_FUNCIONARIO,'N','Funcionario de la Administraciï¿½n','B','Bomberos','P','POLICIA',' ') as TIPO_FUNCIONARIO  FROM RRHH.PERSONAL  WHERE ID_FUNCIONARIO = '" + RSQUERY__MMColParam1 + "' AND APE1 LIKE '" + RSQUERY__MMColParam2 + "%' AND APE2 LIKE '" + RSQUERY__MMColParam3 + "%' AND NOMBRE LIKE '" + RSQUERY__MMColParam4 + "%' AND DNI = LPAD('" + RSQUERY__MMColParam5 + "',8,0) AND DNI_LETRA LIKE '" + RSQUERY__MMColParam6 + "%'");
 PreparedStatement StatementRSQUERY = ConnRSQUERY.prepareStatement(RSQUERY_SQL);
 StatementRSQUERY.setFetchSize(10);
 StatementRSQUERY.setQueryTimeout(0);
@@ -288,25 +288,7 @@ return "";
 <link href="apliweb.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<div id="apliweb-tabform">
-<div>
-<ul id="tabh">
-    <li id="active"><a href="#" id="current">Permisos/Ausencias</a></li>
-     <li><a href="Permisos_vo_rrhh/index.jsp">Autorizar</a></li>
-   
-     <li><a href="Finger_apl/index.jsp"  class="ah12b">Finger</a></li>
-    <li><a href="Gestion/index.jsp" class="ah12b">Horas Sindicales</a></li>   
-      <li><a href="Listados" >Sin Justificar</a></li> 
-    <li><a href="Bolsa_proceso/index.jsp" class="ah12b">Proceso Bolsa</a></li>   
- <li><a href="calendario_laboral/index.jsp" class="ah12b">Calendario Laboral</a></li> 
- <li><a href="Bajas/index.jsp" >Bajas Fichero</a></li>
-  <li><a href="Informes/index_informes.jsp" >Informes</a></li>
-<li><a href="Formacion/index_formacion.jsp" >Formacion</a></li>
-<li><a href="Carga_nomina/carga.jsp"  >Carga Nominas</a></li>
-
-  </ul>
-  </div>
-  <div id="form">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
   <table cellspacing=0 border=0 cellpadding="0" width="95%">
   <tr> 
     <td valign=top align="center"> 
@@ -407,6 +389,7 @@ return "";
 </table>
   </div>
 
+<%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
 </body>
 </html>
 <%

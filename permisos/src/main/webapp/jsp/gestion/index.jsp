@@ -286,6 +286,7 @@ String thisPage = request.getRequestURI();
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <link href="esquema.css" rel="stylesheet" type="text/css">
 <link href="apliweb.css" rel="stylesheet" type="text/css">
+<%@ include file="includes/head.jsp" %>
 <script type="text/JavaScript">
 <!--
 function MM_goToURL() { //v3.0
@@ -324,40 +325,14 @@ function show_calendario()
 </head>
 <body>
 
-<div id="apliweb-tabform">
-<div>
-<ul id="tabh">
-    <li id="active"><a href="../../index_busqueda.jsp" id="current">Permisos/Ausencias</a></li>
-     <li><a href="../../gestion/Permisos_vo_rrhh/index.jsp">Autorizar</a></li>
-         
-    <li><a href="../../gestion/Finger_apl/index.jsp" class="ah12b">Finger</a></li>   
-    <li><a href="../../gestion/Gestion/index.jsp" class="ah12b">Horas Sindicales</a></li>  
-      <li><a href="../../gestion/Bolsa_proceso/index.jsp" class="ah12b">Proceso Bolsa</a></li>  
-       <li><a href="../../gestion/calendario_laboral/index.jsp?ID_ANO=2016" class="ah12b">Calendario Laboral</a></li>   
-       <li><a href="../../gestion/Bajas/index.jsp" >Bajas Fichero</a></li>
-       <li><a href="../../gestion/Informes/index_informes.jsp" >Informes</a></li>
-       <li><a href="../../gestion/Formacion/index_formacion.jsp" >Formacion</a></li>
-       <li><a href="../../gestion/Carga_nomina/carga.jsp" >Carga Nominas</a></li>
+<%@ include file="includes/header.jsp" %>
+<div class="container-fluid mt-3">
+	<div class="row">
+		<%@ include file="includes/sidebar.jsp" %>
+		<main class="col-md-9 col-lg-10">
+			<div class="content-card">
 
-       
- </ul>
-</div>
-  <div id="form">
-<div>
-	  <ul id="subtabh">
-		<li id="active"><a href="../Datos" >Datos per.</a></li>
-		<li><a href="../Permisos" >Permisos</a></li>
-		<li><a href="../Ausencias">Ausencias</a></li>		
-		<li><a href="../Horas">Horas</a></li>
-		<li><a href="../Firmas">Firmas</a></li>
-		<li><a href="../Finger" id="current">Fichajes</a></li>
-		<li><a href="../Bolsa">Bolsa</a></li>
-		<li><a href="../Bolsa_concilia" >Bolsa Conciliacion</a></li>
-		<li><a href="../Incidencias_finger" >Incidencias  Fichajes</a></li>
-	  </ul>
-	</div>
-	
-	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
                       <tr > 
                       <th>
 					    <div align="left">
@@ -597,7 +572,7 @@ function show_calendario()
                                 
                                 <td width="10%" scope="col"><div align="center"><strong>H. Hacer</strong></div></td>
                                 <td width="10%" scope="col"><div align="center">Diferencia</div></td>
-                                <td width="10%" scope="col"><div align="center"><strong>Saldo ese día.</strong></div></td>
+                                <td width="10%" scope="col"><div align="center"><strong>Saldo ese dï¿½a.</strong></div></td>
                                 <td scope="col"><div align="center">Observaciones</div></td>
                               </tr>
                               
@@ -733,6 +708,14 @@ function show_calendario()
 </div>
 	</div>
 </body>
+
+	</div>
+		</main>
+	</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>
 <%
 RSPERIODO.close();

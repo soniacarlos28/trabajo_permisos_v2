@@ -1,4 +1,4 @@
-<%@page language="java" import="java.util.Date,java.sql.*" %>
+﻿<%@page language="java" import="java.util.Date,java.sql.*" %>
 <%
 	/**
 	* Garantiza que la sesion tenga los atributos necesarios para el
@@ -102,7 +102,7 @@ String thisPage = request.getRequestURI();
 <script language="JavaScript" type="text/javascript" src="calendario.js"></script>
 <body>
 
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 <div>
 <ul id="tabh">
     <li ><a href="../../index_busqueda.jsp" >Permisos/Ausencias</a></li>
@@ -112,7 +112,7 @@ String thisPage = request.getRequestURI();
     <li><a href="../../gestion/Bolsa_proceso/index.jsp" class="ah12b">Proceso Bolsa</a></li>
     <li><a href="../../gestion/Bajas/index.jsp" >Bajas Fichero</a></li>   
   </ul>
-</div>
+<%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
 <div id="form">
 <table width="95%" border="0" cellspacing="0" cellpadding="2">
                           <tr> 

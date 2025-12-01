@@ -1,4 +1,4 @@
-<%@page language="java" import="java.util.Date,java.sql.*" %>
+﻿<%@page language="java" import="java.util.Date,java.sql.*" %>
 <%@ include file="../../../Connections/RRHH.jsp" %>
 <%
 	/**
@@ -41,7 +41,7 @@ String thisPage = request.getRequestURI();
 <link href="apliweb.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 <div>
 <ul id="tabh">
     <li id="active"><a href="../Datos" >Datos per.</a></li>
@@ -54,7 +54,7 @@ String thisPage = request.getRequestURI();
 <li><a href="../gestion/Formacion/index_formacion.jsp" >Formacion</a></li>
 
  </ul>
-</div>
+<%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
   <div id="form">
 <div>
 	 <ul id="subtabh">

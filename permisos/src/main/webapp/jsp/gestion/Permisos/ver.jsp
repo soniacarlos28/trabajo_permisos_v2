@@ -1,4 +1,4 @@
-<%@page language="java" import="java.util.Date,java.sql.*" errorPage="error.jsp"%>
+ï»¿<%@page language="java" import="java.util.Date,java.sql.*" errorPage="error.jsp"%>
 <%@ include file="../../../Connections/RRHH.jsp" %>
 <%
 	/**
@@ -86,7 +86,7 @@ function envia_unavez()
 <link href="apliweb.css" rel="stylesheet" type="text/css">
 <body>
 
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 <div>
 <ul id="tabh">
     <li id="active"><a href="../../index_busqueda.jsp" id="current">Permisos/Ausencias</a></li>
@@ -98,7 +98,7 @@ function envia_unavez()
         <li><a href="../../gestion/calendario_laboral/index.jsp" class="ah12b">Calendario Laboral</a></li>
         <li><a href="../../gestion/Bajas/index.jsp" >Bajas Fichero</a></li>
   </ul>
-</div>
+<%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
   <div id="form">
 <div>
 	  <ul id="subtabh">
@@ -122,7 +122,7 @@ function envia_unavez()
                                       <input type="button" value="Nuevo" name="Nuevo" onClick="window.location='alta.jsp'" disabled="yes">
                                     </td>
                                     <td>                                      
-									  <input type="button" value="volver atrás" name="volver atrás2" onClick="history.back()" />
+									  <input type="button" value="volver atrï¿½s" name="volver atrï¿½s2" onClick="history.back()" />
                                     </td>
                                     <td>&nbsp;<b><%= session.getValue("MM_ID_FUNCIONARIO_NOMBRE") %> <%= session.getValue("MM_ID_FUNCIONARIO_APE1") %> <%= session.getValue("MM_ID_FUNCIONARIO_APE2") %></b>&nbsp; </td>
                                   </tr>
@@ -224,12 +224,12 @@ function envia_unavez()
            						<% } else { %>
 									<td width="9%" align="right" nowrap>Grado:</td>
                                      <td colspan="3"><select name="ID_GRADO" disabled="yes" onChange="document.formPermiso.OBSERVACIONES.value=document.formPermiso.GRADO.options[selectedIndex].text">
-                                       <option value="4" <%=(("4".toString().equals((((RSPERMISO_data = RSPERMISO.getObject("ID_GRADO"))==null || RSPERMISO.wasNull())?"":RSPERMISO_data)))?"SELECTED":"")%>>Padres/P. Politicos 4 días(Enfermedad o Muerte)</option>
-                                       <option value="5" <%=(("5".toString().equals((((RSPERMISO_data = RSPERMISO.getObject("ID_GRADO"))==null || RSPERMISO.wasNull())?"":RSPERMISO_data)))?"SELECTED":"")%>>Hijos/H. Politicos Conyuge 5 Días (Enfermedad o Muerte)</option>
-                                       <option value="2" <%=(("2".toString().equals((((RSPERMISO_data = RSPERMISO.getObject("ID_GRADO"))==null || RSPERMISO.wasNull())?"":RSPERMISO_data)))?"SELECTED":"")%>>Abuelos/Hermanos/Nietos 2 Días(Enfermedad o Muerte)</option>
-                                       <option value="1" <%=(("1".toString().equals((((RSPERMISO_data = RSPERMISO.getObject("ID_GRADO"))==null || RSPERMISO.wasNull())?"":RSPERMISO_data)))?"SELECTED":"")%>>Abuelos/Hermanos politicos 1 Día(Enfermedad)</option>
-                                       <option value="2" <%=(("2".toString().equals((((RSPERMISO_data = RSPERMISO.getObject("ID_GRADO"))==null || RSPERMISO.wasNull())?"":RSPERMISO_data)))?"SELECTED":"")%>>Abuelos/Hermanos politicos 2 Días(Muerte)</option>
-                                       <option value="1" <%=(("1".toString().equals((((RSPERMISO_data = RSPERMISO.getObject("ID_GRADO"))==null || RSPERMISO.wasNull())?"":RSPERMISO_data)))?"SELECTED":"")%>>Tios/sobrinos carnales o del conyugue 1 Día(Enf. o Mue.)</option>
+                                       <option value="4" <%=(("4".toString().equals((((RSPERMISO_data = RSPERMISO.getObject("ID_GRADO"))==null || RSPERMISO.wasNull())?"":RSPERMISO_data)))?"SELECTED":"")%>>Padres/P. Politicos 4 dï¿½as(Enfermedad o Muerte)</option>
+                                       <option value="5" <%=(("5".toString().equals((((RSPERMISO_data = RSPERMISO.getObject("ID_GRADO"))==null || RSPERMISO.wasNull())?"":RSPERMISO_data)))?"SELECTED":"")%>>Hijos/H. Politicos Conyuge 5 Dï¿½as (Enfermedad o Muerte)</option>
+                                       <option value="2" <%=(("2".toString().equals((((RSPERMISO_data = RSPERMISO.getObject("ID_GRADO"))==null || RSPERMISO.wasNull())?"":RSPERMISO_data)))?"SELECTED":"")%>>Abuelos/Hermanos/Nietos 2 Dï¿½as(Enfermedad o Muerte)</option>
+                                       <option value="1" <%=(("1".toString().equals((((RSPERMISO_data = RSPERMISO.getObject("ID_GRADO"))==null || RSPERMISO.wasNull())?"":RSPERMISO_data)))?"SELECTED":"")%>>Abuelos/Hermanos politicos 1 Dï¿½a(Enfermedad)</option>
+                                       <option value="2" <%=(("2".toString().equals((((RSPERMISO_data = RSPERMISO.getObject("ID_GRADO"))==null || RSPERMISO.wasNull())?"":RSPERMISO_data)))?"SELECTED":"")%>>Abuelos/Hermanos politicos 2 Dï¿½as(Muerte)</option>
+                                       <option value="1" <%=(("1".toString().equals((((RSPERMISO_data = RSPERMISO.getObject("ID_GRADO"))==null || RSPERMISO.wasNull())?"":RSPERMISO_data)))?"SELECTED":"")%>>Tios/sobrinos carnales o del conyugue 1 Dï¿½a(Enf. o Mue.)</option>
                                     </select></td>
                                
 	                          <% } %>
@@ -294,3 +294,4 @@ RSESTADO.close();
 StatementRSESTADO.close();
 ConnRSESTADO.close();
 %>
+

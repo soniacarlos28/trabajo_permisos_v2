@@ -1,4 +1,4 @@
-<%@page contentType="text/html; charset=iso-8859-1" language="java" import="java.sql.*"%>
+﻿<%@page contentType="text/html; charset=iso-8859-1" language="java" import="java.sql.*"%>
 <%
 	/**
 	* Garantiza que la sesion tenga los atributos necesarios para el
@@ -42,12 +42,12 @@ function show_finger()
 <link href="apliweb.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 <div>
 <ul id="tabh">
    
    </ul>
-  </div>
+  <%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
   <div id="form">
   <table width="95%" border="0" cellspacing="0" cellpadding="2">
                           <tr> 
@@ -115,3 +115,4 @@ function show_finger()
    </div>
 </body>
 </html>
+

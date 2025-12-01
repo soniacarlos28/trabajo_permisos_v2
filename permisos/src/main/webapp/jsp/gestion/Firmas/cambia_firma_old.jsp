@@ -1,4 +1,4 @@
-<%@page language="java" import="java.util.Date,java.sql.*" %>
+ï»¿<%@page language="java" import="java.util.Date,java.sql.*" %>
 <%@ include file="../../../Connections/RRHH.jsp" %>
 <%
 	/**
@@ -211,7 +211,7 @@ String thisPage = request.getRequestURI();
 <link href="esquema.css" rel="stylesheet" type="text/css">
 <link href="apliweb.css" rel="stylesheet" type="text/css">
 <body>
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 <div>
 <ul id="tabh">
     <li id="active"><a href="../../index_busqueda.jsp" id="current">Permisos/Ausencias</a></li>
@@ -222,7 +222,7 @@ String thisPage = request.getRequestURI();
     <li><a href="../../gestion/calendario_laboral/index.jsp" class="ah12b">Calendario Laboral</a></li>
   <li><a href="gestion/Bajas/index.jsp" >Bajas Fichero</a></li>
   </ul>
-</div>
+<%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
   <div id="form">
 <div>
 	  <ul id="subtabh">
@@ -318,7 +318,7 @@ RSTODOS_isEmpty = !RSTODOS_hasData;
 %>
         </select>
       
-      </label> DELEGACIÓN:<select name="ID_DELEGADO_FIRMA" size="1" id="ID_DELEGADO_FIRMA" >
+      </label> DELEGACIï¿½N:<select name="ID_DELEGADO_FIRMA" size="1" id="ID_DELEGADO_FIRMA" >
         <option value="1" <%=(("1".toString().equals((((RSDELEGADOJS_data = RSDELEGADOJS.getObject("ID_DELEGADO_FIRMA"))==null || RSDELEGADOJS.wasNull())?"":RSDELEGADOJS_data)))?"SELECTED":"")%>>SI</option>
         <option value="0" <%=(("0".toString().equals((((RSDELEGADOJS_data = RSDELEGADOJS.getObject("ID_DELEGADO_FIRMA"))==null || RSDELEGADOJS.wasNull())?"":RSDELEGADOJS_data)))?"SELECTED":"")%>>NO</option>
       </select></td>
@@ -351,7 +351,7 @@ RSTODOS_isEmpty = !RSTODOS_hasData;
             
 </div></td></tr>
  <tr>
-    <td colspan="3" bgcolor="#CCCCFF" scope="col"><div align="center">Los Suplentes con Delegación pueden autorizar permisos, aunque el Jefe no este de vacaciones o baja.</div></td>
+    <td colspan="3" bgcolor="#CCCCFF" scope="col"><div align="center">Los Suplentes con Delegaciï¿½n pueden autorizar permisos, aunque el Jefe no este de vacaciones o baja.</div></td>
     </tr>
     <tr>
       <th colspan="3" scope="row"><div align="center">
@@ -393,3 +393,4 @@ RSDELEGADOJS.close();
 StatementRSDELEGADOJS.close();
 ConnRSDELEGADOJS.close();
 %>
+

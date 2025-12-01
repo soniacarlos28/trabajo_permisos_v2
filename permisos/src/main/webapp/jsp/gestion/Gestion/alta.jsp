@@ -1,4 +1,4 @@
-<%@page contentType="text/html; charset=iso-8859-1" language="java" import="java.sql.*"%> 
+ï»¿<%@page contentType="text/html; charset=iso-8859-1" language="java" import="java.sql.*"%> 
 <%@ include file="../../../Connections/RRHH.jsp" %>
 <%
 	/**
@@ -136,19 +136,19 @@ int RSFUNCIONARIO_numRows = 0;
 
 function validarSiNumero(numero){
     if (!/^([0-9])*$/.test(numero))
-      alert("El valor " + numero + " no es un número");
+      alert("El valor " + numero + " no es un nï¿½mero");
   }
 
 function Valida(campo,mes) {
 
   if ((campo.length == 0) ) 
 	  {
-      alert('Falta información. ' + mes );
+      alert('Falta informaciï¿½n. ' + mes );
       return false
       }   
   if (!isNaN(parseInt(campo.value))) 
 	  {
-      alert('El campo debe ser un número. '+ mes);
+      alert('El campo debe ser un nï¿½mero. '+ mes);
       return false;
       }  
     return true
@@ -228,7 +228,7 @@ function envia_unavez()
 <script language="JavaScript" type="text/javascript" src="../../imagen/calendario.js"></script>
 </head>
 <body>
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 <div>
 <ul id="tabh">
     <li ><a href="../../index_busqueda.jsp" >Permisos/Ausencias</a></li>
@@ -240,7 +240,7 @@ function envia_unavez()
     <li><a href="../../gestion/calendario_laboral/index.jsp" class="ah12b">Calendario Laboral</a></li>
     <li><a href="../../gestion/Bajas/index.jsp" >Bajas Fichero</a></li>
   </ul>
-</div>
+<%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
 <div id="form">
 <div>
 	 <ul id="subtabh">
@@ -448,7 +448,7 @@ function envia_unavez()
                                             </select>
                                             <% } %>
                                           </td>
-                                          <td>Año: </td>
+                                          <td>Aï¿½o: </td>
                                           <td> <select name="PERIODO" id="PERIODO"  onchange="location.href='alta.jsp?EDITAR=SI&ID_FUNCIONARIO=' + <%=RSSINDICAL__MMColParam4%> + '&ID_TIPO_AUSENCIA=' + <%=RSSINDICAL__MMColParam2%>  + '&PERIODO='+this.value   ">
 
           <% while (RSPERIODO_hasData) {
@@ -692,3 +692,4 @@ RSPERIODO.close();
 StatementRSPERIODO.close();
 ConnRSPERIODO.close();
 %>
+

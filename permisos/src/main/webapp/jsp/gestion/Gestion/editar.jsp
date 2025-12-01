@@ -146,7 +146,7 @@ int RSSINDICAL_numRows = 0;
 <script language="JavaScript" type="text/javascript" src="../../imagen/calendario.js"></script>
 </head>
 <body>
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 <div>
 <ul id="tabh">
     <li ><a href="../../index_busqueda.jsp" >Permisos/Ausencias</a></li>
@@ -171,7 +171,7 @@ int RSSINDICAL_numRows = 0;
                                         <tr bgcolor="#FFFFFF"> 
                                           <td align="right">A&ntilde;o: </td>
                                           <td colspan="3"> 
-                                            <input type="text" name="ID_AÑO" size="6" maxlength="4" value="<%=(((RSSINDICAL_data = RSSINDICAL.getObject("ID_AnO"))==null || RSSINDICAL.wasNull())?"":RSSINDICAL_data)%>">
+                                            <input type="text" name="ID_Aï¿½O" size="6" maxlength="4" value="<%=(((RSSINDICAL_data = RSSINDICAL.getObject("ID_AnO"))==null || RSSINDICAL.wasNull())?"":RSSINDICAL_data)%>">
                                           </td>
                                         </tr>
                                         <tr bgcolor="#f2f2f2"> 
@@ -236,6 +236,7 @@ int RSSINDICAL_numRows = 0;
                           </tr>
                         </table>
 </div>
+<%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
 </body>
 </html>
 <%

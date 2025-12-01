@@ -1,4 +1,4 @@
-<%@page language="java" import="java.util.Date,java.sql.*" %>
+ï»¿<%@page language="java" import="java.util.Date,java.sql.*" %>
 <%@ include file="../../../Connections/RRHH.jsp" %>
 <%
 	/**
@@ -324,7 +324,7 @@ function show_calendario()
 </head>
 <body>
 
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 <div>
 <ul id="tabh">
     <li id="active"><a href="../../index_busqueda.jsp" id="current">Permisos/Ausencias</a></li>
@@ -340,7 +340,7 @@ function show_calendario()
 
        
  </ul>
-</div>
+<%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
   <div id="form">
 <div>
 	  <ul id="subtabh">
@@ -602,7 +602,7 @@ function show_calendario()
                                 
                                 <td width="10%" scope="col"><div align="center"><strong>H. Hacer</strong></div></td>
                                 <td width="10%" scope="col"><div align="center">Diferencia</div></td>
-                                <td width="10%" scope="col"><div align="center"><strong>Saldo ese día.</strong></div></td>
+                                <td width="10%" scope="col"><div align="center"><strong>Saldo ese dï¿½a.</strong></div></td>
                                 <td scope="col"><div align="center">Observaciones</div></td>
                               </tr>
                               

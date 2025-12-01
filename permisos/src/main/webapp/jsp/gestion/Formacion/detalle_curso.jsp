@@ -1,4 +1,4 @@
-<%@page language="java" import="java.util.Date,java.sql.*,java.util.Calendar" %>
+ï»¿<%@page language="java" import="java.util.Date,java.sql.*,java.util.Calendar" %>
 <%@ include file="../../../Connections/RRHH.jsp" %>
 <%
 	/**
@@ -17,7 +17,7 @@
 <link href="../apliweb.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 <div>
 <ul id="tabh">
      <li><a href="../../index_busqueda.jsp" >Permisos/Ausencias</a></li>
@@ -32,7 +32,7 @@
    <li><a href="../../gestion/Informes/index_informes.jsp" >Informes</a></li> 
    <li><a href="../../gestion/Formacion/index_formacion.jsp" id="current" >Formacion</a></li>
     </ul>
-  </div>
+  <%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
 
 <table width="85%" border="0" cellspacing="1" cellpadding="2">
     <tr bgcolor="#CCFFCC">
@@ -54,7 +54,7 @@
         ResultSet rs = null;
               Driver DriverRSCURSO = (Driver)Class.forName(MM_RRHH_DRIVER).newInstance();
              con = DriverManager.getConnection(MM_RRHH_STRING,MM_RRHH_USERNAME,MM_RRHH_PASSWORD);           
-             // Usamos la conexión que hemos creado
+             // Usamos la conexiï¿½n que hemos creado
              // Consultamos las solicitudes de los empleados para este curso
              String query = " SELECT distinct s.codisoli as peticion_id, t.desc_curso as descripcion, e.nombre || ' '||  e.ape1 || ' ' || e.ape2  as nombre_empleado,e.id_funcionario as id_funcionario,s.estadosoli,fechasoli,to_char(FECHASOLI,'dd/mm/yyyy hh24:mi') as fechasolitxt FROM curso_savia_solicitudes s" +
                             " JOIN personal_new e ON s.codiempl = e.id_funcionario  " +
@@ -70,8 +70,8 @@
             <thead>
                 <tr>
                     <th>Seleccionar</th>
-                    <th>ID de Petición</th>
-                    <th>Descripción</th>
+                    <th>ID de Peticiï¿½n</th>
+                    <th>Descripciï¿½n</th>
                     <th>ID de Funcionario</th>
                     <th>Nombre del Empleado</th>
                     <th>Fecha Solicitud</th>
@@ -80,7 +80,7 @@
             </thead>
             <tbody>
     <%
-                // Usamos un contador para asegurarnos de tener identificadores únicos
+                // Usamos un contador para asegurarnos de tener identificadores ï¿½nicos
                 int count = 0;
                 do {
                     String peticionId = rs.getString("peticion_id");
@@ -92,7 +92,7 @@
                     String fechasoli = rs.getString("fechasolitxt");
 
 
-                    // Generamos un nombre único para cada checkbox basado en el ID de la petición
+                    // Generamos un nombre ï¿½nico para cada checkbox basado en el ID de la peticiï¿½n
                     String checkboxName = "peticion_" + peticionId;
     %>
                     <tr>

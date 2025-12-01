@@ -1,4 +1,4 @@
-<%@page contentType="text/html; charset=iso-8859-1" language="java" import="java.sql.*"%>
+﻿<%@page contentType="text/html; charset=iso-8859-1" language="java" import="java.sql.*"%>
 <%@ include file="../../../Connections/RRHH.jsp" %>
 <%
 	/**
@@ -26,7 +26,7 @@ int RSPERIODO_numRows = 0;
 <script language="JavaScript" type="text/javascript" src="../../imagen/calendario.js"></script>
 </head>
 <body>
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 <div>
 <ul id="tabh">
     <li id="active"><a href="../../index_busqueda.jsp" >Permisos/Ausencias</a></li>
@@ -37,7 +37,7 @@ int RSPERIODO_numRows = 0;
       <li><a href="../../gestion/calendario_laboral/index.jsp" class="ah12b">Calendario Laboral</a></li>
  <li><a href="../../gestion/Bajas/index.jsp" >Bajas Fichero</a></li>
  </ul>
-</div>
+<%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
 <div id="form">
 <table width="95%" border="0" cellspacing="0" cellpadding="2">
                           <tr> 
@@ -125,3 +125,4 @@ RSPERIODO.close();
 StatementRSPERIODO.close();
 ConnRSPERIODO.close();
 %>
+

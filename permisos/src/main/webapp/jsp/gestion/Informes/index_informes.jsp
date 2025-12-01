@@ -1,4 +1,4 @@
-<%@page language="java" import="java.util.Date,java.sql.*" %>
+ï»¿<%@page language="java" import="java.util.Date,java.sql.*" %>
 <%@ include file="../../../Connections/RRHH.jsp" %>
 
 <%
@@ -80,13 +80,13 @@ function nuevo_informe()
 }
 function show_confirm(id, description, url)
 {
-   var text = "¿Realmente desea eliminar: '" + description + "'?";
+   var text = "ï¿½Realmente desea eliminar: '" + description + "'?";
    var r = confirm(text);
    if (r==true) { 
       MM_goToURL('self',url + id);
    }
    else { 
-      alert("Operación cancelada!"); 
+      alert("Operaciï¿½n cancelada!"); 
    }
 }
 </script>
@@ -118,7 +118,7 @@ function show_calendario()
 </style>
 </head>
 <body>
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 
 <div>
 <ul id="tabh">
@@ -134,7 +134,7 @@ function show_calendario()
 <li><a href="../../gestion/Formacion/index_formacion.jsp" >Formacion</a></li>
 
     </ul>
-  </div>
+  <%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
   <div id="form">
 
 <table width="95%" border="0" cellspacing="0" cellpadding="2">
@@ -150,7 +150,7 @@ function show_calendario()
                       <td class="va10b" width="30%">Nombre</td>
                         <td class="va10b" align="center" width="5%">Seleccion Personal</td>
                        <td class="va10b" bgcolor="#CCCCCC" align="center" width="15%">Seleccion Fechas</td>
-                        <td class="va10b" bgcolor="#CCCCCC" align="center" width="15%">Fecha Ultima Ejecución</td>
+                        <td class="va10b" bgcolor="#CCCCCC" align="center" width="15%">Fecha Ultima Ejecuciï¿½n</td>
                        <td class="va10b" bgcolor="#CCCCCC" align="center" width="5%">Acciones</td>
                       <td class="va10b" bgcolor="#f2f2f2" width="2%" align="center">  <a href="javascript:nuevo_informe()"><img	src="../../imagen/new.png" alt="Nuevo" width="20" height="20" border="0"></a>
                       </td>
@@ -209,5 +209,6 @@ function show_calendario()
 
 </body>
 </html>
+
 
 

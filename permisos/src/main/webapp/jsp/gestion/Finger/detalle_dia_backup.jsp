@@ -1,4 +1,4 @@
-<%@page language="java" import="java.util.Date,java.sql.*" errorPage="error.jsp"%>
+﻿<%@page language="java" import="java.util.Date,java.sql.*" errorPage="error.jsp"%>
 <%@ include file="../../../Connections/RRHH.jsp" %>
 <%
 	/**
@@ -261,7 +261,7 @@ return "";
 <link href="esquema.css" rel="stylesheet" type="text/css">
 <link href="apliweb.css" rel="stylesheet" type="text/css">
 <body>
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 <div>
 <ul id="tabh">
     <li id="active"><a href="../../index_busqueda.jsp" id="current">Permisos/Ausencias</a></li>
@@ -269,7 +269,7 @@ return "";
     <li><a href="" onClick="show_finger()"  class="ah12b">Finger</a></li>
     <li><a href="gestion/Gestion/index.jsp" class="ah12b">Horas Sindicales</a></li>   
   </ul>
-</div>
+<%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
   <div id="form">
 <div>
 	  <ul id="subtabh">

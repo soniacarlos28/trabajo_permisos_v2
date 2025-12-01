@@ -1,4 +1,4 @@
-<%@page language="java" import="java.util.Date,java.sql.*"  %>
+ï»¿<%@page language="java" import="java.util.Date,java.sql.*"  %>
 <%@ include file="../../../Connections/RRHH.jsp" %>
 <%
 	/**
@@ -73,7 +73,7 @@ function envia_unavez()
 </script>
 </head>
 <body>
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 <div>
 <ul id="tabh">
     <li id="active"><a href="../../index_busqueda.jsp" id="current">Permisos/Ausencias</a></li>
@@ -85,7 +85,7 @@ function envia_unavez()
       <li><a href="../../gestion/Bajas/index.jsp"  >Bajas Fichero</a></li> 
        <li><a href="../../gestion/Informes/index_informes.jsp" >Informes</a></li>      
  </ul>
-</div>
+<%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
   <div id="form">
 <div>
 	  <ul id="subtabh">
@@ -108,7 +108,7 @@ function envia_unavez()
                                     <td> 
                                       <input type="button" disabled="yes" value="Nuevo" name="Nuevo" onClick="window.location='alta.jsp'">
                                     </td>
-                                    <td>  <input type="button" value="volver atrás" name="volver atrás2" onClick="history.back()" />
+                                    <td>  <input type="button" value="volver atrï¿½s" name="volver atrï¿½s2" onClick="history.back()" />
                                </td>
                                     <td>&nbsp;<b><%= session.getValue("MM_ID_FUNCIONARIO_NOMBRE") %> <%= session.getValue("MM_ID_FUNCIONARIO_APE1") %> <%= session.getValue("MM_ID_FUNCIONARIO_APE2") %></b>&nbsp; </td>
                                   </tr>
@@ -241,3 +241,4 @@ ConnRSESTADO.close();
 RS_TipoAusencia.close();
 ConnRS_TipoAusencia.close();
 %>
+

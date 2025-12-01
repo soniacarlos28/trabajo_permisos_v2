@@ -1,4 +1,4 @@
-<%@page contentType="text/html; charset=iso-8859-1" language="java" import="java.sql.*"%> 
+ï»¿<%@page contentType="text/html; charset=iso-8859-1" language="java" import="java.sql.*"%> 
 <%@ include file="../../../Connections/RRHH.jsp" %>
 <%
 	/**
@@ -197,7 +197,7 @@ String thisPage = request.getRequestURI();
 <script language="JavaScript" type="text/javascript" src="../../imagen/calendario.js"></script>
 </head>
 <body>
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 <div>
 <ul id="tabh">
     <li ><a href="../../index_busqueda.jsp" >Permisos/Ausencias</a></li>
@@ -209,7 +209,7 @@ String thisPage = request.getRequestURI();
      <li><a href="../../gestion/calendario_laboral/index.jsp" class="ah12b" id="current">Calendario Laboral</a></li> 
 <li><a href="../../gestion/Bajas/index.jsp" >Bajas Fichero</a></li>
   </ul>
-</div>
+<%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
 <div id="form">
 
 <table width="95%" border="0" cellspacing="0" cellpadding="2">
@@ -223,12 +223,12 @@ String thisPage = request.getRequestURI();
                                         <tr bgcolor="#FFFFFF"> 
                                           <td align="right">A&ntilde;o: </td>
                                           <td colspan="3"> 
-                                            <input type="text" disabled=yes name="ID_AÑO2" size="6" maxlength="4" value="<%=(((RSCABECERA_data = RSCABECERA.getObject("ID_ANO"))==null || RSCABECERA.wasNull())?"":RSCABECERA_data)%>">
-                                            <input type="hidden"  name="ID_AÑO" size="6" maxlength="4" value="<%=(((RSCABECERA_data = RSCABECERA.getObject("ID_ANO"))==null || RSCABECERA.wasNull())?"":RSCABECERA_data)%>">
+                                            <input type="text" disabled=yes name="ID_Aï¿½O2" size="6" maxlength="4" value="<%=(((RSCABECERA_data = RSCABECERA.getObject("ID_ANO"))==null || RSCABECERA.wasNull())?"":RSCABECERA_data)%>">
+                                            <input type="hidden"  name="ID_Aï¿½O" size="6" maxlength="4" value="<%=(((RSCABECERA_data = RSCABECERA.getObject("ID_ANO"))==null || RSCABECERA.wasNull())?"":RSCABECERA_data)%>">
                                           </td>
                                         </tr>
                                         <tr bgcolor="#f2f2f2"> 
-                                          <td align="right">Día</td>
+                                          <td align="right">Dï¿½a</td>
                                           <td colspan="3"><b><%=(((RSCABECERA_data = RSCABECERA.getObject("DESC_DIA"))==null || RSCABECERA.wasNull())?"":RSCABECERA_data)%>-<%=(((RSCABECERA_data = RSCABECERA.getObject("ID_DIA"))==null || RSCABECERA.wasNull())?"":RSCABECERA_data)%></b> </td>
                                         </tr>
                                         <tr bgcolor="#FFFFFF"> 
@@ -246,7 +246,7 @@ String thisPage = request.getRequestURI();
                                           </td>
                                         </tr>
                                         <tr bgcolor="#CCCCCC"> 
-                                          <td align="right" bgcolor="#f2f2f2">Observación: 
+                                          <td align="right" bgcolor="#f2f2f2">Observaciï¿½n: 
                                           </td>
                                           <td colspan="3" bgcolor="#f2f2f2"> 
                                             <input type="text" name="OBSERVACION" value="<%=(((RSCABECERA_data = RSCABECERA.getObject("OBSERVACION"))==null || RSCABECERA.wasNull())?"":RSCABECERA_data)%>" size="65" maxlength="60">
@@ -292,3 +292,4 @@ String thisPage = request.getRequestURI();
 RSCABECERA.close();
 ConnRSCABECERA.close();
 %>
+

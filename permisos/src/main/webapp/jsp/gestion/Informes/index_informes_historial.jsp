@@ -1,4 +1,4 @@
-<%@page language="java" import="java.util.Date,java.sql.*" %>
+ï»¿<%@page language="java" import="java.util.Date,java.sql.*" %>
 <%@ include file="../../../Connections/RRHH.jsp" %>
 
 <%
@@ -85,13 +85,13 @@ function nuevo_informe()
 }
 function show_confirm(id, description, url)
 {
-   var text = "¿Realmente desea eliminar: '" + description + "'?";
+   var text = "ï¿½Realmente desea eliminar: '" + description + "'?";
    var r = confirm(text);
    if (r==true) { 
       MM_goToURL('self',url + id);
    }
    else { 
-      alert("Operación cancelada!"); 
+      alert("Operaciï¿½n cancelada!"); 
    }
 }
 </script>
@@ -123,7 +123,7 @@ function show_calendario()
 </style>
 </head>
 <body>
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 
 <div>
 <ul id="tabh">
@@ -137,7 +137,7 @@ function show_calendario()
    <li><a href="../../gestion/Bajas/index.jsp" >Bajas Fichero</a></li>
    <li ><a href="../../gestion/Informes/index_informes.jsp" id="current" >Informes</a></li>
     </ul>
-  </div>
+  <%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
   <div id="form">
 <div>
 	 <ul id="subtabh">
@@ -161,7 +161,7 @@ function show_calendario()
                       <td class="va10b" width="30%">Nombre--HISTORIAL</td>
                         <td class="va10b" align="center" width="5%">Seleccion Personal</td>
                        <td class="va10b" bgcolor="#CCCCCC" align="center" width="15%">Seleccion Fechas</td>
-                        <td class="va10b" bgcolor="#CCCCCC" align="center" width="15%">Fecha Ultima Ejecución</td>
+                        <td class="va10b" bgcolor="#CCCCCC" align="center" width="15%">Fecha Ultima Ejecuciï¿½n</td>
                        <td class="va10b" bgcolor="#CCCCCC" align="center" width="5%">Acciones</td>
                       <td class="va10b" bgcolor="#f2f2f2" width="2%" align="center"> 
                       </td>
@@ -215,5 +215,6 @@ function show_calendario()
 
 </body>
 </html>
+
 
 

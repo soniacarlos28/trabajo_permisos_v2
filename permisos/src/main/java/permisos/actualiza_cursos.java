@@ -17,17 +17,17 @@ import org.apache.oltu.oauth2.common.message.types.GrantType;
 import org.json.*;
 
 public class actualiza_cursos {
-	  private static final String API_URL = "https://api.saviacloud.net/ginpix7/V2/Entidades/1/PlanCod/2025/search/(AnioPlan=2025)";
-	    private static final String OAUTH_TOKEN = "TU_TOKEN_OAUTH"; // Reemplazar con el token v�lido
-	    private static final String DB_URL = "CADENA";
-	    private static final String DB_USER = "USUARIO";
-	    private static final String DB_PASSWORD = "CALVE";
-		
-	    public static final String TOKEN_REQUEST_URL = "A";
-	    public static final String CLIENT_ID = "B";
-	    public static final String CLIENT_SECRET = "C";
-	    public static final String SCOPE = "H";
-	    public static final String RESOURCE_URL_TPL =   "I";
+    private static final String API_URL = Config.get("API_URL", "https://api.saviacloud.net/ginpix7/V2/Entidades/1/PlanCod/2025/search/(AnioPlan=2025)");
+        private static final String OAUTH_TOKEN = Config.get("OAUTH_TOKEN", ""); // keep empty by default
+        private static final String DB_URL = Config.get("DB_URL", "CADENA");
+        private static final String DB_USER = Config.get("DB_USER", "USUARIO");
+        private static final String DB_PASSWORD = Config.get("DB_PASSWORD", "CALVE");
+    
+        public static final String TOKEN_REQUEST_URL = Config.get("TOKEN_REQUEST_URL", "A");
+        public static final String CLIENT_ID = Config.get("CLIENT_ID", "B");
+        public static final String CLIENT_SECRET = Config.get("CLIENT_SECRET", "C");
+        public static final String SCOPE = Config.get("SCOPE", "H");
+        public static final String RESOURCE_URL_TPL = Config.get("RESOURCE_URL_TPL", "I");
 
 	    
     
@@ -81,7 +81,10 @@ public class actualiza_cursos {
             conn.setRequestMethod("GET");
             conn.setRequestProperty("Authorization", "Bearer " + token);
             conn.setRequestProperty("Content-Type", "application/json");
-            conn.setRequestProperty("Ocp-Apim-Subscription-Key", "4f9e137d0ac64a61b215a8ae888a00c9");
+            String subKey = Config.get("API_SUBSCRIPTION_KEY", "");
+            if (subKey != null && !subKey.isEmpty()) {
+                conn.setRequestProperty("Ocp-Apim-Subscription-Key", subKey);
+            }
 
             int code = conn.getResponseCode();
             System.out.println("C�digo de respuesta: " + code);

@@ -1,4 +1,4 @@
-<%@page language="java" import="java.util.Date,java.sql.*" %>
+ï»¿<%@page language="java" import="java.util.Date,java.sql.*" %>
 <%@ include file="../../../Connections/RRHH.jsp" %>
 <%
 	/**
@@ -108,7 +108,7 @@ function ocultar(capa)
 </style>
 </head>
 <body>
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 
 <div>
 
@@ -165,9 +165,9 @@ function ocultar(capa)
                            <table border=1>
                            
                                   <tr> 
-                                        <td width="10%" bgcolor="#FFCCCC" align="center">Día<span class="va10b"></span></td>
-                                        <td width="15%" colspan=2 bgcolor="#FFCCCC" align="center">Obligatorio Mañana</td>
-                                        <td width="15%" colspan=2 bgcolor="#FFCCCC" align="center">Flexible Mañana</td>
+                                        <td width="10%" bgcolor="#FFCCCC" align="center">Dï¿½a<span class="va10b"></span></td>
+                                        <td width="15%" colspan=2 bgcolor="#FFCCCC" align="center">Obligatorio Maï¿½ana</td>
+                                        <td width="15%" colspan=2 bgcolor="#FFCCCC" align="center">Flexible Maï¿½ana</td>
                                         <td width="15%" colspan=2 bgcolor="#FFCCCC" align="center">Obligatorio Tarde</td>
                                         <td width="15%" colspan=2 bgcolor="#FFCCCC" align="center">Flexible Tarde</td>    
                                         <td width="15%" colspan=2 bgcolor="#FFCCCC" align="center">Obligatorio Noche</td>
@@ -266,9 +266,10 @@ function ocultar(capa)
    		
 								
 	
-</div>
+<%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
 	</div>
 </body>
 </html>
+
 
 

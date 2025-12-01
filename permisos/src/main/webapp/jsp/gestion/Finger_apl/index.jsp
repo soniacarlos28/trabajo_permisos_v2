@@ -1,4 +1,4 @@
-<%@page language="java" import="java.util.Date,java.sql.*" %>
+ï»¿<%@page language="java" import="java.util.Date,java.sql.*" %>
 <%@ include file="../../../Connections/RRHH.jsp" %>
 <%
 	/**
@@ -148,24 +148,24 @@ function show_calendario()
 
 function show_confirm(id, description, url)
 {
-   var text = "¿Realmente desea eliminar: '" + description + "'?";
+   var text = "ï¿½Realmente desea eliminar: '" + description + "'?";
    var r = confirm(text);
    if (r==true) { 
       MM_goToURL('self',url + id);
    }
    else { 
-      alert("Operación cancelada!"); 
+      alert("Operaciï¿½n cancelada!"); 
    }
 }
 function regenera(id, description, url)
 {
-   var text = "¿Realmente desea regenerar : '" + description + "'?";
+   var text = "ï¿½Realmente desea regenerar : '" + description + "'?";
    var r = confirm(text);
    if (r==true) { 
       MM_goToURL('self',url + id);
    }
    else { 
-      alert("Operación cancelada!"); 
+      alert("Operaciï¿½n cancelada!"); 
    }
 }
 
@@ -189,7 +189,7 @@ function envia_unavez()
 </style>
 </head>
 <body>
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 
 <div>
 <ul id="tabh">
@@ -205,7 +205,7 @@ function envia_unavez()
 <li><a href="../../gestion/Formacion/index_formacion.jsp" >Formacion</a></li>
 
     </ul>
-  </div>
+  <%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
   <div id="form">
 <div>
 	 <ul id="subtabh">
@@ -325,7 +325,7 @@ RSPERIO_isEmpty = !RSPERIO_hasData;
                                       <tr bgcolor="#CCFFCC"> 
                                       
                                         <td align="center">   <% if (!RSQUERY_isEmpty ) { %> <a href="javascript:regenera('<%=(((RSQUERY_data = RSQUERY.getObject("ID_INCIDENCIA")) == null || RSQUERY
-							.wasNull()) ? "" : RSQUERY_data)%>','Regenerar todas las incidencias del día','regenerar_incidencia.jsp?ID_TODOS=1&ID_INCIDENCIA=')"><img	src="../../imagen/regenerar.jpg" alt="Regenerar Incidencia" width="20" height="20" border="0">							
+							.wasNull()) ? "" : RSQUERY_data)%>','Regenerar todas las incidencias del dï¿½a','regenerar_incidencia.jsp?ID_TODOS=1&ID_INCIDENCIA=')"><img	src="../../imagen/regenerar.jpg" alt="Regenerar Incidencia" width="20" height="20" border="0">							
                       </a>  <% } /* end !RSQUERY_isEmpty */ %></td>
                                         <td colspan="5" align="center"><b>Incidencias d&iacute;a:  <%= RSFLECHA__MMColParam3 %></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                           
                                        
@@ -404,3 +404,4 @@ RSFLECHA.close();
 StatementRSFLECHA.close();
 ConnRSFLECHA.close();
 %>
+

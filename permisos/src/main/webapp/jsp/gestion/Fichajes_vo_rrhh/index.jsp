@@ -1,4 +1,4 @@
-<%@page language="java" import="java.util.Date,java.sql.*" %>
+ï»¿<%@page language="java" import="java.util.Date,java.sql.*" %>
 <%@ include file="../../../Connections/RRHH.jsp" %>
 <%
 	/**
@@ -188,7 +188,7 @@ function envia_unavez(firma)
 <link href="apliweb.css" rel="stylesheet" type="text/css">
 
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"><body OnLoad="carga_final()">
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 <div>
 <ul id="tabh">
     <li id="active"><a href="../../index_busqueda.jsp" >Permisos/Ausencias</a></li>
@@ -203,7 +203,7 @@ function envia_unavez(firma)
 <li><a href="../../gestion/Formacion/index_formacion.jsp" >Formacion</a></li>
 
     </ul>
-</div>
+<%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
 <div id="form"><div>
 	  <ul id="subtabh">
 		<li><a href="../../gestion/Permisos_vo_rrhh/index.jsp" >Permisos pendientes autorizar</a></li>
@@ -216,7 +216,7 @@ function envia_unavez(firma)
 <table width="85%" border="0" cellspacing="1" cellpadding="2">
 <form name="Sindicales" method="POST" action="firmar_select.jsp">
                                       <tr bgcolor="#CCFFCC">
-                                         <td colspan="9" align="center"><b>Fichajes pendientes de VºBº</b> <input type="hidden" name="TODO_T" ID="TODO_T" size="122" >
+                                         <td colspan="9" align="center"><b>Fichajes pendientes de Vï¿½Bï¿½</b> <input type="hidden" name="TODO_T" ID="TODO_T" size="122" >
                                         <input type="hidden" name="ID_AUTORIZA" ID="ID_AUTORIZA" size="1" value="" >
                                         <input type="hidden" name="TIPO_T" ID="TIPO_T" size="1" value="A" >
                                         <input type="hidden" name="ID_FIRMA_PERMISO" ID="ID_FIRMA_PERMISO" size="10" value="<%= session.getValue("MM_ID_USUARIO")%>" >
@@ -229,13 +229,13 @@ function envia_unavez(firma)
                                       <tr bgcolor="#CCCCCC" >
                                         <td colspan="3"> <input type="submit" value="Autorizar selecionados" ID="AUTO" name="AUTO"onClick="javascript:envia_unavez('1');"></td> 
                                         <td colspan="6" align="left"><input type="submit" value="Denegar selecionados" ID="DENI" name="DENI" onClick="javascript:envia_unavez('0');">                                       
-                                         &nbsp;Motivo denegación: &nbsp;<input type="tex" name="ID_MOTIVO_DENEGA" ID="ID_MOTIVO_DENEGA" size="55" value="" >
+                                         &nbsp;Motivo denegaciï¿½n: &nbsp;<input type="tex" name="ID_MOTIVO_DENEGA" ID="ID_MOTIVO_DENEGA" size="55" value="" >
                                         
                                         </td>
                                       </tr>
                               <tr> 
                                         <td width="2%" bgcolor="#CCCCCC" align="center"><span class="va10b">Selecionar</span></td>
-                                        <td width="5%" bgcolor="#CCCCCC" align="center"><span class="va10b"><a href="javascript:c_ordenar('1')">Año</a></span></td>
+                                        <td width="5%" bgcolor="#CCCCCC" align="center"><span class="va10b"><a href="javascript:c_ordenar('1')">Aï¿½o</a></span></td>
                                         <td width="5%" bgcolor="#CCCCCC" align="center"><span class="va10b"><a href="javascript:c_ordenar('2')">Funcio</a></span></td>
                                         <td width="32%" bgcolor="#CCCCCC" align="center"><span class="va10b"><a href="javascript:c_ordenar('3')">Nombre</a></span></td>
                                         <td width="32%" bgcolor="#CCCCCC" align="center"><span class="va10b"><a href="javascript:c_ordenar('4')">Permiso</a></span></td>
@@ -289,3 +289,4 @@ RSCLAVE_FI.close();
 StatementRSCLAVE_FI.close();
 ConnRSCLAVE_FI.close();
 %>
+

@@ -1,4 +1,4 @@
-<%@page language="java" import="java.util.Date,java.sql.*" %>
+ï»¿<%@page language="java" import="java.util.Date,java.sql.*" %>
 <%@ include file="../../../Connections/RRHH.jsp" %>
 <%
 	/**
@@ -456,7 +456,7 @@ function Alertas()
    
 } 
 
-function añadir()
+function aï¿½adir()
 {
 
    var ida = 1;
@@ -649,7 +649,7 @@ function calcular()
 	 
 	 if (isNaN(parseInt(campo))) 
 	  {
-     alert('\nDebe ser Numerico la reducción.' );
+     alert('\nDebe ser Numerico la reducciï¿½n.' );
      document.getElementById("REDUCCION").focus();
      return false;
      }
@@ -761,7 +761,7 @@ function show_calendario()
 </head>
 <body>
 
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 <div>
 <ul id="tabh">
     <li id="active"><a href="../../index_busqueda.jsp" id="current">Permisos/Ausencias</a></li>
@@ -776,7 +776,7 @@ function show_calendario()
 <li><a href="../../gestion/Formacion/index_formacion.jsp" >Formacion</a></li>
 
  </ul>
-</div>
+<%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
   <div id="form">
 <div>
 	  <ul id="subtabh">
@@ -835,7 +835,7 @@ RSTIPO_FICHA_isEmpty = !RSTIPO_FICHA_hasData;
           <%  if (!RS_JORNADA_FUN_isEmpty ) {%>   
            <td colspan=1 bgcolor="#CCCCCC" align="center">Jornada</td>
          <% } else {  %>
-           <td colspan=1 bgcolor="#CCCCCC" align="center">Sin Jornada en el día de hoy</td>
+           <td colspan=1 bgcolor="#CCCCCC" align="center">Sin Jornada en el dï¿½a de hoy</td>
          <% } %>
            <td colspan=1 bgcolor="#CCCCCC" align="center">Puntos Fichajes</td>
                 </tr>         
@@ -855,7 +855,7 @@ RSTIPO_FICHA_isEmpty = !RSTIPO_FICHA_hasData;
                  <td nowrap><input type="checkbox" name="ALERTA_2" id="ALERTA_2" 
                    <%  if (!RS_ALERTAS_isEmpty ) {%>    
                         <%= (((RS_ALERTAS_data = RS_ALERTAS.getObject("ALERTA_2"))==null || RS_ALERTAS.wasNull())?"":RS_ALERTAS_data)  %>   <% }   %>  
-                          onchange="Modifica_Alertas();"   ><label for="ALERTA_2">Días no Laborables</label>                                   
+                          onchange="Modifica_Alertas();"   ><label for="ALERTA_2">Dï¿½as no Laborables</label>                                   
                          </td>
                                   
                          
@@ -1064,7 +1064,7 @@ RSTIPO_FICHA_isEmpty = !RSTIPO_FICHA_hasData;
 									   <% } %>		
 										size="4" maxlength="4">
                                   </td>
-                                  <td> <a href="javascript:calcular();"><img src="../../imagen/calculator.png" alt="Añadir transacción"	width="20" height="20" border="0"></a></td>                                        
+                                  <td> <a href="javascript:calcular();"><img src="../../imagen/calculator.png" alt="Aï¿½adir transacciï¿½n"	width="20" height="20" border="0"></a></td>                                        
                               </table>           
       </td>       
    </tr>
@@ -1110,7 +1110,7 @@ RSTIPO_FICHA_isEmpty = !RSTIPO_FICHA_hasData;
         <table >
          <tr >
                   <td nowrap><input type="checkbox" name="PTO_TODOS" id="PTO_TODOS"  ><label for="PTO_TODOS"> Todos</label></td>          
-             <td colspan=2 align="right"><a href="javascript:añadir();"><img src="../../imagen/new.png" alt="Añadir transacción"	width="20" height="20" border="0"></a>
+             <td colspan=2 align="right"><a href="javascript:aï¿½adir();"><img src="../../imagen/new.png" alt="Aï¿½adir transacciï¿½n"	width="20" height="20" border="0"></a>
 	    </tr>
            <tr> 
              <td colspan=2 align="center" bgcolor="#CCCCCC"><span class="va10b">Lugar Fichaje</span></td>   
@@ -1191,7 +1191,7 @@ RSTIPO_FICHA_isEmpty = !RSTIPO_FICHA_hasData;
                                         <td width="20%" colspan=2 bgcolor="#CACFD2" align="center">Fecha Hasta</td> 
                                         <td width="20%" colspan=2 bgcolor="#F2F3F4" align="center">Horas Semanales</td>
                                         <td width="20%" colspan=2 bgcolor="#CACFD2" align="center">Horas Teoricas</td>  
-                                         <td width="20%" colspan=2 bgcolor="#CACFD2" align="center">Días Jornada</td>                                                                                                                                                                                                   
+                                         <td width="20%" colspan=2 bgcolor="#CACFD2" align="center">Dï¿½as Jornada</td>                                                                                                                                                                                                   
                                         <td width="20%" colspan=1 bgcolor="#CCCCCC" align="center">Reduccion</td>
                                         <td width="20%" colspan=1 bgcolor="#CCCCCC" align="center">Libre</td>
                                          <td width="20%" colspan=1 bgcolor="#CCCCCC" align="center">Contar Comida</td>
@@ -1283,7 +1283,7 @@ RSTIPO_FICHA_isEmpty = !RSTIPO_FICHA_hasData;
 	   <% }  %> 
 	  </tr>	   
             <tr> 
-                                        <td width="10%" bgcolor="#CCCCCC" align="center">Día<span class="va10b"></span></td>
+                                        <td width="10%" bgcolor="#CCCCCC" align="center">Dï¿½a<span class="va10b"></span></td>
                                         <td width="15%" colspan=2 bgcolor="#CACFD2" align="center">Obligatorio</td>
                                         <td width="15%" colspan=2 bgcolor="#F2F3F4" align="center">Flexible</td>
                                         <td width="15%" colspan=2 bgcolor="#CACFD2" align="center">Obligatorio</td>
@@ -1342,7 +1342,7 @@ RSTIPO_FICHA_isEmpty = !RSTIPO_FICHA_hasData;
 	  <table>
 	    <tr>
                <td align="center" style=" width : 772px;">
-                           <input type="button" name="Guardar" value="Guardar Configuración" onClick="javascript:envia_unavez();" >
+                           <input type="button" name="Guardar" value="Guardar Configuraciï¿½n" onClick="javascript:envia_unavez();" >
                          </td>
                </tr> 
                 <tr>
@@ -1407,6 +1407,7 @@ RSRELOJ.close();
 StatementRSRELOJ.close();
 ConnRSRELOJ.close();
 %>
+
 
 
 

@@ -1,4 +1,4 @@
-<%@page language="java" import="java.util.Date,java.sql.*" %>
+ï»¿<%@page language="java" import="java.util.Date,java.sql.*" %>
 <%@ include file="../../../Connections/RRHH.jsp" %>
 <%
 	/**
@@ -215,7 +215,7 @@ function ocultar(capa)
 </style>
 </head>
 <body>
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 
 <div>
 <ul id="tabh">
@@ -229,7 +229,7 @@ function ocultar(capa)
    <li><a href="../../gestion/Bajas/index.jsp" >Bajas Fichero</a></li>
    <li ><a href="../../gestion/Informes/index_informes.jsp" >Informes</a></li>
     </ul>
-  </div>
+  <%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
   <div id="form">
 <div>
 	 <ul id="subtabh">
@@ -289,14 +289,14 @@ function ocultar(capa)
         <option value="NO" <%=(("NO".toString().equals((((RSCALENDARIO_data = RSCALENDARIO.getObject("TURNO"))==null || RSCALENDARIO.wasNull())?"":RSCALENDARIO_data)))?"selected=\"selected\"":"")%>>NO</option>
         <option value="SI" <%=(("SI".toString().equals((((RSCALENDARIO_data = RSCALENDARIO.getObject("TURNO"))==null || RSCALENDARIO.wasNull())?"":RSCALENDARIO_data)))?"selected=\"selected\"":"")%>>SI</option>
       </select></td>
-                                        <td width="30%" colspan=4 bgcolor="#E5E7E9" align="center">Mañana</td>
+                                        <td width="30%" colspan=4 bgcolor="#E5E7E9" align="center">Maï¿½ana</td>
                                         <td width="30%" colspan=4 bgcolor="#D7DBDD" align="center">Tarde</td>
                                         <td width="30%" colspan=4 bgcolor="#C7DBDD" align="center">Noche</td>
                                         <td width="30%" colspan=2  align="center"></td>
                                         
                                       </tr>
                                       <tr> 
-                                        <td   width="10%" bgcolor="#CCCCCC" align="center">Día<span class="va10b"></span></td>
+                                        <td   width="10%" bgcolor="#CCCCCC" align="center">Dï¿½a<span class="va10b"></span></td>
                                         <td width="15%" colspan=2 bgcolor="#CACFD2" align="center">Obligatorio</td>
                                         <td width="15%" colspan=2 bgcolor="#F2F3F4" align="center">Flexible</td>
                                         <td width="15%" colspan=2 bgcolor="#CACFD2" align="center">Obligatorio</td>
@@ -415,9 +415,9 @@ function ocultar(capa)
                            <table border=1>
                            
                                   <tr> 
-                                        <td width="10%" bgcolor="#FFCCCC" align="center">Día<span class="va10b"></span></td>
-                                        <td width="15%" colspan=2 bgcolor="#FFCCCC" align="center">Obligatorio Mañana</td>
-                                        <td width="15%" colspan=2 bgcolor="#FFCCCC" align="center">Flexible Mañana</td>
+                                        <td width="10%" bgcolor="#FFCCCC" align="center">Dï¿½a<span class="va10b"></span></td>
+                                        <td width="15%" colspan=2 bgcolor="#FFCCCC" align="center">Obligatorio Maï¿½ana</td>
+                                        <td width="15%" colspan=2 bgcolor="#FFCCCC" align="center">Flexible Maï¿½ana</td>
                                         <td width="15%" colspan=2 bgcolor="#FFCCCC" align="center">Obligatorio Tarde</td>
                                         <td width="15%" colspan=2 bgcolor="#FFCCCC" align="center">Flexible Tarde</td>    
                                         <td width="15%" colspan=2 bgcolor="#FFCCCC" align="center">Obligatorio Noche</td>
@@ -518,5 +518,6 @@ function ocultar(capa)
 	</div>
 </body>
 </html>
+
 
 

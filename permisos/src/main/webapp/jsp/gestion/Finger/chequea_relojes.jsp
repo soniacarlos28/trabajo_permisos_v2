@@ -1,4 +1,4 @@
-<%@page language="java" import="java.util.Date,java.sql.*" %>
+ï»¿<%@page language="java" import="java.util.Date,java.sql.*" %>
 <%@ include file="../../../Connections/RRHH.jsp" %>
 <%
 	/**
@@ -57,7 +57,7 @@ function http_ping() {
  
 var fqdn = document.getElementById('ip').value;
 var NB_ITERATIONS = 4; // numero de loops
-var MAX_ITERATIONS = 5; // XMLHttpRequest esta limitado según el navegador
+var MAX_ITERATIONS = 5; // XMLHttpRequest esta limitado segï¿½n el navegador
 var TIME_PERIOD = 1000; // 1000 ms entre cada ping
 var i = 0;
 var over_flag = 0;
@@ -139,7 +139,7 @@ var ping_loop = setInterval(function() {
 <link href="apliweb.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 <div>
 <ul id="tabh">
      <li><a href="../../index_busqueda.jsp" >Permisos/Ausencias</a></li>
@@ -151,7 +151,7 @@ var ping_loop = setInterval(function() {
    <li><a href="../../gestion/calendario_laboral/index.jsp" class="ah12b">Calendario Laboral</a></li> 
    <li><a href="../../gestion/Bajas/index.jsp" >Bajas Fichero</a></li>
     </ul>
-  </div>
+  <%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
   <form id="direccion">
   <input type="text" id="ip" value=""/>
   <input type="button" value="Ping" onClick="comprobar()"/>

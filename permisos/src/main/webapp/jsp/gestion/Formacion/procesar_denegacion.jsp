@@ -1,4 +1,4 @@
-<%@page language="java" import="java.util.Date,java.sql.*,java.util.Calendar" %>
+ï»¿<%@page language="java" import="java.util.Date,java.sql.*,java.util.Calendar" %>
 <%@ include file="../../../Connections/RRHH.jsp" %>
 <%
 	/**
@@ -25,13 +25,13 @@ return "";
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Procesar Denegación de Solicitudes</title>
+    <title>Procesar Denegaciï¿½n de Solicitudes</title>
 <link href="../estilos.css" rel="stylesheet" type="text/css">
 <link href="../esquema.css" rel="stylesheet" type="text/css">
 <link href="../apliweb.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 <div>
 <ul id="tabh">
      <li><a href="../../index_busqueda.jsp" >Permisos/Ausencias</a></li>
@@ -46,10 +46,10 @@ return "";
    <li><a href="../../gestion/Informes/index_informes.jsp" >Informes</a></li> 
    <li><a href="../../gestion/Formacion/index_formacion.jsp" id="current" >Formacion</a></li>
     </ul>
-  </div>
+  <%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
    <table width="85%" border="0" cellspacing="1" cellpadding="2">
     <tr bgcolor="#CCFFCC">
-       <td colspan="10" align="center"><b>Procesar Denegación de Solicitudes</b> <input type="hidden" name="TODO_T" ID="TODO_T" size="122" >
+       <td colspan="10" align="center"><b>Procesar Denegaciï¿½n de Solicitudes</b> <input type="hidden" name="TODO_T" ID="TODO_T" size="122" >
       </tr>
      </table>                              
    
@@ -67,7 +67,7 @@ return "";
                   con = DriverManager.getConnection(MM_RRHH_STRING,MM_RRHH_USERNAME,MM_RRHH_PASSWORD);
                 
 
-                // Iniciar una transacción
+                // Iniciar una transacciï¿½n
                 con.setAutoCommit(false);
                 
                 // Actualizar el estado de las solicitudes seleccionadas
@@ -76,13 +76,13 @@ return "";
 
                 for (String peticionId : peticionesSeleccionadas) {
                     stmt.setString(1, peticionId);
-                    stmt.addBatch();  // Añadimos la actualización al lote
+                    stmt.addBatch();  // Aï¿½adimos la actualizaciï¿½n al lote
                 }
 
                 // Ejecutar el lote
                 int[] result = stmt.executeBatch();
                 
-                // Confirmar la transacción
+                // Confirmar la transacciï¿½n
                 con.commit();
 
                 out.println("Las solicitudes seleccionadas se han denegado correctamente.");
@@ -99,3 +99,4 @@ return "";
     <a href="index_formacion.jsp">Volver a la lista de cursos</a>
 </body>
 </html>
+

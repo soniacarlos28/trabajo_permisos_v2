@@ -1,4 +1,4 @@
-<%@page contentType="text/html; charset=iso-8859-1" language="java" import="java.sql.*"%> 
+ï»¿<%@page contentType="text/html; charset=iso-8859-1" language="java" import="java.sql.*"%> 
 <%@ include file="../../../Connections/RRHH.jsp" %>
 <%
 	/**
@@ -53,7 +53,7 @@ RSQUERY_SQL += " order by estado_baja, ape1,ape2,nombre";
 <%
 Driver DriverRSQUERY = (Driver)Class.forName(MM_RRHH_DRIVER).newInstance();
 Connection ConnRSQUERY = DriverManager.getConnection(MM_RRHH_STRING,MM_RRHH_USERNAME,MM_RRHH_PASSWORD);
-//PreparedStatement StatementRSQUERY = ConnRSQUERY.prepareStatement("SELECT ID_FUNCIONARIO, INITCAP(APE1) AS APE1, INITCAP(APE2) AS APE2, INITCAP(NOMBRE) AS NOMBRE, ID_FUNCIONARIO, FECHA_INGRESO, ACTIVO, JORNADA, NUMERO_SS, DECODE(TIPO_FUNCIONARIO,'N','Funcionario de la Administración','B','Bomberos','P','POLICIA',' ') as TIPO_FUNCIONARIO  FROM RRHH.PERSONAL_NEW  WHERE ID_FUNCIONARIO = '" + RSQUERY__MMColParam1 + "' AND APE1 LIKE '" + RSQUERY__MMColParam2 + "%' AND APE2 LIKE '" + RSQUERY__MMColParam3 + "%' AND NOMBRE LIKE '" + RSQUERY__MMColParam4 + "%' AND DNI = LPAD('" + RSQUERY__MMColParam5 + "',8,0) AND DNI_LETRA LIKE '" + RSQUERY__MMColParam6 + "%'");
+//PreparedStatement StatementRSQUERY = ConnRSQUERY.prepareStatement("SELECT ID_FUNCIONARIO, INITCAP(APE1) AS APE1, INITCAP(APE2) AS APE2, INITCAP(NOMBRE) AS NOMBRE, ID_FUNCIONARIO, FECHA_INGRESO, ACTIVO, JORNADA, NUMERO_SS, DECODE(TIPO_FUNCIONARIO,'N','Funcionario de la Administraciï¿½n','B','Bomberos','P','POLICIA',' ') as TIPO_FUNCIONARIO  FROM RRHH.PERSONAL_NEW  WHERE ID_FUNCIONARIO = '" + RSQUERY__MMColParam1 + "' AND APE1 LIKE '" + RSQUERY__MMColParam2 + "%' AND APE2 LIKE '" + RSQUERY__MMColParam3 + "%' AND NOMBRE LIKE '" + RSQUERY__MMColParam4 + "%' AND DNI = LPAD('" + RSQUERY__MMColParam5 + "',8,0) AND DNI_LETRA LIKE '" + RSQUERY__MMColParam6 + "%'");
 PreparedStatement StatementRSQUERY = ConnRSQUERY.prepareStatement(RSQUERY_SQL);
 StatementRSQUERY.setFetchSize(10);
 StatementRSQUERY.setQueryTimeout(0);
@@ -296,7 +296,7 @@ return "";
 <link href="apliweb.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
   <div id="form">
   <table cellspacing=0 border=0 cellpadding="0" width="95%">
   <tr> 
@@ -403,7 +403,7 @@ return "";
     </td>
   </tr>
 </table>
-  </div>
+  <%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
 
 </body>
 </html>
@@ -411,3 +411,4 @@ return "";
 RSQUERY.close();
 ConnRSQUERY.close();
 %>
+

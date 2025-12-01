@@ -49,7 +49,7 @@ PRFIRMA.execute();
 <%
 Driver DriverRSPENDIENTE = (Driver)Class.forName(MM_RRHH_DRIVER).newInstance();
 Connection ConnRSPENDIENTE = DriverManager.getConnection(MM_RRHH_STRING,MM_RRHH_USERNAME,MM_RRHH_PASSWORD);
-PreparedStatement StatementRSPENDIENTE = ConnRSPENDIENTE.prepareStatement("SELECT distinct a.ID_PERMISO,       a.id_ano,       a.id_funcionario,       a.ID_TIPO_PERMISO,       to_char(a.id_estado) as ID_ESTADO,       to_char(a.fecha_inicio, 'DD/MM/YYYY hh24:mi') as fecha_inicio,       to_char(a.fecha_fin, 'DD/MM/YYYY hh24:mi') as fecha_fin,       a.num_dias || '-' || tipo_dias as NUM_DIAS,        a.JUSTIFICACION AS JUSTI,       a.fecha_anulacion,       DESC_TIPO_PERMISO,       INITCAP(NOMBRE) || ' ' || INITCAP(APE1) || ' ' || INITCAP(APE2) as NOMBRES,       MENSAJE,       DECODE(RESULTADO, 0, '0', '1') as RESULTADO,       DECODE(RESULTADO, 0, 'OK', 'ERROR') as RESULTADOS, DECODE(ID_OPERACION,0,'Denegación','Autorizado') as OPERA FROM PERMISO                 A,       TR_TIPO_PERMISO         B,       TR_ESTADO_PERMISO        T,       personal_new                 pe,       PERMISO_VALIDACION_TODOS PV WHERE a.id_funcionario = pe.id_funcionario    and a.id_ano=b.id_ano    AND A.ID_permiso = PV.ID_PERMISO   AND PV.CLAVE_FIRMA= '" +  PRFIRMA__V_CLAVE_FIRMA   + "'   AND PV.TIPO_PERMISO='P'   AND (A.ANULADO = 'NO' OR a.ANULADO IS NULL)   and t.id_ESTADO_PERMISO = a.id_EStado   AND A.ID_TIPO_permiso = B.ID_TIPO_permiso ORDER BY FECHA_INICIO DESC");
+PreparedStatement StatementRSPENDIENTE = ConnRSPENDIENTE.prepareStatement("SELECT distinct a.ID_PERMISO,       a.id_ano,       a.id_funcionario,       a.ID_TIPO_PERMISO,       to_char(a.id_estado) as ID_ESTADO,       to_char(a.fecha_inicio, 'DD/MM/YYYY hh24:mi') as fecha_inicio,       to_char(a.fecha_fin, 'DD/MM/YYYY hh24:mi') as fecha_fin,       a.num_dias || '-' || tipo_dias as NUM_DIAS,        a.JUSTIFICACION AS JUSTI,       a.fecha_anulacion,       DESC_TIPO_PERMISO,       INITCAP(NOMBRE) || ' ' || INITCAP(APE1) || ' ' || INITCAP(APE2) as NOMBRES,       MENSAJE,       DECODE(RESULTADO, 0, '0', '1') as RESULTADO,       DECODE(RESULTADO, 0, 'OK', 'ERROR') as RESULTADOS, DECODE(ID_OPERACION,0,'Denegaciï¿½n','Autorizado') as OPERA FROM PERMISO                 A,       TR_TIPO_PERMISO         B,       TR_ESTADO_PERMISO        T,       personal_new                 pe,       PERMISO_VALIDACION_TODOS PV WHERE a.id_funcionario = pe.id_funcionario    and a.id_ano=b.id_ano    AND A.ID_permiso = PV.ID_PERMISO   AND PV.CLAVE_FIRMA= '" +  PRFIRMA__V_CLAVE_FIRMA   + "'   AND PV.TIPO_PERMISO='P'   AND (A.ANULADO = 'NO' OR a.ANULADO IS NULL)   and t.id_ESTADO_PERMISO = a.id_EStado   AND A.ID_TIPO_permiso = B.ID_TIPO_permiso ORDER BY FECHA_INICIO DESC");
 ResultSet RSPENDIENTE = StatementRSPENDIENTE.executeQuery();
 boolean RSPENDIENTE_isEmpty = !RSPENDIENTE.next();
 boolean RSPENDIENTE_hasData = !RSPENDIENTE_isEmpty;
@@ -72,7 +72,7 @@ String thisPage = request.getRequestURI();
 <link href="apliweb.css" rel="stylesheet" type="text/css">
 <body>
 
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 <div>
 <ul id="tabh">
     <li id="active"><a href="../../index_busqueda.jsp" >Permisos/Ausencias</a></li>
@@ -101,7 +101,7 @@ String thisPage = request.getRequestURI();
                                                    </td>
                                       </tr>
                                        <tr>                                         
-                                        <td width="5%" bgcolor="#CCCCCC" align="center"><span class="va10b">Año</span></td>
+                                        <td width="5%" bgcolor="#CCCCCC" align="center"><span class="va10b">Aï¿½o</span></td>
                                         <td width="5%" bgcolor="#CCCCCC" align="center"><span class="va10b">Funcio</span></td>
                                         <td width="32%" bgcolor="#CCCCCC" align="center"><span class="va10b">Nombre </span></td>
                                         <td width="32%" bgcolor="#CCCCCC" align="center"><span class="va10b">Permiso</span></td>
@@ -110,7 +110,7 @@ String thisPage = request.getRequestURI();
                                         <td width="5%" bgcolor="#CCCCCC" align="center"><span class="va10b">Num Dias</span></td>
                                         <td width="5%" bgcolor="#CCCCCC" align="center"><span class="va10b">Justificado</span></td>  
                                         <td width="5%" bgcolor="#CCCCCC" align="center"><span class="va10b">Firma</span></td>                                     
-                                         <td width="5%" bgcolor="#CCCCCC" align="center"><span class="va10b">Operación</span></td>                                     
+                                         <td width="5%" bgcolor="#CCCCCC" align="center"><span class="va10b">Operaciï¿½n</span></td>                                     
                                    
                                       </tr>
                                       
@@ -153,6 +153,7 @@ String thisPage = request.getRequestURI();
 
 
 
+<%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
 </body>
 </html>
 <%

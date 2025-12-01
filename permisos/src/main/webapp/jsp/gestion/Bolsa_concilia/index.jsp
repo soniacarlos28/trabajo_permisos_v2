@@ -1,4 +1,4 @@
-<%@page language="java" import="java.util.Date,java.sql.*" %>
+ï»¿<%@page language="java" import="java.util.Date,java.sql.*" %>
 <%@ include file="../../../Connections/RRHH.jsp" %>
 <%
 	/**
@@ -123,7 +123,7 @@ function envia_unavez()
 <link href="apliweb.css" rel="stylesheet" type="text/css">
 <body>
 
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 <div>
 <ul id="tabh">
     <li id="active"><a href="../../index_busqueda.jsp" id="current">Permisos/Ausencias</a></li>
@@ -138,7 +138,7 @@ function envia_unavez()
 <li><a href="../../gestion/Formacion/index_formacion.jsp" >Formacion</a></li>
 
  </ul>
-</div>
+<%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
   <div id="form">
 <div>
 	  <ul id="subtabh">
@@ -226,7 +226,7 @@ function envia_unavez()
                    <td colspan="3" valign="middle" nowrap bgcolor="#FFFFDD" class="va10b">
                       <form name="form2" method="post" action="alta_movimiento.jsp">
                             <div align="right">
-                                  <input type="submit" name="Submit3" value="Añadir Jornada de Recuperación">                                 
+                                  <input type="submit" name="Submit3" value="Aï¿½adir Jornada de Recuperaciï¿½n">                                 
                             </div>
                       </form>
                    </td>
@@ -289,3 +289,4 @@ ConnRSPERIODO.close();
 BOLSA_FUN.close();
 ConnBOLSA_FUN.close();
 %>
+

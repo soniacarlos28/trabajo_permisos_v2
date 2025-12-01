@@ -1,4 +1,4 @@
-<%@page language="java" import="java.util.Date,java.sql.*" %>
+ï»¿<%@page language="java" import="java.util.Date,java.sql.*" %>
 <%@ include file="../../../Connections/RRHH.jsp" %>
 <%
 	/**
@@ -15,7 +15,7 @@
 <%
 Driver DriverRSCALENDARIO = (Driver)Class.forName(MM_RRHH_DRIVER).newInstance();
 Connection ConnRSCALENDARIO = DriverManager.getConnection(MM_RRHH_STRING,MM_RRHH_USERNAME,MM_RRHH_PASSWORD);
-PreparedStatement StatementRSCALENDARIO = ConnRSCALENDARIO.prepareStatement("select distinct to_char(mod(rownum, 2)) as impar,                t.id_calendario,                turno,                'Mañana O: '|| lpad(to_char( p1_obl_desde,'hh24:mi'),5,' ') ||' a '|| lpad( to_char(p1_obl_hasta,'hh24:mi'),5,' ') ||                '-Ma F: '|| lpad(to_char( p1_fle_desde,'hh24:mi'),5,' ') ||' a '|| lpad( to_char(p1_fle_hasta,'hh24:mi'),5,' ') ||                DECODE(p2_fle_desde,NULL,'',                                '* Tarde O: '|| lpad(to_char( p2_obl_desde,'hh24:mi'),5,' ') ||' a '|| lpad( to_char(p2_obl_hasta,'hh24:mi'),5,' ') ||                '-Ta F: '|| lpad(to_char( p2_fle_desde,'hh24:mi'),5,' ') ||' a '|| lpad( to_char(p2_fle_hasta,'hh24:mi'),5,' '))                ||                DECODE(p3_fle_desde,NULL,'',                                '* Noche O: '|| lpad(to_char( p3_obl_desde,'hh24:mi'),5,' ') ||' a '|| lpad( to_char(p3_obl_hasta,'hh24:mi'),5,' ') ||                '-N F: '|| lpad(to_char( p3_fle_desde,'hh24:mi'),5,' ') ||' a '|| lpad( to_char(p3_fle_hasta,'hh24:mi'),5,' '))                as horarios,                horas_semanales,                DESC_CALENDARIO,                to_char(t.fecha_inicio, 'dd/mm/yyyy') as FECHA_INICIO  from FICHAJE_CALENDARIO t , FICHAJE_CALENDARIO_JORNADA jt  where t.fecha_fin is null and jt.fecha_fin is null       and  t.id_calendario= jt.id_calendario and dia=2   and t.id_calendario <> '0' order by id_calendario ");
+PreparedStatement StatementRSCALENDARIO = ConnRSCALENDARIO.prepareStatement("select distinct to_char(mod(rownum, 2)) as impar,                t.id_calendario,                turno,                'Maï¿½ana O: '|| lpad(to_char( p1_obl_desde,'hh24:mi'),5,' ') ||' a '|| lpad( to_char(p1_obl_hasta,'hh24:mi'),5,' ') ||                '-Ma F: '|| lpad(to_char( p1_fle_desde,'hh24:mi'),5,' ') ||' a '|| lpad( to_char(p1_fle_hasta,'hh24:mi'),5,' ') ||                DECODE(p2_fle_desde,NULL,'',                                '* Tarde O: '|| lpad(to_char( p2_obl_desde,'hh24:mi'),5,' ') ||' a '|| lpad( to_char(p2_obl_hasta,'hh24:mi'),5,' ') ||                '-Ta F: '|| lpad(to_char( p2_fle_desde,'hh24:mi'),5,' ') ||' a '|| lpad( to_char(p2_fle_hasta,'hh24:mi'),5,' '))                ||                DECODE(p3_fle_desde,NULL,'',                                '* Noche O: '|| lpad(to_char( p3_obl_desde,'hh24:mi'),5,' ') ||' a '|| lpad( to_char(p3_obl_hasta,'hh24:mi'),5,' ') ||                '-N F: '|| lpad(to_char( p3_fle_desde,'hh24:mi'),5,' ') ||' a '|| lpad( to_char(p3_fle_hasta,'hh24:mi'),5,' '))                as horarios,                horas_semanales,                DESC_CALENDARIO,                to_char(t.fecha_inicio, 'dd/mm/yyyy') as FECHA_INICIO  from FICHAJE_CALENDARIO t , FICHAJE_CALENDARIO_JORNADA jt  where t.fecha_fin is null and jt.fecha_fin is null       and  t.id_calendario= jt.id_calendario and dia=2   and t.id_calendario <> '0' order by id_calendario ");
 ResultSet RSCALENDARIO = StatementRSCALENDARIO.executeQuery();
 boolean RSCALENDARIO_isEmpty = !RSCALENDARIO.next();
 boolean RSCALENDARIO_hasData = !RSCALENDARIO_isEmpty;
@@ -88,7 +88,7 @@ function show_calendario()
 </style>
 </head>
 <body>
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 
 <div>
 <ul id="tabh">
@@ -103,7 +103,7 @@ function show_calendario()
    <li><a href="../../gestion/Informes/index_informes.jsp" >Informes</a></li>
    
     </ul>
-  </div>
+  <%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
   <div id="form">
 <div>
 	 <ul id="subtabh">
@@ -180,5 +180,6 @@ function show_calendario()
 	</div>
 </body>
 </html>
+
 
 

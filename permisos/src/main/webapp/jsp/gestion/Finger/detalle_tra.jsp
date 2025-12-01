@@ -1,4 +1,4 @@
-<%@page language="java" import="java.util.Date,java.sql.*" errorPage="error.jsp"%>
+ï»¿<%@page language="java" import="java.util.Date,java.sql.*" errorPage="error.jsp"%>
 <%@ include file="../../../Connections/RRHH.jsp" %>
 <%
 	/**
@@ -200,7 +200,7 @@ return "";
 <link href="esquema.css" rel="stylesheet" type="text/css">
 <link href="apliweb.css" rel="stylesheet" type="text/css">
 <body>
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 <div>
 <ul id="tabh">
     <li id="active"><a href="../../index_busqueda.jsp" id="current">Permisos/Ausencias</a></li>
@@ -214,7 +214,7 @@ return "";
 <li><a href="../../gestion/Formacion/index_formacion.jsp" >Formacion</a></li>
 
  </ul>
-</div>
+<%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
   <div id="form">
 <div>
 	  <ul id="subtabh">
@@ -247,7 +247,7 @@ return "";
                                   <td width="9%" align="left" valign="top" bgcolor="#E0E0E0"><table border="0" cellspacing="0" cellpadding="2" width="100">
                                     <form name="formPeriodo" method=post action="detalle_dia.jsp">
                                       <tr>
-                                        <td>Día&nbsp;</td>
+                                        <td>Dï¿½a&nbsp;</td>
                                         <td>
                                           <select name="ID_DIA">
                                             <% while (RSPERIODO_hasData) {

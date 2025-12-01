@@ -1,4 +1,4 @@
-<%@page language="java" import="java.util.Date,java.sql.*" %>
+ï»¿<%@page language="java" import="java.util.Date,java.sql.*" %>
 <%@ include file="../../../Connections/RRHH.jsp" %>
 <%
 	/**
@@ -146,24 +146,24 @@ function show_calendario()
 
 function show_confirm(id, description, url)
 {
-   var text = "¿Realmente desea eliminar: '" + description + "'?";
+   var text = "ï¿½Realmente desea eliminar: '" + description + "'?";
    var r = confirm(text);
    if (r==true) { 
       MM_goToURL('self',url + id);
    }
    else { 
-      alert("Operación cancelada!"); 
+      alert("Operaciï¿½n cancelada!"); 
    }
 }
 function regenera(id, description, url)
 {
-   var text = "¿Realmente desea regenerar : '" + description + "'?";
+   var text = "ï¿½Realmente desea regenerar : '" + description + "'?";
    var r = confirm(text);
    if (r==true) { 
       MM_goToURL('self',url + id);
    }
    else { 
-      alert("Operación cancelada!"); 
+      alert("Operaciï¿½n cancelada!"); 
    }
 }
 
@@ -189,7 +189,7 @@ function envia_unavez()
 <body>
 
 
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 <div>
 <ul id="tabh">
     <li id="active"><a href="../../index_busqueda.jsp" id="current">Permisos/Ausencias</a></li>
@@ -202,7 +202,7 @@ function envia_unavez()
        <li><a href="../../gestion/Bajas/index.jsp" >Bajas Fichero</a></li>
         <li><a href="../../gestion/Informes/index_informes.jsp" >Informes</a></li>
  </ul>
-</div>
+<%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
   <div id="form">
 <div>
 	  <ul id="subtabh">

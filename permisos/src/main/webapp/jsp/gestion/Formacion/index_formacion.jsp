@@ -1,4 +1,4 @@
-<%@page language="java" import="java.util.Date,java.sql.*,java.util.Calendar"  import="permisos.*" %>
+ï»¿<%@page language="java" import="java.util.Date,java.sql.*,java.util.Calendar"  import="permisos.*" %>
 <%@ include file="../../../Connections/RRHH.jsp" %>
 <%
 	/**
@@ -33,7 +33,7 @@ String mensaje ="";
 <link href="../apliweb.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 
 <div>
 <ul id="tabh">
@@ -48,14 +48,14 @@ String mensaje ="";
    <li ><a href="../../gestion/Informes/index_informes.jsp"  >Informes</a></li>
    <li><a href="../../gestion/Formacion/index_formacion.jsp" id="current" >Formacion</a></li>
     </ul>
-  </div>
+  <%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
   <div id="form">  
    
  <table width="85%" border="0" cellspacing="1" cellpadding="2"> 
    <tr>
    <th>
     <form method="get" action="index_formacion.jsp">
-        <label for="anio">Seleccionar Año:</label>
+        <label for="anio">Seleccionar Aï¿½o:</label>
         <input type="number" id="anio" name="anio" value="<%= Calendar.getInstance().get(Calendar.YEAR) %>" min="2000" max="2099">
         <input type="submit" value="Filtrar">
     </form>
@@ -72,7 +72,7 @@ String mensaje ="";
    <table width="85%" border="0" cellspacing="1" cellpadding="2">          
         <thead>
          <tr bgcolor="#CCFFCC">
-                                <td colspan="10" align="center"><b>Lista de Cursos - Año <%= Calendar.getInstance().get(Calendar.YEAR) %></b> <input type="hidden" name="TODO_T" ID="TODO_T" size="122" >
+                                <td colspan="10" align="center"><b>Lista de Cursos - Aï¿½o <%= Calendar.getInstance().get(Calendar.YEAR) %></b> <input type="hidden" name="TODO_T" ID="TODO_T" size="122" >
     
             <tr>
                 <th>Nombre del Curso</th>
@@ -87,11 +87,11 @@ String mensaje ="";
                     try {
                         anioSeleccionado = Integer.parseInt(anioParam);
                     } catch (NumberFormatException e) {
-                        out.println("Año inválido");
+                        out.println("Aï¿½o invï¿½lido");
                     }
                 }
 
-                // Consultar los cursos para el año seleccionado
+                // Consultar los cursos para el aï¿½o seleccionado
                 Connection con = null;
                 PreparedStatement stmt = null;
                 ResultSet rs = null;
@@ -128,6 +128,7 @@ String mensaje ="";
     </table>
 </body>
 </html>
+
 
 
 

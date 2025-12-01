@@ -1,4 +1,4 @@
-<%@page language="java" import="java.util.Date,java.sql.*" errorPage="error.jsp"%>
+ï»¿<%@page language="java" import="java.util.Date,java.sql.*" errorPage="error.jsp"%>
 <%@ include file="../../../Connections/RRHH.jsp" %>
 <%
 	/**
@@ -24,7 +24,7 @@ if (request.getParameter("ID_ANO") !=null) {RSTIPOPERMISO__MMColParam1 = (String
 <%
 Driver DriverRSTIPOPERMISO = (Driver)Class.forName(MM_RRHH_DRIVER).newInstance();
 Connection ConnRSTIPOPERMISO = DriverManager.getConnection(MM_RRHH_STRING,MM_RRHH_USERNAME,MM_RRHH_PASSWORD);
-PreparedStatement StatementRSTIPOPERMISO = ConnRSTIPOPERMISO.prepareStatement("SELECT ID_TIPO_PERMISO || '--' || DECODE(JUSTIFICACION,'SI','NO',JUSTIFICACION) || '--' || DECODE(TIPO_DIAS,'N','N','L')  AS ID_TIPO_PERMISO,   ID_TIPO_PERMISO AS ID_TIPO_PERMISO2,  DESC_TIPO_PERMISO || ' - (Días:' ||  num_dias || ' )' as  DESC_TIPO_PERMISO,TIPO_DIAS              ,       DECODE(JUSTIFICACION,'SI','NO',JUSTIFICACION) as JUSTIFICACION  FROM TR_TIPO_PERMISO  WHERE ID_ANO = '" + RSTIPOPERMISO__MMColParam1 + "'  ORDER BY id_tipo_permiso");
+PreparedStatement StatementRSTIPOPERMISO = ConnRSTIPOPERMISO.prepareStatement("SELECT ID_TIPO_PERMISO || '--' || DECODE(JUSTIFICACION,'SI','NO',JUSTIFICACION) || '--' || DECODE(TIPO_DIAS,'N','N','L')  AS ID_TIPO_PERMISO,   ID_TIPO_PERMISO AS ID_TIPO_PERMISO2,  DESC_TIPO_PERMISO || ' - (Dï¿½as:' ||  num_dias || ' )' as  DESC_TIPO_PERMISO,TIPO_DIAS              ,       DECODE(JUSTIFICACION,'SI','NO',JUSTIFICACION) as JUSTIFICACION  FROM TR_TIPO_PERMISO  WHERE ID_ANO = '" + RSTIPOPERMISO__MMColParam1 + "'  ORDER BY id_tipo_permiso");
 ResultSet RSTIPOPERMISO = StatementRSTIPOPERMISO.executeQuery();
 boolean RSTIPOPERMISO_isEmpty = !RSTIPOPERMISO.next();
 boolean RSTIPOPERMISO_hasData = !RSTIPOPERMISO_isEmpty;
@@ -438,7 +438,7 @@ function mostrarOcultar() {
 <link href="apliweb.css" rel="stylesheet" type="text/css">
 <script language="JavaScript" type="text/javascript" src="../../imagen/calendario.js"></script>
 <body OnLoad="carga_final()">
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 <div>
 <ul id="tabh">
     <li id="active"><a href="../../index_busqueda.jsp" id="current">Permisos/Ausencias</a></li>
@@ -450,7 +450,7 @@ function mostrarOcultar() {
       <li><a href="../../gestion/calendario_laboral/index.jsp" class="ah12b">Calendario Laboral</a></li> 
       <li><a href="../../gestion/Bajas/index.jsp" >Bajas Fichero</a></li>
       </ul>
-</div>
+<%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
   <div id="form">
 <div>
 	  <ul id="subtabh">
@@ -535,9 +535,9 @@ RSTIPOPERMISO_isEmpty = !RSTIPOPERMISO_hasData;
            						<% } else { %>
 									<td nowrap align="right">Grado:</td>
                                      <td colspan="4"><select name="ID_GRADO" onChange="document.formPermiso.OBSERVACIONES.value=document.formPermiso.GRADO.options[selectedIndex].text">
-                                	<option value="4">Padres/Padres políticos 5 D&iacute;as Enfermedad y 4 D&iacute;as Fallecimiento</option>
+                                	<option value="4">Padres/Padres polï¿½ticos 5 D&iacute;as Enfermedad y 4 D&iacute;as Fallecimiento</option>
 					<option value="5">Hijos/Hijos politicos/Conyuge 5 D&iacute;as (Enfermedad y  Fallecimiento)</option>
-					<option value="3">Abuelos/Hermanos/Nietos y políticos 4 D&iacute;as Enfermedad y 2 D&iacute;as Fallecimiento</option>
+					<option value="3">Abuelos/Hermanos/Nietos y polï¿½ticos 4 D&iacute;as Enfermedad y 2 D&iacute;as Fallecimiento</option>
 					<option value="6">Tios/sobrinos carnales o c. del conyugue 1 D&iacute;a (Enfermedad y  Fallecimiento)</option>
                                     </select></td>
                                
@@ -567,7 +567,7 @@ RSTIPOPERMISO_isEmpty = !RSTIPOPERMISO_hasData;
                              </select>
                              
                         </td>
-                         <td nowrap align="right" width="20%">Descuento en días:</td>
+                         <td nowrap align="right" width="20%">Descuento en dï¿½as:</td>
                          <td><input name="DESCUENTO_DIAS" type="text" id="DESCUENTO_DIAS" value="<%=RSQUEYFECHAS__MMColParam14 %>" size="8" maxlength="5"></td>
                     
              </tr>     
@@ -605,12 +605,12 @@ RSTIPOPERMISO_isEmpty = !RSTIPOPERMISO_hasData;
  
 <tr id="BOMB"> <td colspan="5" align="center"><table id="BOMBE">
             <tr><td colspan="5" >
-            <tr><td colspan="3" >Guardia: Fecha Inicio a las 08:00 hasta día siguiente a las 08:00. Desde el 21 Mayo 2022</td></tr>
+            <tr><td colspan="3" >Guardia: Fecha Inicio a las 08:00 hasta dï¿½a siguiente a las 08:00. Desde el 21 Mayo 2022</td></tr>
             <tr><td colspan="3">Solicitudes 00:00 a 08:00,es referido a la fecha del inicio de la Guardia.</td></tr>           
             <tr><td colspan="2" ><input name="AP1_1"  type="hidden" value="" size="12" maxlength="12"><input name="FECHA_TURNO_1" disabled="yes" type="text" value="" size="12" maxlength="12"><input type="checkbox" name="AP1" id="AP1" onclick="Turnos('1');"><label for="AP1">08:00 a 16:00</label> </td></tr>
             <tr><td colspan="2" ><input name="AP1_2"  type="hidden" value="" size="12" maxlength="12"><input name="FECHA_TURNO_2" disabled="yes" type="text" value="" size="12" maxlength="12"><input type="checkbox" name="AP2" id="AP2" onclick="Turnos('2');"><label for="AP2">16:00 a 00:00</label> </td></tr>
             <tr><td colspan="2" ><input name="AP1_3"  type="hidden" value="" size="12" maxlength="12"><input name="FECHA_TURNO_3" disabled="yes" type="text" value="" size="12" maxlength="12"><input type="checkbox" name="AP3" id="AP3" onclick="Turnos('3');"><label for="AP3">00:00 a 08:00</label></td> </tr>
-            <tr><td colspan="2" >Número de días: <input type="text" disabled="yes" name="horas_sel" size="1"></td> </tr>
+            <tr><td colspan="2" >Nï¿½mero de dï¿½as: <input type="text" disabled="yes" name="horas_sel" size="1"></td> </tr>
            
              </td></tr>
              </table></td>
@@ -696,3 +696,4 @@ RSHORAS.close();
 StatementRSHORAS.close();
 ConnRSHORAS.close();
 %>
+

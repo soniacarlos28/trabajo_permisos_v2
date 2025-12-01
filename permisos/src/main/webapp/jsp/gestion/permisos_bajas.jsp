@@ -1,4 +1,4 @@
-<%@page contentType="text/html; charset=iso-8859-1" language="java" import="java.sql.*"%> 
+﻿<%@page contentType="text/html; charset=iso-8859-1" language="java" import="java.sql.*"%> 
 <%@ include file="../../Connections/RRHH.jsp" %>
 <%
 	/**
@@ -240,7 +240,7 @@ String MM_moveFirst,MM_moveLast,MM_moveNext,MM_movePrev;
 <body>
 
 
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 <div>
 <ul id="tabh">
     <li ><a href="../index_busqueda.jsp" id="current">Permisos/Ausencias</a></li>
@@ -249,6 +249,9 @@ String MM_moveFirst,MM_moveLast,MM_moveNext,MM_movePrev;
     <li><a href="../gestion/Gestion/index.jsp">Horas Sindicales</a></li>  
     <li><a href="../gestion/Bolsa_proceso/index.jsp" class="ah12b">Proceso Bolsa</a></li>   
   </ul>
+  <%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
+  <div id="form">
+  <%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 </div>
 <div id="form">
 <table cellspacing=0 border=0 cellpadding="0" width="95%">
@@ -351,3 +354,4 @@ String MM_moveFirst,MM_moveLast,MM_moveNext,MM_movePrev;
 RSQUERY.close();
 ConnRSQUERY.close();
 %>
+
