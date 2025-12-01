@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_RSTIPO_AUSENCIA" value="name:DESC_TIPO_AUSENCIA;datatype:VARCHAR2" />
+	<infoitem key="UD_PERMI" value="name:V_ID_ANO;direction:3;datatype:NUMBER;,name:V_ID_FUNCIONARIO;direction:1;datatype:NUMBER;,name:V_ID_TIPO_FUNCIONARIO;direction:1;datatype:VARCHAR2;,name:V_ID_TIPO_AUSENCIA;direction:1;datatype:VARCHAR2;,name:V_ID_ESTADO_AUSENCIA;direction:1;datatype:VARCHAR2;,name:V_FECHA_INICIO;direction:1;datatype:DATE;,name:V_FECHA_FIN;direction:1;datatype:DATE;,name:V_HORA_INICIO;direction:1;datatype:VARCHAR2;,name:V_HORA_FIN;direction:1;datatype:VARCHAR2;,name:V_JUSTIFICACION;direction:1;datatype:VARCHAR2;,name:V_OBSERVACIONES;direction:1;datatype:VARCHAR2;,name:V_IP;direction:1;datatype:VARCHAR2;,name:MSGSALIDA;direction:2;datatype:VARCHAR2;,name:TODOOK;direction:2;datatype:VARCHAR2;" />
+</info>

@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_PERMI" value="name:V_ID_AUSENCIA;direction:1;datatype:NUMBER;,name:V_ID_ESTADO_AUSENCIA;direction:1;datatype:NUMBER;,name:V_JUSTIFICACION;direction:1;datatype:VARCHAR2;,name:V_OBSERVACIONES;direction:1;datatype:VARCHAR2;,name:MSGSALIDA;direction:2;datatype:VARCHAR2;,name:TODOOK;direction:2;datatype:VARCHAR2;" />
+</info>

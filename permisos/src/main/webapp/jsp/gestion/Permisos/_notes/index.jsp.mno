@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_RSQUERY" value="name:JUSTIFICACION;datatype:VARCHAR2,name:ID_PERMISO;datatype:NUMBER,name:ID_ANO;datatype:NUMBER,name:DESC_TIPO_PERMISO;datatype:VARCHAR2,name:FECHA_INICIO;datatype:DATE,name:FECHA_FIN;datatype:DATE,name:NUM_DIAS;datatype:NUMBER,name:DESC_ESTADO_PERMISO;datatype:VARCHAR2" />
+	<infoitem key="UD_RSPERIODO" value="name:PERIODO;datatype:VARCHAR2" />
+	<infoitem key="UD_RSQUERY2" value="name:ID_TIPO_PERMISO;datatype:VARCHAR2,name:DESC_TIPO_PERMISO;datatype:VARCHAR2,name:ID_ANO;datatype:NUMBER,name:NUM_DIAS;datatype:NUMBER,name:COMPLETO;datatype:VARCHAR2,name:TOTAL;datatype:NUMBER,name:DISFRUTADOS;datatype:NUMBER" />
+</info>

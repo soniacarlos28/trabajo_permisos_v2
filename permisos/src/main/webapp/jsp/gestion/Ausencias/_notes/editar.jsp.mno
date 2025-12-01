@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_RS_TipoAusencia" value="name:ID_TIPO_AUSENCIA;datatype:VARCHAR2,name:DESC_TIPO_AUSENCIA;datatype:VARCHAR2" />
+	<infoitem key="UD_RS_DatosAusencia" value="name:ID_ESTADO;datatype:NUMBER,name:ID_AUSENCIA;datatype:NUMBER,name:DESC_TIPO_AUSENCIA;datatype:VARCHAR2,name:ID_ANO;datatype:NUMBER,name:ID_FUNCIONARIO;datatype:NUMBER,name:ID_TIPO_AUSENCIA;datatype:VARCHAR2,name:ID_ESTADO;datatype:NUMBER,name:FIRMADO_JS;datatype:NUMBER,name:FECHA_JS;datatype:DATE,name:FIRMADO_JA;datatype:NUMBER,name:FECHA_JA;datatype:DATE,name:FIRMADO_RRHH;datatype:NUMBER,name:FECHA_RRHH;datatype:DATE,name:FECHA_INICIO;datatype:VARCHAR2,name:FECHA_FIN;datatype:VARCHAR2,name:HORA_INICIO;datatype:VARCHAR2,name:MINUTO_INICIO;datatype:VARCHAR2,name:HORA_FIN;datatype:VARCHAR2,name:MINUTO_FIN;datatype:VARCHAR2,name:TOTAL_HORAS;datatype:NUMBER,name:MOTIVO_DENEGA;datatype:VARCHAR2,name:OBSERVACIONES;datatype:VARCHAR2,name:ANULADO;datatype:VARCHAR2,name:FECHA_ANULACION;datatype:DATE,name:ID_USUARIO;datatype:VARCHAR2,name:FECHA_MODI;datatype:DATE,name:JUSTIFICADO;datatype:VARCHAR2" />
+	<infoitem key="UD_RSESTADO" value="name:ID_ESTADO_PERMISO;datatype:NUMBER,name:DESC_ESTADO_PERMISO;datatype:VARCHAR2" />
+</info>

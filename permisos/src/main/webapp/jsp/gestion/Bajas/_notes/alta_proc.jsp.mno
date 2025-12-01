@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_RSTIPOBAJAS" value="name:ID_TIPO_BAJA;datatype:NUMBER,name:DESC_TIPO_BAJA;datatype:VARCHAR2" />
+</info>

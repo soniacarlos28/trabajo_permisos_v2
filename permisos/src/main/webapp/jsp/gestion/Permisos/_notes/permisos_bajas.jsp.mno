@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_RSQUERY" value="name:ID_FUNCIONARIO;datatype:NUMBER,name:APE1;datatype:VARCHAR2,name:APE2;datatype:VARCHAR2,name:NOMBRE;datatype:VARCHAR2,name:F_INI_PER;datatype:VARCHAR2,name:F_FIN_PER;datatype:VARCHAR2,name:DESC_TIPO_PERMISO;datatype:VARCHAR2,name:F_INI_BAJ;datatype:VARCHAR2,name:F_FIN_BAJ;datatype:VARCHAR2,name:ID_TIPO_BAJA;datatype:VARCHAR2" />
+</info>

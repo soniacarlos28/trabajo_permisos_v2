@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_RSQUERY" value="name:ID_PERMISO;datatype:NUMBER,name:ID_ANO;datatype:NUMBER,name:ID_FUNCIONARIO;datatype:NUMBER,name:ID_TIPO_PERMISO;datatype:VARCHAR2,name:FECHA_INICIO;datatype:DATE,name:FECHA_FIN;datatype:DATE,name:NUM_DIAS;datatype:NUMBER,name:TIPO_DIAS;datatype:VARCHAR2,name:JUSTIFICADO;datatype:VARCHAR2,name:OBSERVACIONES;datatype:VARCHAR2,name:ANULADO;datatype:VARCHAR2,name:FECHA_ANULACION;datatype:DATE,name:ID_USUARIO;datatype:VARCHAR2,name:FECHA_MODI;datatype:DATE" />
+	<infoitem key="UD_RSFUNCIONARIO" value="name:ORDEN;datatype:NUMBER,name:NOMBRE;datatype:VARCHAR2,name:APE1;datatype:VARCHAR2,name:APE2;datatype:VARCHAR2,name:TIPO_FUNCIONARIO;datatype:NUMBER" />
+	<infoitem key="UD_RS_TipoAusencia" value="name:ID_TIPO_AUSENCIA;datatype:VARCHAR2,name:DESC_TIPO_AUSENCIA;datatype:VARCHAR2" />
+	<infoitem key="UD_RSHORAS" value="name:CONTADOR;datatype:VARCHAR2" />
+	<infoitem key="UD_RSHORAS_SINDICALES" value="name:REGISTRO;datatype:VARCHAR2,name:TOTAL;datatype:VARCHAR2" />
+</info>

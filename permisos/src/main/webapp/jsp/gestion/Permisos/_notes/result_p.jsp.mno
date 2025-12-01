@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_RSTIPO_PERMISO" value="name:DESC_TIPO_PERMISO;datatype:VARCHAR2" />
+	<infoitem key="UD_RSTIPODIAS" value="name:DESC_TIPO_DIAS;datatype:VARCHAR2" />
+	<infoitem key="UD_RSGRADO" value="name:DESC_GRADO;datatype:VARCHAR2" />
+	<infoitem key="UD_PERMI" value="name:V_ID_ANO;direction:1;datatype:NUMBER;,name:V_ID_FUNCIONARIO;direction:1;datatype:NUMBER;,name:V_ID_TIPO_FUNCIONARIO;direction:1;datatype:VARCHAR2;,name:V_ID_TIPO_PERMISO;direction:1;datatype:VARCHAR2;,name:V_ID_ESTADO_PERMISO;direction:1;datatype:VARCHAR2;,name:V_ID_TIPO_DIAS;direction:1;datatype:VARCHAR2;,name:V_FECHA_INICIO;direction:1;datatype:DATE;,name:V_FECHA_FIN;direction:1;datatype:DATE;,name:V_HORA_INICIO;direction:1;datatype:VARCHAR2;,name:V_HORA_FIN;direction:1;datatype:VARCHAR2;,name:V_ID_GRADO;direction:1;datatype:VARCHAR2;,name:V_DPROVINCIA;direction:1;datatype:VARCHAR2;,name:V_JUSTIFICACION;direction:1;datatype:VARCHAR2;,name:V_UNICO;direction:1;datatype:VARCHAR2;,name:V_IP;direction:1;datatype:VARCHAR2;,name:V_ID_USUARIO;direction:1;datatype:VARCHAR2;,name:MSGSALIDA;direction:2;datatype:VARCHAR2;,name:TODOOK;direction:2;datatype:VARCHAR2;" />
+</info>

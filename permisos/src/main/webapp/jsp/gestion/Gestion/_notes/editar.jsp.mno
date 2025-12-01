@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_RSSINDICAL" value="name:ID_TIPO_AUSENCIA;datatype:VARCHAR2,name:ID_ANO;datatype:NUMBER,name:ID_FUNCIONARIO;datatype:NUMBER,name:MES;datatype:VARCHAR2,name:TOTAL;datatype:NUMBER,name:TOTAL_MINUTOS;datatype:NUMBER,name:ID_HORA_SINDICAL;datatype:NUMBER" />
+</info>

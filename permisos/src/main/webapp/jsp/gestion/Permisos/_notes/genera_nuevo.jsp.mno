@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_RSFUNCIONARIO" value="name:ORDEN;datatype:NUMBER,name:NOMBRE;datatype:VARCHAR2,name:APE1;datatype:VARCHAR2,name:APE2;datatype:VARCHAR2" />
+</info>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<info>
+	<infoitem key="UD_RSQUERY" value="name:IP;datatype:VARCHAR2,name:SO;datatype:VARCHAR2,name:FECHA_COMPRA;datatype:DATE,name:GARANTIA;datatype:VARCHAR2,name:NOMBRE;datatype:VARCHAR2,name:APELLIDOS;datatype:VARCHAR2,name:DESC_TIPO_MAQUINA;datatype:VARCHAR2" />
+</info>

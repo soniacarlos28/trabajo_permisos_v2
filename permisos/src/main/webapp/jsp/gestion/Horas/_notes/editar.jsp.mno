@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<info>
+	<infoitem key="UD_RS_TipoHoras" value="name:ID_TIPO_HORAS;datatype:VARCHAR2,name:DESC_TIPO_HORAS;datatype:VARCHAR2" />
+	<infoitem key="UD_RSDatosHoras" value="name:ID_HORA;datatype:NUMBER,name:ID_ANO;datatype:NUMBER,name:ID_FUNCIONARIO;datatype:NUMBER,name:FECHA_HORAS;datatype:DATE,name:ID_TIPO_HORAS;datatype:VARCHAR2,name:HORA_INICIO;datatype:VARCHAR2,name:HORA_FIN;datatype:VARCHAR2,name:TOTAL_HORAS;datatype:VARCHAR2,name:DESC_HORAS_MOTIVO;datatype:VARCHAR2,name:COMPENSA;datatype:VARCHAR2,name:FECHA_COMISION;datatype:DATE,name:ANULADO;datatype:VARCHAR2" />
+</info>

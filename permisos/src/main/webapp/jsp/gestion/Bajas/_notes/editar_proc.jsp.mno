@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_RSDatosBaja" value="name:ID_ANO;datatype:NUMBER,name:ID_TIPO_BAJA;datatype:NUMBER,name:FECHA_INICIO;datatype:VARCHAR2,name:FECHA_PRESENTACION;datatype:VARCHAR2,name:FECHA_FIN;datatype:VARCHAR2,name:FECHA_CONFIRMACION;datatype:VARCHAR2,name:BAJA_COBRA_100;datatype:VARCHAR2,name:ID_BAJA;datatype:NUMBER,name:OBSERVACIONES;datatype:VARCHAR2,name:ANULADA;datatype:VARCHAR2" />
+	<infoitem key="UD_RSTIPOBAJAS" value="name:ID_TIPO_BAJA;datatype:NUMBER,name:DESC_TIPO_BAJA;datatype:VARCHAR2" />
+</info>

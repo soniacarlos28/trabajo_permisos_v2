@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_RSQUERYPER" value="name:ID_TIPO_PERMISO;datatype:VARCHAR2,name:DESC_TIPO_PERMISO;datatype:VARCHAR2,name:ID_FUNCIONARIO;datatype:NUMBER,name:NOMBRE;datatype:VARCHAR2,name:APE1;datatype:VARCHAR2,name:FECHA_INICIO;datatype:VARCHAR2,name:FECHA_FIN;datatype:VARCHAR2,name:JUSTIFICACION;datatype:VARCHAR2,name:OBSERVACIONES;datatype:VARCHAR2" />
+	<infoitem key="UD_RSQUERYAUS" value="name:ID_TIPO_AUSENCIA;datatype:VARCHAR2,name:DESC_TIPO_AUSENCIA;datatype:VARCHAR2,name:ID_FUNCIONARIO;datatype:NUMBER,name:NOMBRE;datatype:VARCHAR2,name:APE1;datatype:VARCHAR2,name:FECHA_INICIO;datatype:DATE,name:FECHA_FIN;datatype:DATE,name:JUSTIFICADO;datatype:VARCHAR2,name:OBSERVACIONES;datatype:VARCHAR2,name:FECHA_AUSENCIA;datatype:VARCHAR2" />
+	<infoitem key="UD_RSPERIODOS" value="name:ANO;datatype:VARCHAR2,name:MES;datatype:VARCHAR2,name:PERIODO;datatype:VARCHAR2" />
+</info>

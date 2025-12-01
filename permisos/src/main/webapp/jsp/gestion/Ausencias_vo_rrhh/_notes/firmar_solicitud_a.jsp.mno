@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_RSTIPO_AUSENCIA" value="name:ID_AUSENCIA;datatype:NUMBER,name:ID_ANO;datatype:NUMBER,name:ID_FUNCIONARIO;datatype:NUMBER,name:ID_TIPO_AUSENCIA;datatype:VARCHAR2,name:ID_ESTADO;datatype:VARCHAR2,name:FECHA_SOLI;datatype:VARCHAR2,name:FIRMADO_JS;datatype:VARCHAR2,name:FECHA_JS;datatype:VARCHAR2,name:FIRMADO_JA;datatype:VARCHAR2,name:FECHA_JA;datatype:VARCHAR2,name:FIRMADO_RRHH;datatype:VARCHAR2,name:FECHA_RRHH;datatype:VARCHAR2,name:FECHA_INICIO;datatype:VARCHAR2,name:FECHA_FIN;datatype:VARCHAR2,name:HORA_INICIO;datatype:VARCHAR2,name:HORA_FIN;datatype:VARCHAR2,name:OBSERVACIONES;datatype:VARCHAR2,name:ANULADO;datatype:VARCHAR2,name:FECHA_ANULACION;datatype:DATE,name:DESC_TIPO_AUSENCIA;datatype:VARCHAR2,name:DESC_ESTADO_PERMISO;datatype:VARCHAR2,name:NOMBRE;datatype:VARCHAR2" />
+</info>

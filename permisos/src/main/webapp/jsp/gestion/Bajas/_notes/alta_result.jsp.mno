@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_PABAJAS" value="name:V_NUMEINCI;direction:1;datatype:VARCHAR2;,name:V_TIPO_OPERACION;direction:1;datatype:VARCHAR2;,name:V_ID_ANIO;direction:1;datatype:VARCHAR2;,name:V_ID_FUNCIONARIO;direction:1;datatype:VARCHAR2;,name:V_TIPO_BAJA;direction:1;datatype:VARCHAR2;,name:V_FECHA_INICIO;direction:1;datatype:VARCHAR2;,name:V_FECHA_FIN;direction:1;datatype:VARCHAR2;,name:V_FECHA_CONFIRMACION;direction:1;datatype:VARCHAR2;,name:V_OBSERVACIONES;direction:1;datatype:VARCHAR2;,name:V_ANULADA;direction:1;datatype:VARCHAR2;,name:V_FECHA_ANULADA;direction:1;datatype:VARCHAR2;,name:V_ID_USUARIO;direction:1;datatype:VARCHAR2;" />
+</info>

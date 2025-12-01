@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_RSQUERYJS" value="name:ID_FUNCIONARIO;datatype:NUMBER,name:ID_JS;datatype:VARCHAR2,name:NOMBRE;datatype:VARCHAR2" />
+	<infoitem key="UD_RSQUERYJA" value="name:ID_FUNCIONARIO;datatype:NUMBER,name:ID_JA;datatype:VARCHAR2,name:NOMBRE;datatype:VARCHAR2" />
+	<infoitem key="UD_RSDELEGADOJS" value="name:ID_FUNCIONARIO;datatype:NUMBER,name:ID_DELEGADO_JS;datatype:VARCHAR2,name:NOMBRE;datatype:VARCHAR2" />
+	<infoitem key="UD_RSFUNCIONARIO" value="name:ID_FUNCIONARIO;datatype:NUMBER,name:ID_JS;datatype:VARCHAR2,name:NOMBRE;datatype:VARCHAR2" />
+</info>

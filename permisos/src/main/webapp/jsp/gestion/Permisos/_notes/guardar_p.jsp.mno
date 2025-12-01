@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_RSQUERY" value="name:ID_TIPO_PERMISO;datatype:VARCHAR2,name:DESC_TIPO_PERMISO;datatype:VARCHAR2,name:ID_ANO;datatype:NUMBER,name:NUM_DIAS;datatype:NUMBER,name:COMPLETO;datatype:VARCHAR2,name:ID_FUNCIONARIO;datatype:NUMBER" />
+</info>

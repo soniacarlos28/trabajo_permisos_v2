@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<info>
+	<infoitem key="UD_Ausencia" value="name:ID_AUSENCIA;datatype:NUMBER,name:ID_ANO;datatype:NUMBER,name:ID_TIPO_AUSENCIA;datatype:NUMBER,name:ID_FUNCIONARIO;datatype:NUMBER,name:FECHA_AUSENCIA;datatype:DATE,name:HORA_INICIO;datatype:NUMBER,name:MINUTO_INCIO;datatype:NUMBER,name:HORA_FIN;datatype:NUMBER,name:MINUTO_FIN;datatype:NUMBER,name:TOTAL_HORAS;datatype:VARCHAR2,name:JUSTIFICADO;datatype:VARCHAR2,name:COMPENSACION;datatype:VARCHAR2,name:OBSERVACIONES;datatype:VARCHAR2,name:ID_USUARIO;datatype:VARCHAR2,name:FECHA_MODI;datatype:DATE" />
+</info>

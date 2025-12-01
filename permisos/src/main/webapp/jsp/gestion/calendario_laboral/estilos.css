@@ -1,0 +1,233 @@
+BODY {
+	BACKGROUND: #ffffff; margin: 1em;
+}
+* {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	color: #2f2a2a;
+}
+table {
+	padding: 0px;
+	margin: 0px;
+	border-collapse: collapse;
+}
+th {
+	background-color: #E0E8EF;
+	font-weight: bold;
+	padding: 2px;
+	text-align: center;
+	/*font-size: 9pt;*/
+	margin: 0px;
+	border: 1px dotted #E0E8EF;
+	border-collapse: collapse;
+	vertical-align: top;
+}
+
+td {
+	padding: 2px;
+	border: 1px dotted #E0E8EF;
+	text-align: center;
+	/*font-size: 9pt;*/
+	margin: 0px;
+	border-collapse: collapse;
+	vertical-align: top;
+}
+div {
+	margin: 0em;
+}
+form {
+	margin: 0px;
+	padding: 0px;
+}
+input {
+	font-size: 10pt;
+}
+select {
+	font-size: 10pt;
+}
+.leyenda {
+	font-size: 8pt;
+	text-decoration: none;
+	text-align: left;
+}
+.destacado {
+	background-color: #476680;
+	text-decoration: none;
+	color: #FFFFFF;
+	text-align: left;
+	font-weight: bold;
+}
+.subdestacado {
+	background-color: #7098bb;
+	text-decoration: none;
+	color: #242729;
+	text-align: left;
+	font-weight: bold;
+}
+.contenido .volver {
+	color: #628db1;
+	text-decoration: none;
+	font-weight: bold;
+	background-image: url(http://barcelo/portaldelempleado/jsp/imagen/flecha_volver.gif);
+	background-repeat: no-repeat;
+	background-position: left 50%;
+	padding-left: 1.5em;
+}
+
+.destacado a {
+	text-decoration: none;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+.barraherramientas {
+	text-align: right;
+	clear: both;
+	height: 30px;
+	vertical-align: top;
+}
+.imagenderecha {
+	float: right;
+}
+.contenido {
+}
+label {
+	font-weight: bold;
+	color: #476680;
+}
+.volver {
+	margin: 0.5px;
+	padding: 0.5px;
+}
+.caja {
+	margin: 0px;
+}
+#appdata {
+	padding: 0.5em;
+	margin-top: 0em;
+	margin-right: 0em;
+	margin-bottom: 0em;
+	margin-left: 0em;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: none;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #777788;
+	border-right-color: #777788;
+	border-bottom-color: #777788;
+	border-left-color: #777788;
+}
+#appsubdata {
+	padding: 0.5em;
+	margin-top: 0em;
+	margin-right: 0em;
+	margin-bottom: 0em;
+	margin-left: 0em;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: none;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #777788;
+	border-right-color: #777788;
+	border-bottom-color: #777788;
+	border-left-color: #777788;
+}
+/* menu principal horizontal */
+#appmenuh
+{
+	margin-left: 0em;
+	border-bottom: 1px solid #778;
+	margin-top: 0em;
+	margin-bottom: 0em;
+	padding-top: 3px;
+	padding-right: 0;
+	padding-bottom: 3px;
+	padding-left: 0;
+}
+
+#appmenuh li
+{
+list-style: none;
+margin: 0;
+display: inline;
+}
+
+#appmenuh li a
+{
+padding: 3px 0.5em;
+margin-left: 3px;
+border: 1px solid #778;
+border-bottom: none;
+background: #DDE;
+text-decoration: none;
+}
+
+#appmenuh li a:link { color: #448; }
+#appmenuh li a:visited { color: #667; }
+
+#appmenuh li a:hover
+{
+color: #000;
+background: #AAE;
+border-color: #227;
+}
+
+#appmenuh li a#current
+{
+background: white;
+border-bottom: 1px solid white;
+}
+
+/* submenu principal horizontal */
+#appsubmenuh
+{
+	margin-left: 0em;
+	border-bottom: 1px solid #778;
+	margin-top: 0em;
+	margin-bottom: 0em;
+	padding-top: 3px;
+	padding-right: 0;
+	padding-bottom: 3px;
+	padding-left: 0;
+}
+
+#appsubmenuh li
+{
+list-style: none;
+margin: 0;
+display: inline;
+}
+
+#appsubmenuh li a
+{
+padding: 3px 0.5em;
+margin-left: 3px;
+border: 1px solid #778;
+border-bottom: none;
+background: #DDE;
+text-decoration: none;
+}
+
+#appsubmenuh li a:link { color: #448; }
+#appsubmenuh li a:visited { color: #667; }
+
+#appsubmenuh li a:hover
+{
+color: #000;
+background: #AAE;
+border-color: #227;
+}
+
+#appsubmenuh li a#current
+{
+background: white;
+border-bottom: 1px solid white;
+}
+

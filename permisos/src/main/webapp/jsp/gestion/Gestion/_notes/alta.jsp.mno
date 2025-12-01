@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<info>
+	<infoitem key="UD_RSSINDICAL" value="name:ID_TIPO_AUSENCIA;datatype:VARCHAR2,name:ID_ANO;datatype:NUMBER,name:DESC_TIPO_AUSENCIA;datatype:VARCHAR2,name:CONTROL;datatype:VARCHAR2,name:TIPO_MENSUAL_ANUAL;datatype:VARCHAR2" />
+	<infoitem key="UD_RSPERMISO" value="name:ID;datatype:VARCHAR2,name:ID_TIPO;datatype:VARCHAR2,name:DESCRIPCION;datatype:VARCHAR2,name:TIPO;datatype:VARCHAR2,name:FECHA_HOY;datatype:VARCHAR2,name:FECHA_HOY_ULT;datatype:VARCHAR2" />
+</info>

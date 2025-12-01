@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_RSPENDIENTE" value="name:ID_UNIDAD;datatype:VARCHAR2,name:DESC_UNIDAD;datatype:VARCHAR2,name:ID_ANO;datatype:NUMBER,name:ID_PERMISO;datatype:NUMBER,name:FILA;datatype:NUMBER,name:APE1;datatype:VARCHAR2,name:APE2;datatype:VARCHAR2,name:CADENA;datatype:VARCHAR2" />
+</info>

@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_RS_Datos_Funcionario" value="name:ID_FUNCIONARIO;datatype:NUMBER,name:CATEGORIA;datatype:CHAR,name:PUESTO;datatype:CHAR,name:NOMBRE;datatype:VARCHAR2,name:APE1;datatype:VARCHAR2,name:APE2;datatype:VARCHAR2,name:TIPO_FUNCIONARIO;datatype:CHAR,name:FECHA_INGRESO;datatype:DATE,name:ACTIVO;datatype:CHAR,name:JORNADA;datatype:CHAR,name:NUMERO_SS;datatype:VARCHAR2,name:DNI;datatype:VARCHAR2,name:DESC_FUNCIONARIO;datatype:VARCHAR2" />
+	<infoitem key="UD_RSQUERY" value="name:FECHA_ANTIGUEDAD;datatype:DATE,name:ID_FUNCIONARIO;datatype:NUMBER,name:CATEGORIA;datatype:CHAR,name:PUESTO;datatype:CHAR,name:NOMBRE;datatype:VARCHAR2,name:APE1;datatype:VARCHAR2,name:APE2;datatype:VARCHAR2,name:TIPO_FUNCIONARIO;datatype:VARCHAR2,name:FECHA_INGRESO;datatype:DATE,name:ACTIVO;datatype:CHAR,name:JORNADA;datatype:CHAR,name:DIRECCION;datatype:VARCHAR2,name:TELEFONO;datatype:VARCHAR2,name:NUMERO_SS;datatype:VARCHAR2,name:DNI;datatype:VARCHAR2,name:DESC_FUNCIONARIO;datatype:VARCHAR2" />
+	<infoitem key="UD_Recordset1" value="name:ID_EVENTO;datatype:NUMBER,name:ID_FUNCIONARIO;datatype:NUMBER,name:FECHA_EVENTO;datatype:DATE,name:TIPO_VENTO;datatype:VARCHAR2,name:DESC_EVENTO;datatype:VARCHAR2" />
+	<infoitem key="UD_RSEVENTOS" value="name:ID_EVENTO;datatype:NUMBER,name:ID_FUNCIONARIO;datatype:NUMBER,name:FECHA_EVENTO;datatype:DATE,name:ID_TIPO_EVENTO;datatype:VARCHAR2,name:DESC_EVENTO;datatype:VARCHAR2" />
+</info>

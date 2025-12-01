@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_RSPERIO" value="name:ANO;datatype:VARCHAR2,name:MES;datatype:VARCHAR2,name:PERIODO;datatype:VARCHAR2" />
+	<infoitem key="UD_RSPERIODO" value="name:F;datatype:DATE,name:FECHA;datatype:VARCHAR2,name:ENTRADA;datatype:VARCHAR2,name:SALIDA;datatype:VARCHAR2,name:HORAS_FICHADAS;datatype:VARCHAR2,name:HORAS_HACER;datatype:VARCHAR2,name:DMINUTOS;datatype:NUMBER,name:OBSERVACIONES;datatype:VARCHAR2" />
+</info>

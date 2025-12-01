@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_RSPERIODO" value="name:PERIODO;datatype:VARCHAR2" />
+	<infoitem key="UD_RSQUERY" value="name:JUSTIFICADO;datatype:VARCHAR2,name:ID_AUSENCIA;datatype:NUMBER,name:FECHA_INICIO2;datatype:DATE,name:DESC_ESTADO_PERMISO;datatype:VARCHAR2,name:ID_ANO;datatype:NUMBER,name:ID_TIPO_AUSENCIA;datatype:VARCHAR2,name:FECHA_INICIO;datatype:VARCHAR2,name:HORA_INICIO;datatype:VARCHAR2,name:HORA_FIN;datatype:VARCHAR2,name:FECHA_FIN;datatype:DATE,name:TOTAL_HORAS;datatype:VARCHAR2,name:ID_TIPO_AUSENCIA;datatype:VARCHAR2,name:DESC_TIPO_AUSENCIA;datatype:VARCHAR2" />
+	<infoitem key="UD_RSQUERY_TOTALES" value="name:ID_ANO;datatype:NUMBER,name:HORAS_TOTALES;datatype:VARCHAR2,name:DESC_TIPO_AUSENCIA;datatype:VARCHAR2" />
+	<infoitem key="UD_RS_HORASEXTRAS" value="name:ID_ANO;datatype:VARCHAR2,name:HORAS_EXTRAS;datatype:VARCHAR2,name:UTILIZADAS;datatype:VARCHAR2,name:DISPONIBLE;datatype:VARCHAR2" />
+	<infoitem key="UD_Sincroniza" value="name:I_ID_FUNCIONARIO;direction:1;datatype:varchar;" />
+</info>

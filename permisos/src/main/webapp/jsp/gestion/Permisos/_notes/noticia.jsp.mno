@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_RSTABLON" value="name:ID_REGISTRO;datatype:NUMBER,name:FICHERO_ENTRADA;datatype:LONG" />
+	<infoitem key="UD_RSDPTO" value="name:ABREVIATURA;datatype:VARCHAR2,name:ID_DEPTO;datatype:VARCHAR2" />
+</info>

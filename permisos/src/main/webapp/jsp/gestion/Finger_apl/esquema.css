@@ -1,0 +1,66 @@
+/* CSS Document */
+
+BODY {	BACKGROUND-COLOR: #ffffff; BACKGROUND-POSITION: 0% 50%; FONT-SIZE: 12px; BACKGROUND-ATTACHMENT: scroll; BACKGROUND-REPEAT: no-repeat; FONT-FAMILY: Arial, Helvetica, Verdana, serif; LIST-STYLE-TYPE: none; TEXT-ALIGN: left; color: #000000; MARGIN: 0px 0px 3px 0px	}
+
+H1 {
+	FONT-SIZE: 16px;
+	COLOR: #000000;
+	FONT-FAMILY: Arial, Helvetica, Verdana, serif;
+	font-weigh: bold;
+	margin: 0px;
+	padding: 0px;
+}
+
+H2 {	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #000000; FONT-FAMILY: Arial, Helvetica, Verdana, serif; font-weigh: bold}
+
+H3 {	FONT-SIZE: 13px; COLOR: #000000; FONT-STYLE: italic; FONT-FAMILY: Arial, Helvetica, Verdana, serif}
+
+H4 {	FONT-WEIGHT: bold; FONT-SIZE: 13px; COLOR: #000000; FONT-FAMILY: Arial, Helvetica, Verdana, serif; font-weigh: bold}
+
+H5 {	FONT-WEIGHT: bold; FONT-SIZE: 13px; COLOR: #000000; FONT-STYLE: italic; FONT-FAMILY: Arial, Helvetica, serif}
+
+H6 {	FONT-WEIGHT: bold; FONT-SIZE: 13px; COLOR: #000000; FONT-STYLE: italic; FONT-FAMILY: Arial, Helvetica, serif}
+
+P {	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Arial, Helvetica, Verdana, serif}
+
+BR {	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Arial, Helvetica, Verdana, serif}
+
+UL {	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Arial, Helvetica, Verdana, serif; LIST-STYLE-TYPE: disc}
+
+OL {	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Arial, Helvetica, serif}
+
+TD {	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Arial, Helvetica, Verdana, serif}
+
+TH {	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Arial, Helvetica, serif}
+
+LI {	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Arial, Helvetica, Verdana, serif}
+
+OL LI {	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Arial, Helvetica, Verdana, serif; LIST-STYLE-TYPE: decimal}
+
+UL LI {	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Arial, Helvetica, Verdana, serif; LIST-STYLE-TYPE: disc}
+
+UL UL {	LIST-STYLE-TYPE: disc}
+
+UL UL UL {	LIST-STYLE-TYPE: disc}
+
+UL UL LI {	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Arial, Helvetica, Verdana, serif; LIST-STYLE-TYPE: circle}
+
+UL UL UL LI {	FONT-SIZE: 10px; COLOR: #000000; FONT-FAMILY: Arial, Helvetica, Verdana, serif; LIST-STYLE-TYPE: square }
+
+HR {	FONT-SIZE: 9px; COLOR: #778; FONT-FAMILY: Arial, Helvetica, Verdana, serif}
+
+SMALL {	FONT-SIZE: 10px; COLOR: #000000; FONT-FAMILY: Arial, Helvetica, Verdana, serif}
+
+EM {	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #000000; FONT-STYLE: italic; FONT-FAMILY: Arial, Helvetica, Verdana, serif}
+
+PRE {	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: monospace}
+
+XMP {	MARGIN-LEFT: 48px}
+
+SELECT {FONT-FAMILY: Verdana,Arial; FONT-SIZE: 10px}
+
+INPUT {FONT-FAMILY: Verdana,Arial; FONT-SIZE: 10px}
+
+TEXTAREA { FONT-FAMILY: Verdana,Arial; FONT-SIZE: 10px }
+
+FORM { margin: 0em; }

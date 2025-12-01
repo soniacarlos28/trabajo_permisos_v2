@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_RSCONSULTA" value="name:DENOM;datatype:VARCHAR2,name:HORA;datatype:VARCHAR2,name:NOMBRE;datatype:VARCHAR2,name:PIN;datatype:VARCHAR2" />
+</info>

@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_RSQUERY" value="name:ID_ANO;datatype:VARCHAR2,name:FECHA_INICIO;datatype:DATE,name:FECHA_FIN;datatype:DATE,name:ID_TIPO_BAJA;datatype:VARCHAR2,name:ID_BAJA;datatype:NUMBER,name:DESC_TIPO_BAJA;datatype:VARCHAR2,name:FECHA_CONFIRMACION;datatype:CHAR" />
+	<infoitem key="UD_RSPERIODO" value="name:PERIODO;datatype:VARCHAR2" />
+</info>

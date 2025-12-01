@@ -1,0 +1,213 @@
+/* CSS Document */
+.rightbox {
+	border: 1px solid #999999;
+	padding: 5px;
+	background-color: #DDE;
+	margin-bottom: 5px;
+	float: right;
+	margin-top: 5px;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+.rightbox h2 {
+	margin: 0px;
+	padding: 0px;
+	text-decoration: none;
+	font-size: 14px;
+}
+.rightbox form {
+	margin-top: 5px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+#apliweb-title {
+	margin-bottom: 0.5em;
+	padding-bottom: 0.5em;
+	border-bottom-width: thin;
+	border-bottom-style: solid;
+	border-bottom-color: #DDE;
+}
+.apliweb-recordbox {
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+}
+.apliweb-recordbox ul {
+	padding: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 10px;
+}
+.apliweb-recordbox li {
+	list-style-image: url(imagen/item.jpeg);
+	margin-bottom: 10px;
+}
+.apliweb-recordbox table {
+	cellspacing: 0px;
+	cellpadding: 0px;
+}
+.apliweb-recordbox th {
+	background-color: #DDE;
+	border-collapse: collapse;
+	margin: 0px;
+	padding: 2px;
+}
+.apliweb-recordbox td {
+	border: thin solid #fff;
+	border-collapse: collapse;
+	margin: 0px;
+	padding: 2px;
+} 
+.apliweb-countbox {
+	padding: 5px;
+}
+#apliweb-tabform {
+	padding: 0.5em;
+}
+#apliweb-tabform #form {
+	padding: 0.5em;
+	margin-top: 0em;
+	margin-right: 0em;
+	margin-bottom: 0em;
+	margin-left: 0em;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: none;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #777788;
+	border-right-color: #777788;
+	border-bottom-color: #777788;
+	border-left-color: #777788;
+	clear: both;
+}
+#apliweb-tabform #form table {
+	
+}
+#apliweb-tabform #form th {
+	background-color:#DDE;
+	padding:2px;
+}
+#apliweb-tabform #form td {
+	padding:2px;
+}
+#apliweb-tabform #form td.framed {
+	border: 1px solid #778;	
+}
+#apliweb-tabform #subform {
+	padding: 0.5em;
+	margin-top: 0em;
+	margin-right: 0em;
+	margin-bottom: 0em;
+	margin-left: 0em;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: none;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #777788;
+	border-right-color: #777788;
+	border-bottom-color: #777788;
+	border-left-color: #777788;
+}
+
+/* menu principal horizontal */
+#apliweb-tabform #tabh
+{
+	margin-left: 0em;
+	border-bottom: 1px solid #778;
+	margin-top: 0em;
+	margin-bottom: 0em;
+	padding-top: 3px;
+	padding-right: 0;
+	padding-bottom: 3px;
+	padding-left: 0;
+}
+
+#apliweb-tabform #tabh li
+{
+list-style: none;
+margin: 0;
+display: inline;
+}
+
+#apliweb-tabform #tabh li a
+{
+padding: 3px 0.5em;
+margin-left: 3px;
+border: 1px solid #778;
+border-bottom: none;
+background: #DDE;
+text-decoration: none;
+}
+
+#apliweb-tabform #tabh li a:link { color: #448; }
+#apliweb-tabform #tabh li a:visited { color: #667; }
+
+#apliweb-tabform #tabh li a:hover
+{
+color: #000;
+background: #AAE;
+border-color: #227;
+}
+
+#apliweb-tabform #tabh li a#current
+{
+background: white;
+border-bottom: 1px solid white;
+}
+
+/* submenu principal horizontal */
+#apliweb-tabform #subtabh
+{
+	margin-left: 0em;
+	border-bottom: 1px solid #778;
+	margin-top: 0em;
+	margin-bottom: 0em;
+	padding-top: 3px;
+	padding-right: 0;
+	padding-bottom: 3px;
+	padding-left: 0;
+}
+
+#apliweb-tabform #subtabh li
+{
+list-style: none;
+margin: 0;
+display: inline;
+}
+
+#apliweb-tabform #subtabh li a
+{
+padding: 3px 0.5em;
+margin-left: 3px;
+border: 1px solid #778;
+border-bottom: none;
+background: #DDE;
+text-decoration: none;
+}
+
+#apliweb-tabform #subtabh li a:link { color: #448; }
+#apliweb-tabform #subtabh li a:visited { color: #667; }
+
+#apliweb-tabform #subtabh li a:hover
+{
+color: #000;
+background: #AAE;
+border-color: #227;
+}
+
+#apliweb-tabform #subtabh li a#current
+{
+background: white;
+border-bottom: 1px solid white;
+}

@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_RSSINDICAL" value="name:ORDENA;datatype:NUMBER,name:ORDENA2;datatype:VARCHAR2,name:ID_TIPO_AUSENCIA;datatype:VARCHAR2,name:DESC_TIPO_AUSENCIA;datatype:VARCHAR2" />
+	<infoitem key="UD_RSHORAS_MESES" value="name:TOTAL_ENERO;datatype:NUMBER,name:TOTAL_FEBRERO;datatype:NUMBER,name:TOTAL_MARZO;datatype:NUMBER,name:TOTAL_ABRIL;datatype:NUMBER,name:TOTAL_MAYO;datatype:NUMBER,name:TOTAL_JUNIO;datatype:NUMBER,name:TOTAL_JULIO;datatype:NUMBER,name:TOTAL_AGOSTO;datatype:NUMBER,name:TOTAL_SEPTIEMBRE;datatype:NUMBER,name:TOTAL_OCTUBRE;datatype:NUMBER,name:TOTAL_DICIEMBRE;datatype:NUMBER,name:TOTAL_NOVIEMBRE;datatype:NUMBER,name:ID_FUNCIONARIO;datatype:NUMBER,name:ID_TIPO_AUSENCIA;datatype:VARCHAR2,name:DESC_TIPO_AUSENCIA;datatype:VARCHAR2" />
+</info>

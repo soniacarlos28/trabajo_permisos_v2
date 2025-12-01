@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_RSTIPODIAS" value="name:DESC_TIPO_DIAS;datatype:VARCHAR2" />
+	<infoitem key="UD_RSGRADO" value="name:DESC_GRADO;datatype:VARCHAR2" />
+	<infoitem key="UD_PERMI" value="name:V_OBSERVACIONES;direction:1;datatype:VARCHAR2;,name:V_ID_PERMISO;direction:1;datatype:NUMBER;,name:V_ID_ESTADO_PERMISO;direction:1;datatype:NUMBER;,name:V_JUSTIFICACION;direction:1;datatype:VARCHAR2;,name:V_ID_USUARIO;direction:1;datatype:VARCHAR2;,name:TODO_OK_BASICO;direction:2;datatype:NUMBER;,name:MSGBASICO;direction:2;datatype:VARCHAR2;" />
+</info>
