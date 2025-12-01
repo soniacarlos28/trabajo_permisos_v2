@@ -1,4 +1,4 @@
-<%@page language="java" import="java.util.Date,java.sql.*" errorPage="error.jsp"%>
+﻿<%@page language="java" import="java.util.Date,java.sql.*" errorPage="error.jsp"%>
 <%@ include file="../../../Connections/RRHH.jsp" %>
 <%
 	/**
@@ -40,7 +40,7 @@ String thisPage = request.getRequestURI();
 <link href="apliweb.css" rel="stylesheet" type="text/css">
 <script language="JavaScript" type="text/javascript" src="../../imagen/calendario.js"></script>
 <body>
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 <div>
 <ul id="tabh">
     <li id="active"><a href="../../index_busqueda.jsp" id="current">Permisos/Ausencias</a></li>
@@ -52,7 +52,7 @@ String thisPage = request.getRequestURI();
       <li><a href="../../gestion/calendario_laboral/index.jsp?ID_ANO=2016" class="ah12b">Calendario Laboral</a></li>   
       <li><a href="../../gestion/Bajas/index.jsp" >Bajas Fichero</a></li>
  </ul>
-</div>
+<%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
   <div id="form">
 <div>
 	  <ul id="subtabh">
@@ -150,3 +150,4 @@ String thisPage = request.getRequestURI();
 RSFUNCIONARIO.close();
 ConnRSFUNCIONARIO.close();
 %>
+

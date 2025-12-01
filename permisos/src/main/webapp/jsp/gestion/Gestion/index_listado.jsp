@@ -13,19 +13,19 @@
 
 function validarSiNumero(numero){
     if (!/^([0-9])*$/.test(numero))
-      alert("El valor " + numero + " no es un número");
+      alert("El valor " + numero + " no es un nï¿½mero");
   }
 
 function Valida(campo,mes) {
 
   if ((campo.length == 0) ) 
 	  {
-      alert('Falta información. ' + mes );
+      alert('Falta informaciï¿½n. ' + mes );
       return false
       }   
   if (!isNaN(parseInt(campo.value))) 
 	  {
-      alert('El campo debe ser un número. '+ mes);
+      alert('El campo debe ser un nï¿½mero. '+ mes);
       return false;
       }  
     return true
@@ -60,7 +60,7 @@ function envia_unavez()
 <script language="JavaScript" type="text/javascript" src="../../imagen/calendario.js"></script>
 </head>
 <body>
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 <div>
 <ul id="tabh">
     <li ><a href="../../index_busqueda.jsp" >Permisos/Ausencias</a></li>
@@ -88,8 +88,8 @@ function envia_unavez()
        
    </tr>
   <tr > 
-       <td colspan="5" align="center">Seleccione Año:
-        <select name="ID_AÑO">
+       <td colspan="5" align="center">Seleccione Aï¿½o:
+        <select name="ID_Aï¿½O">
                                               <option value="2018">2018</option>
                                               <option value="2017">2017</option>
                                               <option value="2016">2016</option>
@@ -107,6 +107,7 @@ function envia_unavez()
   
 </table>
 </div>
+<%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
 </body>
 </html>
 

@@ -1,4 +1,4 @@
-<%@page language="java" import="java.util.Date,java.sql.*" errorPage="error.jsp"%>
+﻿<%@page language="java" import="java.util.Date,java.sql.*" errorPage="error.jsp"%>
 <%@ include file="../../../Connections/RRHH.jsp" %>
 <%
 	/**fd
@@ -41,7 +41,7 @@ String thisPage = request.getRequestURI();
 <meta http-equiv="refresh" content="0;URL=index.jsp">
 <link href="esquema.css" rel="stylesheet" type="text/css">
 <link href="apliweb.css" rel="stylesheet" type="text/css">
-<body><div id="apliweb-tabform">
+<body><%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 <div>
 <ul id="tabh">
     <li id="active"><a href="../../index_busqueda.jsp" id="current">Permisos/Ausencias</a></li>
@@ -54,7 +54,7 @@ String thisPage = request.getRequestURI();
        <li><a href="../../gestion/Bajas/index.jsp" >Bajas Fichero</a></li>
         <li><a href="../../gestion/Informes/index_informes.jsp" >Informes</a></li>
  </ul>
-</div>
+<%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
   <div id="form">
 <div>
 	  <ul id="subtabh">
@@ -86,3 +86,4 @@ String thisPage = request.getRequestURI();
 <%
 ConnPERMI.close();
 %>
+

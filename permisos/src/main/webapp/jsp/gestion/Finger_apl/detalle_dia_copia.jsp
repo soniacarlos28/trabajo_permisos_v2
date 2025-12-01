@@ -1,4 +1,4 @@
-<%@page language="java" import="java.util.Date,java.sql.*" errorPage="error.jsp"%>
+ï»¿<%@page language="java" import="java.util.Date,java.sql.*" errorPage="error.jsp"%>
 <%@ include file="../../../Connections/RRHH.jsp" %>
 <%
 	/**
@@ -247,7 +247,7 @@ function regenera() {
   
 }
 
-function añadir()
+function aï¿½adir()
 {
 
    var ida = 1;
@@ -332,7 +332,7 @@ return "";
 <link href="esquema.css" rel="stylesheet" type="text/css">
 <link href="apliweb.css" rel="stylesheet" type="text/css">
 <body>
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 <div>
 <ul id="tabh">
     <li id="active"><a href="../../index_busqueda.jsp" id="current">Permisos/Ausencias</a></li>
@@ -340,7 +340,7 @@ return "";
     <li><a href="" onClick="show_finger()"  class="ah12b">Finger</a></li>
     <li><a href="gestion/Gestion/index.jsp" class="ah12b">Horas Sindicales</a></li>   
   </ul>
-</div>
+<%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
   <div id="form">
 <div>
 	  <ul id="subtabh">
@@ -417,7 +417,7 @@ return "";
 								  
                                       <tr>
                                         <td width="25%" align="right"><div align="right">										
-										<a href="javascript:añadir();"><img src="../../imagen/new.png" alt="Nuevo"	width="20" height="20" border="0"></a></div> <form name="formFICHA" method=post action="procesa_tran.jsp"> <table width="35%" border="1" cellspacing="1" cellpadding="4">
+										<a href="javascript:aï¿½adir();"><img src="../../imagen/new.png" alt="Nuevo"	width="20" height="20" border="0"></a></div> <form name="formFICHA" method=post action="procesa_tran.jsp"> <table width="35%" border="1" cellspacing="1" cellpadding="4">
                                             <tr bgcolor="#FFFFDD"> 
                                               <td bgcolor="#33FFFF">
 											  <input type="hidden" name="campo_final" value="">

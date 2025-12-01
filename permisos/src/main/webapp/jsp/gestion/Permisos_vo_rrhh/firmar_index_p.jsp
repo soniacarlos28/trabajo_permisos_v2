@@ -10,7 +10,7 @@
 <%
 Driver DriverRSPENDIENTE = (Driver)Class.forName(MM_RRHH_DRIVER).newInstance();
 Connection ConnRSPENDIENTE = DriverManager.getConnection(MM_RRHH_STRING,MM_RRHH_USERNAME,MM_RRHH_PASSWORD);
-PreparedStatement StatementRSPENDIENTE = ConnRSPENDIENTE.prepareStatement("SELECT distinct u.id_unidad,desc_unidad,pe.ID_ANO,ID_PERMISO,rownum as fila , DEsc_tipo_permiso,  ape1,ape2,substr(initcap(Nombre) || ' ' || INITCAP(Ape1)|| ' ' || INITCAP(Ape2),1,60)|| '-->' || DEsc_tipo_permiso || '-- Días:' || pe.NUM_DIAS as Cadena  FROM   rrhh_sap8.personal_rpt pers,rrhh_sap8.unidad u,  permiso  pe,(select distinct id_funcionario ,NOMBRE, ape1, ape2  FROM personal_new)  p,tr_tipo_permiso tr  WHERE (     (id_estado in ('22') and pe.id_funcionario=p.id_funcionario            )           )           and tr.id_tipo_permiso=pe.id_tipo_permiso                    and tr.id_ano=pe.id_ano                     and (ANULADO IS  NULL OR ANULADO='NO')   and pe.id_funcionario=pers.id_funcionario(+)      and pers.id_unidad = u.id_unidad(+)  ORDER BY APE1  asc,APE2,DEsc_tipo_permiso");
+PreparedStatement StatementRSPENDIENTE = ConnRSPENDIENTE.prepareStatement("SELECT distinct u.id_unidad,desc_unidad,pe.ID_ANO,ID_PERMISO,rownum as fila , DEsc_tipo_permiso,  ape1,ape2,substr(initcap(Nombre) || ' ' || INITCAP(Ape1)|| ' ' || INITCAP(Ape2),1,60)|| '-->' || DEsc_tipo_permiso || '-- Dï¿½as:' || pe.NUM_DIAS as Cadena  FROM   rrhh_sap8.personal_rpt pers,rrhh_sap8.unidad u,  permiso  pe,(select distinct id_funcionario ,NOMBRE, ape1, ape2  FROM personal_new)  p,tr_tipo_permiso tr  WHERE (     (id_estado in ('22') and pe.id_funcionario=p.id_funcionario            )           )           and tr.id_tipo_permiso=pe.id_tipo_permiso                    and tr.id_ano=pe.id_ano                     and (ANULADO IS  NULL OR ANULADO='NO')   and pe.id_funcionario=pers.id_funcionario(+)      and pers.id_unidad = u.id_unidad(+)  ORDER BY APE1  asc,APE2,DEsc_tipo_permiso");
 ResultSet RSPENDIENTE = StatementRSPENDIENTE.executeQuery();
 boolean RSPENDIENTE_isEmpty = !RSPENDIENTE.next();
 boolean RSPENDIENTE_hasData = !RSPENDIENTE_isEmpty;
@@ -202,7 +202,7 @@ function carga_final(){
 <link href="esquema.css" rel="stylesheet" type="text/css">
 <link href="apliweb.css" rel="stylesheet" type="text/css">
 <body OnLoad="carga_final()">
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 <div>
 <ul id="tabh">
     <li ><a href="../../index_busqueda.jsp" id="current">Permisos/Ausencias</a></li>
@@ -275,7 +275,7 @@ function carga_final(){
                             </table></td>
                           </tr>
                         </table>                        
-                                   </td>
+                      ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ </td>
                       <td align="right"> 
                       <b>                      </b>                      </td>
                     </tr>
@@ -297,6 +297,7 @@ function carga_final(){
 
 
 
+<%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
 </body>
 </html>
 <%

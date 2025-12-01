@@ -1,4 +1,4 @@
-<%@page language="java" import="java.util.Date,java.sql.*" errorPage="error.jsp"%> 
+﻿<%@page language="java" import="java.util.Date,java.sql.*" errorPage="error.jsp"%> 
 <%@ include file="../../../Connections/RRHH.jsp" %>
 <%
 	/**
@@ -75,7 +75,7 @@ return "";
 <link href="apliweb.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="../../../../../imagen/esquema.css" type="text/css">
 <body>
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 <div>
 <ul id="tabh">
     <li id="active"><a href="../../index_busqueda.jsp" id="current">Permisos/Ausencias</a></li>
@@ -85,7 +85,7 @@ return "";
     <li><a href="gestion/Bolsa_proceso/index.jsp" class="ah12b">Proceso Bolsa</a></li>
     <li><a href="../../gestion/calendario_laboral/index.jsp" class="ah12b">Calendario Laboral</a></li>      
   </ul>
-</div>
+<%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
   <div id="form">
 <div>
 	  <ul id="subtabh">
@@ -191,3 +191,4 @@ ConnRSQUERY.close();
 RSPERIODO.close();
 ConnRSPERIODO.close();
 %>
+

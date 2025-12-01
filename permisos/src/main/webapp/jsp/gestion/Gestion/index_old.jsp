@@ -49,13 +49,13 @@ function show_finger()
 }
 function show_confirm(id, description, url)
 {
-   var text = "¿Realmente desea eliminar: '" + description + "'?";
+   var text = "ï¿½Realmente desea eliminar: '" + description + "'?";
    var r = confirm(text);
    if (r==true) { 
       MM_goToURL('self',url + id);
    }
    else { 
-      alert("Operación cancelada!"); 
+      alert("Operaciï¿½n cancelada!"); 
    }
 }
 
@@ -69,7 +69,7 @@ function show_confirm(id, description, url)
 <script language="JavaScript" type="text/javascript" src="../../imagen/calendario.js"></script>
 </head>
 <body>
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 <div>
 <ul id="tabh">
     <li ><a href="../../index_busqueda.jsp" >Permisos/Ausencias</a></li>
@@ -210,6 +210,7 @@ RSSINDICAL_isEmpty = !RSSINDICAL_hasData;
                           </tr>
                         </table>
 </div>
+<%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
 </body>
 </html>
 <%

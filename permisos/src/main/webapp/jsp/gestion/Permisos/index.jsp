@@ -1,4 +1,4 @@
-<%@page language="java" import="java.util.Date,java.sql.*" errorPage="error.jsp"%>
+ï»¿<%@page language="java" import="java.util.Date,java.sql.*" errorPage="error.jsp"%>
 <%@ include file="../../../Connections/RRHH.jsp" %>
 <%
 	/**
@@ -98,7 +98,7 @@ return "";
 
 function show_confirmar(id)
 {
-   var text = "¿Realmente desea eliminar Justificante?";
+   var text = "ï¿½Realmente desea eliminar Justificante?";
    var r = confirm(text);
    if (r==true) { 
                  //MM_goToURL('self',url + id);
@@ -107,7 +107,7 @@ function show_confirmar(id)
  	var win=window.open(url , "_blank" ,param);
    }
    else { 
-      alert("Operación cancelada!");  
+      alert("Operaciï¿½n cancelada!");  
    }
 }
 </script>
@@ -119,7 +119,7 @@ function show_confirmar(id)
 <link href="apliweb.css" rel="stylesheet" type="text/css">
 <body>
 
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 <div>
 <ul id="tabh">
     <li id="active"><a href="../../index_busqueda.jsp" id="current">Permisos/Ausencias</a></li>
@@ -134,7 +134,7 @@ function show_confirmar(id)
 <li><a href="../../gestion/Formacion/index_formacion.jsp" >Formacion</a></li>
 
     </ul>
-</div>
+<%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
   <div id="form">
 <div>
 	  <ul id="subtabh">

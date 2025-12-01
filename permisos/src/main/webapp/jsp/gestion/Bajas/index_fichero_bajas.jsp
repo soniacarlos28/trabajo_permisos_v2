@@ -1,4 +1,4 @@
-<%@page language="java" import="java.util.Date,java.sql.*" %>
+ï»¿<%@page language="java" import="java.util.Date,java.sql.*" %>
 <%@ include file="../../../Connections/RRHH.jsp" %>
 <%
 	/**
@@ -68,7 +68,7 @@ function envia_unavez()
 <link href="apliweb.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 <div>
 <ul id="tabh">
      <li><a href="../../index_busqueda.jsp" >Permisos/Ausencias</a></li>
@@ -81,11 +81,11 @@ function envia_unavez()
     <li><a href="../../gestion/Bajas/index.jsp" id="current" >Bajas Fichero</a></li>
      <li><a href="../../gestion/Informes/index_informes.jsp" >Informes</a></li>
     </ul>
-   </div>
+   <%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
   <div id="form">
      <div>
 	  <ul id="subtabh">		
-		<li><a href="index.jsp" >Bajas Año</a></li>
+		<li><a href="index.jsp" >Bajas Aï¿½o</a></li>
 		<li><a href="index_fichero_bajas.jsp" id="current">Historico Ficheros de Bajas</a></li>					
 	  </ul>
 	</div>   

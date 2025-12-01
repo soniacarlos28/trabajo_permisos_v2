@@ -1,4 +1,4 @@
-<%@page language="java" import="java.util.Date,java.sql.*" %>
+ï»¿<%@page language="java" import="java.util.Date,java.sql.*" %>
 <%@ include file="../../../Connections/RRHH.jsp" %>
 <%
 	/**
@@ -135,9 +135,9 @@ function envia_unavez()
 	var n=0;
 	 miCampoTexto = document.getElementById("ID_JS").value;
 	
-	//la condición
+	//la condiciï¿½n
     if (miCampoTexto.length == 0) {
-    	alert("Campo CAMBIO POR esta vacío");
+    	alert("Campo CAMBIO POR esta vacï¿½o");
         return false;
     }
 	
@@ -160,7 +160,7 @@ function envia_unavez()
 <link href="esquema.css" rel="stylesheet" type="text/css">
 <link href="apliweb.css" rel="stylesheet" type="text/css">
 <body OnLoad="carga_final()">
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 <div>
 <ul id="tabh">
     <li id="active"><a href="../../index_busqueda.jsp" id="current">Permisos/Ausencias</a></li>
@@ -172,7 +172,7 @@ function envia_unavez()
     <li><a href="../../gestion/calendario_laboral/index.jsp" class="ah12b">Calendario Laboral</a></li>
   <li><a href="gestion/Bajas/index.jsp" >Bajas Fichero</a></li>
   </ul>
-</div>
+<%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
   <div id="form">
 <div>
 	  <ul id="subtabh">
@@ -241,7 +241,7 @@ function envia_unavez()
       onClick="javascript:window.open('../Busqueda/index_busqueda_funcionario.jsp?CAMPO=ID_JS' ,null,'height=550,width=600,resizable=n0,scrollbars=no,status=no,toolbar=no ,menubar=no');"      >
       </td>
        <td ID="DELEGA">
-        DELEGACIÓN:
+        DELEGACIï¿½N:
             <select name="ID_DELEGADO_FIRMA" size="1" id="ID_DELEGADO_FIRMA" >
 		        <option value="0"  selected>NO</option>
 		        <option value="1" >SI</option>
@@ -249,7 +249,7 @@ function envia_unavez()
         </td>
       </tr>
       <tr ID="DELEGA2">
-    <td  colspan="3" bgcolor="#CCCCFF" scope="col"><div align="center">Los Suplentes con Delegación pueden autorizar permisos, aunque el Jefe no este de vacaciones o baja.</div></td>
+    <td  colspan="3" bgcolor="#CCCCFF" scope="col"><div align="center">Los Suplentes con Delegaciï¿½n pueden autorizar permisos, aunque el Jefe no este de vacaciones o baja.</div></td>
     </tr> 
    </p>
      <% if (P_C_OPERA.equals("8") )    {  %> 

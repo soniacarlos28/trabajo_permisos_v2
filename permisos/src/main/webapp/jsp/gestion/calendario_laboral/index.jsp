@@ -1,4 +1,4 @@
-<%@page language="java" import="java.util.Date,java.sql.*" %>
+ï»¿<%@page language="java" import="java.util.Date,java.sql.*" %>
 <%
 	/**
 	* Garantiza que la sesion tenga los atributos necesarios para el
@@ -164,7 +164,7 @@ function ocultarCompesa()
 <script language="JavaScript" type="text/javascript" src="calendario.js"></script>
 <body>
 
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 <div>
 <ul id="tabh">    
     <li><a href="../../index_busqueda.jsp" >Permisos/Ausencias</a></li>
@@ -179,11 +179,11 @@ function ocultarCompesa()
 <li><a href="../../gestion/Formacion/index_formacion.jsp" >Formacion</a></li>
 
   </ul>
-</div>
+<%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
 <div id="form">
 <table width="95%" border="0" cellspacing="0" cellpadding="2">
 <tr>
- <td colspan="6" align="left" class="destacado">Calendario del Año: <select name="ID_ANO" id="ID_ANO" onchange="location.href='index.jsp?ID_ANO='+this.value">
+ <td colspan="6" align="left" class="destacado">Calendario del Aï¿½o: <select name="ID_ANO" id="ID_ANO" onchange="location.href='index.jsp?ID_ANO='+this.value">
 
           <% while (RSANOCALENDARIO_hasData) {
 %><option value="<%=((RSANOCALENDARIO.getObject("ID_ANO")!=null)?RSANOCALENDARIO.getObject("ID_ANO"):"")%>" <%=(((RSANOCALENDARIO.getObject("ID_ANO")).toString().equals((RSTIPOPERMISO__MMColParam2).toString()))?"selected=\"selected\"":"")%> ><%=((RSANOCALENDARIO.getObject("ID_ANO")!=null)?RSANOCALENDARIO.getObject("ID_ANO"):"")%></option>

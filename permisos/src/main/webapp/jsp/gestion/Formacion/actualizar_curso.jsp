@@ -1,4 +1,4 @@
-<%@page language="java" import="java.util.Date,java.sql.*,java.util.Calendar"  import="permisos.*" %>
+ï»¿<%@page language="java" import="java.util.Date,java.sql.*,java.util.Calendar"  import="permisos.*" %>
 <%@ include file="../../../Connections/RRHH.jsp" %>
 <%
 	/**
@@ -27,13 +27,13 @@ String mensaje ="";
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Actualización de Cursos</title>
+    <title>Actualizaciï¿½n de Cursos</title>
 <link href="../estilos.css" rel="stylesheet" type="text/css">
 <link href="../esquema.css" rel="stylesheet" type="text/css">
 <link href="../apliweb.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 
 <div>
 <ul id="tabh">
@@ -47,7 +47,7 @@ String mensaje ="";
    <li ><a href="../../gestion/Informes/index_informes.jsp"  >Informes</a></li>
    <li><a href="../../gestion/Formacion/index_formacion.jsp" id="current" >Formacion</a></li>
     </ul>
-  </div>
+  <%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
   <div id="form">  
 
       <%
@@ -57,7 +57,7 @@ String mensaje ="";
     
     <table width="85%" border="0" cellspacing="1" cellpadding="2">
              <tr bgcolor="#CCFFCC">
-                                <td colspan="10" align="center"><b>Actualización de Cursos</b> <input type="hidden" name="TODO_T" ID="TODO_T" size="122" >
+                                <td colspan="10" align="center"><b>Actualizaciï¿½n de Cursos</b> <input type="hidden" name="TODO_T" ID="TODO_T" size="122" >
                    <tr>                    
                 <th><%= mensaje %></th>
                 <th>  <br>
@@ -68,6 +68,7 @@ String mensaje ="";
     </table>
 </body>
 </html>
+
 
 
 

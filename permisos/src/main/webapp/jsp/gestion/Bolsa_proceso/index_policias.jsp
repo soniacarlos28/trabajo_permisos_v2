@@ -1,4 +1,4 @@
-<%@page language="java" import="java.util.Date,java.sql.*" %>
+ï»¿<%@page language="java" import="java.util.Date,java.sql.*" %>
 <%@ include file="../../../Connections/RRHH.jsp" %>
 <%
 	/**
@@ -88,7 +88,7 @@ return "";
 </head>
 <body>
 <% if (RS_EXCEL.equals("0")){%>
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 <div>
 <ul id="tabh">
      <li><a href="../../index_busqueda.jsp" >Permisos/Ausencias</a></li>
@@ -102,7 +102,7 @@ return "";
    <li><a href="../../gestion/Bajas/index.jsp" >Bajas Fichero</a></li>
    <li ><a href="../../gestion/Informes/index_informes.jsp" >Informes</a></li>
     </ul>
-  </div>
+  <%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
    <div id="form">
      <div>
 	  <ul id="subtabh">		
@@ -118,7 +118,7 @@ return "";
 <table width="78%" border="1" cellspacing="3" cellpadding="4">
                                       <tr bgcolor="#CCFFCC"> 
                                         <td colspan="13" align="center"><b>Saldos Policias</b></td>
-                                        <td align="left" nowrap class="destacado">Año: <select name="ID_ANO" id="ID_ANO" onchange="location.href='index_policias.jsp?ID_ANO='+this.value">
+                                        <td align="left" nowrap class="destacado">Aï¿½o: <select name="ID_ANO" id="ID_ANO" onchange="location.href='index_policias.jsp?ID_ANO='+this.value">
 
           <% while (RSANOCALENDARIO_hasData) {
 %><option value="<%=((RSANOCALENDARIO.getObject("ID_ANO")!=null)?RSANOCALENDARIO.getObject("ID_ANO"):"")%>" <%=(((RSANOCALENDARIO.getObject("ID_ANO")).toString().equals((RSTIPOPERMISO__MMColParam2).toString()))?"selected=\"selected\"":"")%> ><%=((RSANOCALENDARIO.getObject("ID_ANO")!=null)?RSANOCALENDARIO.getObject("ID_ANO"):"")%></option>

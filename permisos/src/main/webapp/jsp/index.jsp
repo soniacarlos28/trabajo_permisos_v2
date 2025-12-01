@@ -5,7 +5,11 @@
 	* Garantiza que la sesion tenga los atributos necesarios para el
 	* correcto funcionamiento de las aplicaciones web corporativas.
 	*/
-	es.aytosalamanca.http.controller.session.SessionManager.touchSession(request); 
+try {
+    es.aytosalamanca.http.controller.session.SessionManager.touchSession(request);
+} catch (Throwable _ignore) {
+    // SessionManager library may be missing in this environment — ignore.
+}
 %>
 <%
 Driver DriverRSQUERY = (Driver)Class.forName(MM_RRHH_DRIVER).newInstance();
@@ -50,25 +54,39 @@ function show_finger()
 <head>
 <title>Administraci&oacute;n de RRHH</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- Bootstrap CSS (CDN) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- App styles -->
+<link href="/css/theme-blue.css" rel="stylesheet" type="text/css">
 <link href="esquema.css" rel="stylesheet" type="text/css">
 <link href="apliweb.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<div id="apliweb-tabform">
-<div>
-<ul id="tabh">
-    <li id="active"><a href="#" id="current">Permisos/Ausencias</a></li>
-     <li><a href="gestion/Permisos_vo_rrhh/index.jsp">Autorizar</a></li>
-   
-     <li><a href="gestion/Finger_apl/index.jsp"  class="ah12b">Finger</a></li>
-    <li><a href="gestion/Gestion/index.jsp" class="ah12b">Horas Sindicales</a></li>   
-    <li><a href="gestion/Bolsa_proceso/index.jsp" class="ah12b">Proceso Bolsa</a></li>   
- <li><a href="gestion/calendario_laboral/index.jsp" class="ah12b">Calendario Laboral</a></li> 
- <li><a href="gestion/Bajas/index.jsp" >Bajas Fichero</a></li>
-  <li><a href="gestion/Informes/index_informes.jsp" >Informes</a></li>
-  </ul>
-</div>
-<div id="form">
+<header class="app-header d-flex align-items-center justify-content-between">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <h4 class="mb-0">Administraci&oacute;n de RRHH</h4>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="container-fluid mt-3">
+  <div class="row">
+    <nav class="col-md-3 col-lg-2 app-sidebar">
+      <h5 class="text-white">Navegación</h5>
+      <a href="#" class="active">Permisos/Ausencias</a>
+      <a href="gestion/Permisos_vo_rrhh/index.jsp">Autorizar</a>
+      <a href="gestion/Finger_apl/index.jsp">Finger</a>
+      <a href="gestion/Gestion/index.jsp">Horas Sindicales</a>
+      <a href="gestion/Bolsa_proceso/index.jsp">Proceso Bolsa</a>
+      <a href="gestion/calendario_laboral/index.jsp">Calendario Laboral</a>
+      <a href="gestion/Bajas/index.jsp">Bajas Fichero</a>
+      <a href="gestion/Informes/index_informes.jsp">Informes</a>
+    </nav>
+    <main class="col-md-9 col-lg-10">
+      <div class="content-card">
+        <div id="form">
  <table width="95%" border="0" cellspacing="0" cellpadding="2">
                           <tr> 
                             <td> 
@@ -129,7 +147,12 @@ function show_finger()
                             </td>
                           </tr>
                         </table>
+        </div>
+      </div>
+    </main>
+  </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
 <%

@@ -1,4 +1,4 @@
-<%@page language="java" import="java.util.Date,java.sql.*" %>
+ï»¿<%@page language="java" import="java.util.Date,java.sql.*" %>
 <%@ include file="../../../Connections/RRHH.jsp" %>
 <%
 	/**
@@ -211,7 +211,7 @@ String thisPage = request.getRequestURI();
 <link href="esquema.css" rel="stylesheet" type="text/css">
 <link href="apliweb.css" rel="stylesheet" type="text/css">
 <body>
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 <div>
 <ul id="tabh">
     <li id="active"><a href="../../index_busqueda.jsp" id="current">Permisos/Ausencias</a></li>
@@ -223,7 +223,7 @@ String thisPage = request.getRequestURI();
     <li><a href="../../gestion/calendario_laboral/index.jsp" class="ah12b">Calendario Laboral</a></li>
   <li><a href="gestion/Bajas/index.jsp" >Bajas Fichero</a></li>
   </ul>
-</div>
+<%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
   <div id="form">
 <div>
 	  <ul id="subtabh">
@@ -294,7 +294,7 @@ String thisPage = request.getRequestURI();
       <input type="text" " ID="ID_DELEGADO_JS_NOMBRE" size="35"   value="<%=(((RSDELEGADOJS_data = RSDELEGADOJS.getObject("NOMBRE"))==null || RSDELEGADOJS.wasNull())?"":RSDELEGADOJS_data)%>" >
       <input type="hidden" name="ID_DELEGADO_JS" ID="ID_DELEGADO_JS" size="25" value=<%=(((RSDELEGADOJS_data = RSDELEGADOJS.getObject("ID_DELEGADO_JS"))==null || RSDELEGADOJS.wasNull())?"":RSDELEGADOJS_data)%>><input type="button" name="" value="Cambiar"
       onClick="javascript:window.open('../Busqueda/index_busqueda_funcionario.jsp?CAMPO=ID_DELEGADO_JS' ,null,'height=550,width=600,resizable=n0,scrollbars=no,status=no,toolbar=no ,menubar=no');"      >
-      DELEGACIÓN:<select name="ID_DELEGADO_FIRMA" size="1" id="ID_DELEGADO_FIRMA" >
+      DELEGACIï¿½N:<select name="ID_DELEGADO_FIRMA" size="1" id="ID_DELEGADO_FIRMA" >
         <option value="1" <%=(("1".toString().equals((((RSDELEGADOJS_data = RSDELEGADOJS.getObject("ID_DELEGADO_FIRMA"))==null || RSDELEGADOJS.wasNull())?"":RSDELEGADOJS_data)))?"SELECTED":"")%>>SI</option>
         <option value="0" <%=(("0".toString().equals((((RSDELEGADOJS_data = RSDELEGADOJS.getObject("ID_DELEGADO_FIRMA"))==null || RSDELEGADOJS.wasNull())?"":RSDELEGADOJS_data)))?"SELECTED":"")%>>NO</option>
       
@@ -305,7 +305,7 @@ String thisPage = request.getRequestURI();
       <input type="hidden" name="ID_DELEGADO_JS" ID="ID_DELEGADO_JS" size="25" value=""><input type="button" name="" value="Insertar"
       onClick="javascript:window.open('../Busqueda/index_busqueda_funcionario.jsp?CAMPO=ID_DELEGADO_JS' ,null,'height=550,width=600,resizable=n0,scrollbars=no,status=no,toolbar=no ,menubar=no');"      > 
      
-       DELEGACIÓN:<select name="ID_DELEGADO_FIRMA" size="1" id="ID_DELEGADO_FIRMA" >
+       DELEGACIï¿½N:<select name="ID_DELEGADO_FIRMA" size="1" id="ID_DELEGADO_FIRMA" >
         <option value="1">SI</option>
         <option value="0">NO</option>
       </select>
@@ -332,7 +332,7 @@ String thisPage = request.getRequestURI();
             
 </div></td></tr>
  <tr>
-    <td colspan="3" bgcolor="#CCCCFF" scope="col"><div align="center">Los Suplentes con Delegación pueden autorizar permisos, aunque el Jefe no este de vacaciones o baja.</div></td>
+    <td colspan="3" bgcolor="#CCCCFF" scope="col"><div align="center">Los Suplentes con Delegaciï¿½n pueden autorizar permisos, aunque el Jefe no este de vacaciones o baja.</div></td>
     </tr>
     <tr>
       <th colspan="3" scope="row"><div align="center">
@@ -374,3 +374,4 @@ RSDELEGADOJS.close();
 StatementRSDELEGADOJS.close();
 ConnRSDELEGADOJS.close();
 %>
+

@@ -1,4 +1,4 @@
-<%@page language="java" import="java.util.Date,java.sql.*" errorPage=""%>
+ï»¿<%@page language="java" import="java.util.Date,java.sql.*" errorPage=""%>
 <%@ include file="../../../Connections/RRHH.jsp" %>
 <%
 String RS1__MMColParam1 = "000000";
@@ -22,7 +22,7 @@ PERMI.execute();
 <link href="esquema.css" rel="stylesheet" type="text/css">
 <link href="apliweb.css" rel="stylesheet" type="text/css">
 <body>
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 <div>
 <ul id="tabh">
      <li><a href="../../index_busqueda.jsp" >Permisos/Ausencias</a></li>
@@ -35,17 +35,17 @@ PERMI.execute();
     <li><a href="../../gestion/Bajas/index.jsp" id="current" >Bajas Fichero</a></li>
      <li><a href="../../gestion/Informes/index_informes.jsp" >Informes</a></li>
     </ul>
-   </div>
+   <%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
   <div id="form">
      <div>
 	  <ul id="subtabh">		
-		<li><a href="index.jsp" >Bajas Año</a></li>
+		<li><a href="index.jsp" >Bajas Aï¿½o</a></li>
 		<li><a href="index_fichero_bajas.jsp" id="current">Historico Ficheros de Bajas</a></li>					
 	  </ul>
 	</div>   
 <table width="100%" border="0" align="center" cellpadding="2" cellspacing="1" bordercolor="#FFFFFF">
   <tr>
-    <td colspan="3" class="destacado" align="center">Creación Fichero</td>
+    <td colspan="3" class="destacado" align="center">Creaciï¿½n Fichero</td>
   </tr>
   
 <div class="contenido" id="VACION">&nbsp;</div>
@@ -80,3 +80,4 @@ PERMI.execute();
 <%
 ConnPERMI.close();
 %>
+

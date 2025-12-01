@@ -1,4 +1,4 @@
-<%@page language="java" import="java.util.Date,java.sql.*" errorPage="error.jsp"%>
+ï»¿<%@page language="java" import="java.util.Date,java.sql.*" errorPage="error.jsp"%>
 <%@ include file="../../../Connections/RRHH.jsp" %>
 <%
 	/**
@@ -114,7 +114,7 @@ function envia_unavez()
 <link href="apliweb.css" rel="stylesheet" type="text/css">
 <script language="JavaScript" type="text/javascript" src="../../imagen/calendario.js"></script>
 <body>
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 <div>
 <ul id="tabh">
     <li id="active"><a href="../../index_busqueda.jsp" id="current">Permisos/Ausencias</a></li>
@@ -126,7 +126,7 @@ function envia_unavez()
        <li><a href="../../gestion/calendario_laboral/index.jsp?ID_ANO=2016" class="ah12b">Calendario Laboral</a></li>   
        <li><a href="../../gestion/Bajas/index.jsp" >Bajas Fichero</a></li>
  </ul>
-</div>
+<%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
   <div id="form">
 <div>
 	  <ul id="subtabh">
@@ -223,7 +223,7 @@ function envia_unavez()
                                                  </select>
                                                  <td></td>
                                                 </td>
-                                                <td nowrap align="right" width="20%">Descuento en días:</td>
+                                                <td nowrap align="right" width="20%">Descuento en dï¿½as:</td>
                                                 <td><input name="DESCUENTO_DIAS"  type="text" id="DESCUENTO_DIAS" value="<%= (((RSPERMISO_data = RSPERMISO.getObject("DESCUENTO_DIAS"))==null || RSPERMISO.wasNull())?"":RSPERMISO_data)%>" size="8" maxlength="5"></td>
                                                  </td>  
                                                 </td>   
@@ -259,7 +259,7 @@ function envia_unavez()
         ) { %> 
     <tr> <td colspan="7" align="center"  ><table id="BOMBE">
             <tr><td colspan="5" >
-            <tr><td colspan="3" >Guardia: Fecha Inicio a las 08:00 hasta día siguiente a las 08:00. Desde el 12 Mayo 2022.</td></tr>
+            <tr><td colspan="3" >Guardia: Fecha Inicio a las 08:00 hasta dï¿½a siguiente a las 08:00. Desde el 12 Mayo 2022.</td></tr>
             <tr><td colspan="2" ><%=(((RSPERMISO_data = RSPERMISO.getObject("TURNO_1"))==null || RSPERMISO.wasNull())?"":RSPERMISO_data)%></td></tr>
             <tr><td colspan="2" ><%=(((RSPERMISO_data = RSPERMISO.getObject("TURNO_2"))==null || RSPERMISO.wasNull())?"":RSPERMISO_data)%></td></tr>
             <tr><td colspan="2" ><%=(((RSPERMISO_data = RSPERMISO.getObject("TURNO_3"))==null || RSPERMISO.wasNull())?"":RSPERMISO_data)%></td></tr>          
@@ -299,11 +299,11 @@ function envia_unavez()
            						<% } else { %>
 									<td width="9%" align="right" nowrap>Grado:</td>
                                      <td colspan="3"><select name="ID_GRADO" disabled="yes" onChange="document.formPermiso.OBSERVACIONES.value=document.formPermiso.GRADO.options[selectedIndex].text">
-                                          <option value="4" <%=(("4".toString().equals((((RSPERMISO_data = RSPERMISO.getObject("ID_GRADO"))==null || RSPERMISO.wasNull())?"":RSPERMISO_data)))?"SELECTED":"")%>>Padres/Padres políticos 5 D&iacute;as Enfermedad y 4 D&iacute;as Fallecimiento</option>
+                                          <option value="4" <%=(("4".toString().equals((((RSPERMISO_data = RSPERMISO.getObject("ID_GRADO"))==null || RSPERMISO.wasNull())?"":RSPERMISO_data)))?"SELECTED":"")%>>Padres/Padres polï¿½ticos 5 D&iacute;as Enfermedad y 4 D&iacute;as Fallecimiento</option>
      <option value="5" <%=(("5".toString().equals((((RSPERMISO_data = RSPERMISO.getObject("ID_GRADO"))==null || RSPERMISO.wasNull())?"":RSPERMISO_data)))?"SELECTED":"")%>>Hijos/Hijos politicos/Conyuge 5 D&iacute;as (Enfermedad y  Fallecimiento)</option>
-     <option value="3" <%=(("3".toString().equals((((RSPERMISO_data = RSPERMISO.getObject("ID_GRADO"))==null || RSPERMISO.wasNull())?"":RSPERMISO_data)))?"SELECTED":"")%>>Abuelos/Hermanos/Nietos y políticos 4 D&iacute;as Enfermedad y 2 D&iacute;as Fallecimiento</option>
-     <option value="1" <%=(("1".toString().equals((((RSPERMISO_data = RSPERMISO.getObject("ID_GRADO"))==null || RSPERMISO.wasNull())?"":RSPERMISO_data)))?"SELECTED":"")%>>Abuelos/Hermanos politicos 1 Día(Enfermedad)</option>
-     <option value="2" <%=(("2".toString().equals((((RSPERMISO_data = RSPERMISO.getObject("ID_GRADO"))==null || RSPERMISO.wasNull())?"":RSPERMISO_data)))?"SELECTED":"")%>>Abuelos/Hermanos politicos 2 Días(Muerte)</option>
+     <option value="3" <%=(("3".toString().equals((((RSPERMISO_data = RSPERMISO.getObject("ID_GRADO"))==null || RSPERMISO.wasNull())?"":RSPERMISO_data)))?"SELECTED":"")%>>Abuelos/Hermanos/Nietos y polï¿½ticos 4 D&iacute;as Enfermedad y 2 D&iacute;as Fallecimiento</option>
+     <option value="1" <%=(("1".toString().equals((((RSPERMISO_data = RSPERMISO.getObject("ID_GRADO"))==null || RSPERMISO.wasNull())?"":RSPERMISO_data)))?"SELECTED":"")%>>Abuelos/Hermanos politicos 1 Dï¿½a(Enfermedad)</option>
+     <option value="2" <%=(("2".toString().equals((((RSPERMISO_data = RSPERMISO.getObject("ID_GRADO"))==null || RSPERMISO.wasNull())?"":RSPERMISO_data)))?"SELECTED":"")%>>Abuelos/Hermanos politicos 2 Dï¿½as(Muerte)</option>
      <option value="6" <%=(("6".toString().equals((((RSPERMISO_data = RSPERMISO.getObject("ID_GRADO"))==null || RSPERMISO.wasNull())?"":RSPERMISO_data)))?"SELECTED":"")%>>Tios/sobrinos carnales o c. del conyugue 1 D&iacute;a (Enfermedad y  Fallecimiento)</option>  
                                          </select></td>
                                
@@ -370,3 +370,4 @@ RSESTADO.close();
 StatementRSESTADO.close();
 ConnRSESTADO.close();
 %>
+

@@ -1,4 +1,4 @@
-<%@page language="java" import="java.util.Date,java.sql.*" %>
+ï»¿<%@page language="java" import="java.util.Date,java.sql.*" %>
 <%@ include file="../../../Connections/RRHH.jsp" %>
 <%
 	/**
@@ -372,7 +372,7 @@ main {
 </head>
 <body>
 
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 <div>
 
 <nav>
@@ -393,7 +393,7 @@ main {
 </nav>
 <main>
 
-</div>
+<%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
   <div id="form">
 <div>
 	  
@@ -645,7 +645,7 @@ main {
                                 
                                 <td width="10%" scope="col"><div align="center"><strong>H. Hacer</strong></div></td>
                                 <td width="10%" scope="col"><div align="center">Diferencia</div></td>
-                                <td width="10%" scope="col"><div align="center"><strong>Saldo ese día.</strong></div></td>
+                                <td width="10%" scope="col"><div align="center"><strong>Saldo ese dï¿½a.</strong></div></td>
                                 <td scope="col"><div align="center">Observaciones</div></td>
                               </tr>
                               

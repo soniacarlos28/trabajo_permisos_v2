@@ -1,4 +1,4 @@
-<%@page language="java" import="java.util.Date,java.sql.*" %>
+ï»¿<%@page language="java" import="java.util.Date,java.sql.*" %>
 <%@ include file="../../../Connections/RRHH.jsp" %>
 <%
 	/**
@@ -124,7 +124,7 @@ String thisPage = request.getRequestURI();
 <link href="esquema.css" rel="stylesheet" type="text/css">
 <link href="apliweb.css" rel="stylesheet" type="text/css">
 <body>
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 <div>
 <ul id="tabh">
     <li id="active"><a href="../../index_busqueda.jsp" id="current">Permisos/Ausencias</a></li>
@@ -141,7 +141,7 @@ String thisPage = request.getRequestURI();
 <li><a href="../../gestion/Formacion/index_formacion.jsp" >Formacion</a></li>
 
   </ul>
-</div>
+<%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
   <div id="form">
 <div>
 	  <ul id="subtabh">
@@ -199,7 +199,7 @@ String thisPage = request.getRequestURI();
     <th nowrap scope="row"><div align="right">Suplente Jefe de Servicio:</div></th>
     <td bgcolor="#FFFFFF"><% if (!RSDELEGADOJS_isEmpty ) { %>
         (<%=(((RSDELEGADOJS_data = RSDELEGADOJS.getObject("ID_DELEGADO_JS"))==null || RSDELEGADOJS.wasNull())?"":RSDELEGADOJS_data)%>) <%=(((RSDELEGADOJS_data = RSDELEGADOJS.getObject("NOMBRE"))==null || RSDELEGADOJS.wasNull())?"":RSDELEGADOJS_data)%>              
-  . Delegación: <%=(((RSDELEGADOJS_data = RSDELEGADOJS.getObject("ID_DELEGADO_FIRMA"))==null || RSDELEGADOJS.wasNull())?"":RSDELEGADOJS_data)%>
+  . Delegaciï¿½n: <%=(((RSDELEGADOJS_data = RSDELEGADOJS.getObject("ID_DELEGADO_FIRMA"))==null || RSDELEGADOJS.wasNull())?"":RSDELEGADOJS_data)%>
   <% } /* end !RSDELEGADOJS_isEmpty */ %> 
   </td>
     <td><div align="center">
@@ -226,7 +226,7 @@ String thisPage = request.getRequestURI();
 	       <% }  /* end !RSFUNCIONARIO_isEmpty */ %>
     </div></td>
     <tr>
-    <td colspan="3" bgcolor="#CCCCFF" scope="col"><div align="center">Los Suplentes con Delegación pueden autorizar permisos, aunque el Jefe no este de vacaciones o baja.</div></td>
+    <td colspan="3" bgcolor="#CCCCFF" scope="col"><div align="center">Los Suplentes con Delegaciï¿½n pueden autorizar permisos, aunque el Jefe no este de vacaciones o baja.</div></td>
     </tr>
   
 </table>

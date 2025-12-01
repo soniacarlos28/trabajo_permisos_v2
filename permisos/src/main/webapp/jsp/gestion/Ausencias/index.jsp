@@ -1,4 +1,4 @@
-<%@page language="java" import="java.util.Date,java.sql.*" %>
+ï»¿<%@page language="java" import="java.util.Date,java.sql.*" %>
 <%@ include file="../../../Connections/RRHH.jsp" %>
 <%
 	/**
@@ -110,14 +110,19 @@ String thisPage = request.getRequestURI();
 <head>
 <title>Gesti&oacute;n de Ausencias - Administraci&oacute;n de RRHH</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-<link href="esquema.css" rel="stylesheet" type="text/css">
-<link href="apliweb.css" rel="stylesheet" type="text/css">
+<%@ include file="../includes/head.jsp" %>
 <body>
+<%@ include file="../includes/header.jsp" %>
+<div class="container-fluid mt-3">
+  <div class="row">
+    <%@ include file="../includes/sidebar.jsp" %>
+    <main class="col-md-9 col-lg-10">
+      <div class="content-card">
 <script type="text/JavaScript">
 
 function show_confirmar(id)
 {
-   var text = "¿Realmente desea eliminar Justificante?";
+   var text = "ï¿½Realmente desea eliminar Justificante?";
    var r = confirm(text);
    if (r==true) { 
                  //MM_goToURL('self',url + id);
@@ -125,11 +130,11 @@ function show_confirmar(id)
 				 window.open('../fichero/eliminarDoc.jsp?PERMISO=A&ID='+id , null,top=0,left=100,height=600,width=940,scrollbars=yes,status=no,toolbar=no ,menubar=no,location=0,directories=no);
    }
    else { 
-      alert("Operación cancelada!");  
+      alert("Operaciï¿½n cancelada!");  
    }
 }
 </script>
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 <div>
 <ul id="tabh">
     <li id="active"><a href="../../index_busqueda.jsp" id="current">Permisos/Ausencias</a></li>
@@ -144,7 +149,7 @@ function show_confirmar(id)
 <li><a href="../../gestion/Formacion/index_formacion.jsp" >Formacion</a></li>
 
   </ul>
-</div>
+<%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
   <div id="form">
 <div>
 	  <ul id="subtabh">
@@ -346,8 +351,14 @@ ConnRS_HORASEXTRAS.close();
 RSQUERY.close();
 ConnRSQUERY.close();
 %>
+      </div>
+    </main>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
 
 
 

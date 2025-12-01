@@ -1,4 +1,4 @@
-<%@page language="java" import="java.util.Date,java.sql.*" %>
+ï»¿<%@page language="java" import="java.util.Date,java.sql.*" %>
 <%
 	/**
 	* Garantiza que la sesion tenga los atributos necesarios para el
@@ -88,7 +88,7 @@ String thisPage = request.getRequestURI();
 <link href="apliweb.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 <div>
 <ul id="tabh">
     <li><a href="../../index_busqueda.jsp">Permisos/Ausencias</a></li>
@@ -100,11 +100,11 @@ String thisPage = request.getRequestURI();
     <li><a href="../../gestion/Bajas/index.jsp" >Bajas Fichero</a></li>
     
   </ul>
-  </div>
+  <%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
 
 <table width="95%" border="0" cellspacing="0" cellpadding="2">
                           <tr bgcolor="#FFFFDD"> 
-                                        <td colspan="7"><b>Calendario Laboral Año: <%= RSCABECERA__MMColParam1%></b></td>
+                                        <td colspan="7"><b>Calendario Laboral Aï¿½o: <%= RSCABECERA__MMColParam1%></b></td>
                                       </tr>
                                               <tr bgcolor="#FFFFFF" bordercolor="#333333"> 
                                                 <td align="Left" width="15%">Enero: 
@@ -809,3 +809,4 @@ String thisPage = request.getRequestURI();
 </div>
 </body>
 </html>
+

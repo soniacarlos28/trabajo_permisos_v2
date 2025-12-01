@@ -1,4 +1,4 @@
-<%@page language="java" import="java.util.Date,java.sql.*,javax.swing.JOptionPane" %>
+﻿<%@page language="java" import="java.util.Date,java.sql.*,javax.swing.JOptionPane" %>
 <%@ include file="../../../Connections/RRHH.jsp" %>
 <%
 	/**
@@ -129,7 +129,7 @@ function envia_unavez()
 <body>
 
 
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 <div>
 <ul id="tabh">
     <li id="active"><a href="../../index_busqueda.jsp" id="current">Permisos/Ausencias</a></li>
@@ -142,7 +142,7 @@ function envia_unavez()
       <li><a href="../../gestion/Bajas/index.jsp" >Bajas Fichero</a></li>
        <li><a href="../../gestion/Informes/index_informes.jsp" >Informes</a></li>
   </ul>
-</div>
+<%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
   <div id="form">
 <div>
 	  <ul id="subtabh">

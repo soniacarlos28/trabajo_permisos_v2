@@ -1,4 +1,4 @@
-<%@page language="java" import="java.util.Date,java.sql.*" %>
+ï»¿<%@page language="java" import="java.util.Date,java.sql.*" %>
 <%@ include file="../../../Connections/RRHH.jsp" %>
 <%
 	/**
@@ -128,7 +128,7 @@ function envia_unavez()
 </head>
 <body>
 <% if (RS_EXCEL.equals("0")){%>
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 <div>
 <ul id="tabh">
      <li><a href="../../index_busqueda.jsp" >Permisos/Ausencias</a></li>
@@ -144,7 +144,7 @@ function envia_unavez()
 <li><a href="../../gestion/Formacion/index_formacion.jsp" >Formacion</a></li>
 
     </ul>
-  </div>
+  <%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
    <div id="form">
      <div>
 	  <ul id="subtabh">		
@@ -215,7 +215,7 @@ function envia_unavez()
                                       RSIMPAR =  (String) (((RSQUERY_data = RSQUERY.getObject("INCIDENCIA"))==null || RSQUERY.wasNull())?"":RSQUERY_data); 
                                       RSSIN_JUSTIFICAR =  (String) (((RSQUERY_data = RSQUERY.getObject("SIN_JUSTIFICAR"))==null || RSQUERY.wasNull())?"":RSQUERY_data); 
                                       RSINCIDENCIA="0";
-                            	     if (RSIMPAR.equals("Sí") ) 
+                            	     if (RSIMPAR.equals("Sï¿½") ) 
                             	      { 
                                      	 RSCOLOR="bgcolor=\"#FAD2D2\"";
                                      	 RSINCIDENCIA="1";

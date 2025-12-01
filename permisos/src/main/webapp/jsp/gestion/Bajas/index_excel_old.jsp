@@ -1,4 +1,4 @@
-<%@page language="java" import="java.util.Date,java.sql.*" %>
+﻿<%@page language="java" import="java.util.Date,java.sql.*" %>
 <%@ include file="../../../Connections/RRHH.jsp" %>
 <%
 	/**
@@ -59,7 +59,7 @@ return "";
 <link href="apliweb.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 
   <div id="form">
      
@@ -113,7 +113,7 @@ return "";
   RSQUERY_hasData = RSQUERY.next();
 }
 %>
-                                    </table></div>
+                                    </table><%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
 </body>
 </html>
 

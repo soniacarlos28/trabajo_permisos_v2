@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=UTF-8" language="java" %>
+﻿<%@ page contentType="text/html; charset=UTF-8" language="java" %>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -10,14 +10,14 @@
 <link href="apliweb.css" rel="stylesheet" type="text/css">
 <body>
 
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 <div>
 <ul id="tabh">
     
 <li><a href="../../gestion/Carga_nomina/carga.jsp"  id="current">Carga Nominas</a></li>
 
  </ul>
-</div>
+<%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
  
 <h2>Subida de Nóminas por Entidad</h2>
 <script>
@@ -68,3 +68,4 @@
 
 </body>
 </html>
+

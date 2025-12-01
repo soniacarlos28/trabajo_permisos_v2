@@ -1,4 +1,4 @@
-<%@page language="java" import="java.util.Date,java.sql.*"  errorPage="error.jsp"%>
+ï»¿<%@page language="java" import="java.util.Date,java.sql.*"  errorPage="error.jsp"%>
 <%@ include file="../../../Connections/RRHH.jsp" %>
 <%
 	/**
@@ -14,7 +14,7 @@ if (session.getValue("MM_ID_FUNCIONARIO")        !=null) {RS_TipoAusencia__MMCol
 <%
 Driver DriverRS_TipoAusencia = (Driver)Class.forName(MM_RRHH_DRIVER).newInstance();
 Connection ConnRS_TipoAusencia = DriverManager.getConnection(MM_RRHH_STRING,MM_RRHH_USERNAME,MM_RRHH_PASSWORD);
-PreparedStatement StatementRS_TipoAusencia = ConnRS_TipoAusencia.prepareStatement("select t.id_tipo_ausencia,      ID_TIPO_AUSENCIA || ' -- ' || DESC_TIPO_AUSENCIA || '. Horas Disponibles este año: ' ||  trunc((Total -utILIZADAs) / 60, 2) || ' h.' as desc_tipo_ausencia  FROM bolsa_concilia h, tr_tipo_ausencia t WHERE id_funcionario = '" + RS_TipoAusencia__MMColParam1 + "'   and '050' = t.id_tipo_ausencia   and  h.ID_ANO = '2022'   and tr_ANULADO = 'NO' union SELECT DISTINCT ID_TIPO_AUSENCIA,                ID_TIPO_AUSENCIA || ' -- ' || DESC_TIPO_AUSENCIA as DESC_TIPO_AUSENCIA  FROM TR_TIPO_AUSENCIA where id_tipo_ausencia < 500  and id_tipo_ausencia not in (50)    or id_tipo_ausencia in       (select id_tipo_ausencia          FROM hora_sindical         WHERE id_ano = to_char(sysdate, 'YYYY')           and id_funcionario = '" + RS_TipoAusencia__MMColParam1 + "') ORDER BY DESC_TIPO_AUSENCIA ");
+PreparedStatement StatementRS_TipoAusencia = ConnRS_TipoAusencia.prepareStatement("select t.id_tipo_ausencia,      ID_TIPO_AUSENCIA || ' -- ' || DESC_TIPO_AUSENCIA || '. Horas Disponibles este aï¿½o: ' ||  trunc((Total -utILIZADAs) / 60, 2) || ' h.' as desc_tipo_ausencia  FROM bolsa_concilia h, tr_tipo_ausencia t WHERE id_funcionario = '" + RS_TipoAusencia__MMColParam1 + "'   and '050' = t.id_tipo_ausencia   and  h.ID_ANO = '2022'   and tr_ANULADO = 'NO' union SELECT DISTINCT ID_TIPO_AUSENCIA,                ID_TIPO_AUSENCIA || ' -- ' || DESC_TIPO_AUSENCIA as DESC_TIPO_AUSENCIA  FROM TR_TIPO_AUSENCIA where id_tipo_ausencia < 500  and id_tipo_ausencia not in (50)    or id_tipo_ausencia in       (select id_tipo_ausencia          FROM hora_sindical         WHERE id_ano = to_char(sysdate, 'YYYY')           and id_funcionario = '" + RS_TipoAusencia__MMColParam1 + "') ORDER BY DESC_TIPO_AUSENCIA ");
 ResultSet RS_TipoAusencia = StatementRS_TipoAusencia.executeQuery();
 boolean RS_TipoAusencia_isEmpty = !RS_TipoAusencia.next();
 boolean RS_TipoAusencia_hasData = !RS_TipoAusencia_isEmpty;
@@ -85,7 +85,7 @@ String thisPage = request.getRequestURI();
 <link href="apliweb.css" rel="stylesheet" type="text/css">
 <script language="JavaScript" type="text/javascript" src="../../imagen/calendario.js"></script>
 <body>
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 <div>
 <ul id="tabh">
     <li id="active"><a href="../../index_busqueda.jsp" id="current">Permisos/Ausencias</a></li>
@@ -97,7 +97,7 @@ String thisPage = request.getRequestURI();
         <li><a href="../../gestion/Bajas/index.jsp"  >Bajas Fichero</a></li>
          <li ><a href="../../gestion/Informes/index_informes.jsp" >Informes</a></li>
  </ul>
-</div>
+<%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
   <div id="form">
 <div>
 	  <ul id="subtabh">
@@ -270,3 +270,4 @@ ConnRSHORAS.close();
 RSHORAS_SINDICALES.close();
 ConnRSHORAS_SINDICALES.close();
 %>
+

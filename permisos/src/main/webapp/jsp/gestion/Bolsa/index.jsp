@@ -1,4 +1,4 @@
-<%@page language="java" import="java.util.Date,java.sql.*" %>
+ï»¿<%@page language="java" import="java.util.Date,java.sql.*" %>
 <%@ include file="../../../Connections/RRHH.jsp" %>
 <%
 	/**
@@ -176,7 +176,7 @@ return "";
 <link href="apliweb.css" rel="stylesheet" type="text/css">
 <body>
 
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 <div>
 <ul id="tabh">
     <li id="active"><a href="../../index_busqueda.jsp" id="current">Permisos/Ausencias</a></li>
@@ -191,7 +191,7 @@ return "";
 <li><a href="../../gestion/Formacion/index_formacion.jsp" >Formacion</a></li>
 
  </ul>
-</div>
+<%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
   <div id="form">
 <div>
 	  <ul id="subtabh">
@@ -368,7 +368,7 @@ RSPERIODO_isEmpty = !RSPERIODO_hasData;
                                         <form name="form2" method="post" action="alta_movimiento.jsp">
                                           
                                           <div align="right">
-                                            <input type="submit" name="Submit3" value="Añadir Movimientos">
+                                            <input type="submit" name="Submit3" value="Aï¿½adir Movimientos">
                                           </div>
                                         </form></td>
                                       </tr>

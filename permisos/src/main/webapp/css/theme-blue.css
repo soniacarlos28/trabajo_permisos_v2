@@ -1,0 +1,32 @@
+/* Blue & white theme for the application */
+:root{
+  --blue-900:#0b5394;
+  --blue-700:#1976d2;
+  --blue-500:#2196f3;
+  --blue-300:#64b5f6;
+  --bg:#ffffff;
+  --muted:#f5f7fb;
+  --text:#1b2b3a;
+}
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  color:var(--text);
+  background:var(--muted);
+}
+.app-sidebar{
+  background: linear-gradient(180deg,var(--blue-700),var(--blue-500));
+  color: #fff;
+  min-height:100vh;
+  padding:1rem;
+}
+.app-sidebar a{color:#fff;display:block;padding:.5rem 0;border-radius:4px}
+.app-sidebar a:hover{background:rgba(255,255,255,0.08);text-decoration:none}
+.app-header{background:var(--bg);border-bottom:1px solid #e6eef8;padding:.75rem 1rem}
+.content-card{background:#fff;border-radius:6px;padding:1rem;box-shadow:0 1px 4px rgba(0,0,0,0.05)}
+.search-box input[type=text]{width:100%;padding:.5rem;border:1px solid #d6e9fb;border-radius:4px}
+.badge-blue{background:var(--blue-900);color:#fff;padding:.25rem .5rem;border-radius:12px}
+
+/* Responsive tweaks */
+@media (max-width:767px){
+  .app-sidebar{min-height:auto;padding:.5rem}
+}

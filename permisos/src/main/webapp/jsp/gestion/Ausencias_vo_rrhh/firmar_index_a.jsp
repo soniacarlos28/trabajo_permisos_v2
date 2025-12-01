@@ -1,4 +1,4 @@
-<%@page language="java" import="java.util.Date,java.sql.*" %>
+ï»¿<%@page language="java" import="java.util.Date,java.sql.*" %>
 <%@ include file="../../../Connections/RRHH.jsp" %>
 <%
 	/**
@@ -128,7 +128,7 @@ function carga_final(){
 <link href="apliweb.css" rel="stylesheet" type="text/css">
 
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"><body OnLoad="carga_final()">
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 <ul id="tabh">
     <li id="active"><a href="../../index_busqueda.jsp" >Permisos/Ausencias</a></li>
     <li><a href="../../gestion/Permisos_vo_rrhh/index.jsp" id="current">Autorizar</a></li>
@@ -139,7 +139,7 @@ function carga_final(){
     <li><a href="../../gestion/calendario_laboral/index.jsp" class="ah12b">Calendario Laboral</a></li> 
     <li><a href="../../gestion/Bajas/index.jsp" >Bajas Fichero</a></li>
     </ul>
-</div>
+<%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
 <div>
 	  <ul id="subtabh">
 		<li><a href="../../gestion/Permisos_vo_rrhh/index.jsp" >Permisos pendientes autorizar</a></li>
@@ -213,7 +213,7 @@ function carga_final(){
                             </table></td>
                           </tr>
                         </table>                        
-                                   </td>
+                      ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ </td>
                       <td align="right"> 
                       <b>                      </b>                      </td>
                     </tr>
@@ -241,3 +241,4 @@ RSPENDIENTE.close();
 StatementRSPENDIENTE.close();
 ConnRSPENDIENTE.close();
 %>
+

@@ -1,4 +1,4 @@
-<%@page language="java" import="java.util.Date,java.sql.*" %>
+ï»¿<%@page language="java" import="java.util.Date,java.sql.*" %>
 <%@ include file="../../../Connections/RRHH.jsp" %>
 <%
 	/**
@@ -27,7 +27,7 @@ Integer periodo = new Integer( cal_periodo.get(java.util.Calendar.YEAR) );
 <%
 Driver DriverRSFICHAJE_DIA = (Driver)Class.forName(MM_RRHH_DRIVER).newInstance();
 Connection ConnRSFICHAJE_DIA = DriverManager.getConnection(MM_RRHH_STRING,MM_RRHH_USERNAME,MM_RRHH_PASSWORD);
-PreparedStatement StatementRSFICHAJE_DIA = ConnRSFICHAJE_DIA.prepareStatement("SELECT id_secuencia,       id_funcionario,       pin,       id_dia,       devuelve_min_fto_hora(horas_saldo) as horas_saldo,       horas_saldo-horas_hacer as saldo_diario, devuelve_min_fto_hora(horas_fuera_saldo) as fuera_saldo,       devuelve_min_fto_hora(horas_hacer) as horas_hacer,       festivo,       permiso,       ausencia,       turno1,       turno2,       turno3,       id_calendario,       horas_extras_pagada,       horas_extras_compensada,       audit_usuario,       audit_fecha,       incidencias,       numero_fichajes,       numero_transacciones,       obli_mañana_1,       obli_mañana_2,       fle_mañana_1,       fle_mañana_2,       obli_tarde_1,       obli_tarde_2,       fle_tarde_1,       fle_tarde_2,       obli_noche_1,       obli_noche_2,       fle_noche_1,       fle_noche_2,       comida,       libre        FROM fichaje_funcionario_resu_dia  WHERE id_dia =    to_Date('" + RSFICHAJE_DIA__MMColParam2 + "', 'dd/mm/yyyy')   and lpad(id_funcionario, 6, '0') =    lpad('" + RSFICHAJE_DIA__MMColParam1 + "', 6, '0')");
+PreparedStatement StatementRSFICHAJE_DIA = ConnRSFICHAJE_DIA.prepareStatement("SELECT id_secuencia,       id_funcionario,       pin,       id_dia,       devuelve_min_fto_hora(horas_saldo) as horas_saldo,       horas_saldo-horas_hacer as saldo_diario, devuelve_min_fto_hora(horas_fuera_saldo) as fuera_saldo,       devuelve_min_fto_hora(horas_hacer) as horas_hacer,       festivo,       permiso,       ausencia,       turno1,       turno2,       turno3,       id_calendario,       horas_extras_pagada,       horas_extras_compensada,       audit_usuario,       audit_fecha,       incidencias,       numero_fichajes,       numero_transacciones,       obli_maï¿½ana_1,       obli_maï¿½ana_2,       fle_maï¿½ana_1,       fle_maï¿½ana_2,       obli_tarde_1,       obli_tarde_2,       fle_tarde_1,       fle_tarde_2,       obli_noche_1,       obli_noche_2,       fle_noche_1,       fle_noche_2,       comida,       libre        FROM fichaje_funcionario_resu_dia  WHERE id_dia =    to_Date('" + RSFICHAJE_DIA__MMColParam2 + "', 'dd/mm/yyyy')   and lpad(id_funcionario, 6, '0') =    lpad('" + RSFICHAJE_DIA__MMColParam1 + "', 6, '0')");
 ResultSet RSFICHAJE_DIA = StatementRSFICHAJE_DIA.executeQuery();
 boolean RSFICHAJE_DIA_isEmpty = !RSFICHAJE_DIA.next();
 boolean RSFICHAJE_DIA_hasData = !RSFICHAJE_DIA_isEmpty;
@@ -104,7 +104,7 @@ if (request.getParameter("ID_DIA")             !=null) {RSPERMISO_DIA__MMColPara
 <%
 Driver DriverRSPERMISO_DIA = (Driver)Class.forName(MM_RRHH_DRIVER).newInstance();
 Connection ConnRSPERMISO_DIA = DriverManager.getConnection(MM_RRHH_STRING,MM_RRHH_USERNAME,MM_RRHH_PASSWORD);
-PreparedStatement StatementRSPERMISO_DIA = ConnRSPERMISO_DIA.prepareStatement(" select pe.id_ano as año,DESC_TIPO_PERMISO, to_char(pe.FEcha_inicio,'dd/mm/yyyy') as fecha_inicio,to_char(pe.fecha_fin,'dd/mm/yyyy') as fecha_fin,desc_estado_permiso as estado ,pe.num_dias as num_dias,pe.justificacion as justificacion from permiso pe, TR_ESTADO_PERMISO t,tr_tipo_permiso tr   where id_estado not in (41,42,40,31,32)and t.id_estado_permiso=pe.id_estado and tr.id_tipo_permiso=pe.id_tipo_permiso and tr.id_Ano=pe.id_ano and id_funcionario = '" + RSPERMISO_DIA__MMColParam1 + "' and  to_Date('" + RSPERMISO_DIA__MMColParam3 + "','dd/mm/yyyy')  between pe.fecha_inicio and nvl(pe.fecha_fin,sysdate)   ");
+PreparedStatement StatementRSPERMISO_DIA = ConnRSPERMISO_DIA.prepareStatement(" select pe.id_ano as aï¿½o,DESC_TIPO_PERMISO, to_char(pe.FEcha_inicio,'dd/mm/yyyy') as fecha_inicio,to_char(pe.fecha_fin,'dd/mm/yyyy') as fecha_fin,desc_estado_permiso as estado ,pe.num_dias as num_dias,pe.justificacion as justificacion from permiso pe, TR_ESTADO_PERMISO t,tr_tipo_permiso tr   where id_estado not in (41,42,40,31,32)and t.id_estado_permiso=pe.id_estado and tr.id_tipo_permiso=pe.id_tipo_permiso and tr.id_Ano=pe.id_ano and id_funcionario = '" + RSPERMISO_DIA__MMColParam1 + "' and  to_Date('" + RSPERMISO_DIA__MMColParam3 + "','dd/mm/yyyy')  between pe.fecha_inicio and nvl(pe.fecha_fin,sysdate)   ");
 ResultSet RSPERMISO_DIA = StatementRSPERMISO_DIA.executeQuery();
 boolean RSPERMISO_DIA_isEmpty = !RSPERMISO_DIA.next();
 boolean RSPERMISO_DIA_hasData = !RSPERMISO_DIA_isEmpty;
@@ -444,7 +444,7 @@ function regenera(ida3) {
   
 }
 
-function añadir()
+function aï¿½adir()
 {
 
    var ida = 1;
@@ -556,7 +556,7 @@ return "";
 <link href="esquema.css" rel="stylesheet" type="text/css">
 <link href="apliweb.css" rel="stylesheet" type="text/css">
 <body  OnLoad="carga_final(<%=  RS_total %>)">
-<div id="apliweb-tabform">
+<%@ include file="/jsp/gestion/includes/layout_start.jsp" %>
 <div>
 <ul id="tabh">
     <li id="active"><a href="../../index_busqueda.jsp" id="current">Permisos/Ausencias</a></li>
@@ -571,7 +571,7 @@ return "";
 <li><a href="../../gestion/Formacion/index_formacion.jsp" >Formacion</a></li>
 
  </ul>
-</div>
+<%@ include file="/jsp/gestion/includes/layout_end.jsp" %>
   <div id="form">
 <div>
 	  <ul id="subtabh">
@@ -732,7 +732,7 @@ return "";
                                       </tr>                                      
                                        <tr> 
                                         
-                                        <td width="30%" colspan=4 bgcolor="#E5E7E9" align="center">Mañana</td>
+                                        <td width="30%" colspan=4 bgcolor="#E5E7E9" align="center">Maï¿½ana</td>
                                         <td width="30%" colspan=4 bgcolor="#D7DBDD" align="center">Tarde</td>
                                         <td width="30%" colspan=4 bgcolor="#E5E7E9" align="center">Noche</td>
                                         <td width="30%" colspan=2 bgcolor="#D7DBDD" align="center">Opciones</td>
@@ -756,12 +756,12 @@ return "";
                                       <% if (!RSFICHAJE_DIA_isEmpty ) { %>
                                          <tr> 
                                           <td nowrap width="10%" colspan=2  align="center"> 
-                                           <%=(((RSFICHAJE_DIA_data = RSFICHAJE_DIA.getObject("OBLI_MAÑANA_1"))==null || RSFICHAJE_DIA.wasNull())?"":RSFICHAJE_DIA_data)%> - 
-                                           <%=(((RSFICHAJE_DIA_data = RSFICHAJE_DIA.getObject("OBLI_MAÑANA_2"))==null || RSFICHAJE_DIA.wasNull())?"":RSFICHAJE_DIA_data)%>
+                                           <%=(((RSFICHAJE_DIA_data = RSFICHAJE_DIA.getObject("OBLI_MAï¿½ANA_1"))==null || RSFICHAJE_DIA.wasNull())?"":RSFICHAJE_DIA_data)%> - 
+                                           <%=(((RSFICHAJE_DIA_data = RSFICHAJE_DIA.getObject("OBLI_MAï¿½ANA_2"))==null || RSFICHAJE_DIA.wasNull())?"":RSFICHAJE_DIA_data)%>
                                      </td>
                                         <td nowrap width="10%" colspan=2  align="center">
-                                          <%=(((RSFICHAJE_DIA_data = RSFICHAJE_DIA.getObject("FLE_MAÑANA_1"))==null || RSFICHAJE_DIA.wasNull())?"":RSFICHAJE_DIA_data)%> - 
-                                          <%=(((RSFICHAJE_DIA_data = RSFICHAJE_DIA.getObject("FLE_MAÑANA_2"))==null || RSFICHAJE_DIA.wasNull())?"":RSFICHAJE_DIA_data)%>                              
+                                          <%=(((RSFICHAJE_DIA_data = RSFICHAJE_DIA.getObject("FLE_MAï¿½ANA_1"))==null || RSFICHAJE_DIA.wasNull())?"":RSFICHAJE_DIA_data)%> - 
+                                          <%=(((RSFICHAJE_DIA_data = RSFICHAJE_DIA.getObject("FLE_MAï¿½ANA_2"))==null || RSFICHAJE_DIA.wasNull())?"":RSFICHAJE_DIA_data)%>                              
                                         </td>
                                         <td width="10%" nowrap colspan=2  align="center">
                                           <%=(((RSFICHAJE_DIA_data = RSFICHAJE_DIA.getObject("OBLI_TARDE_1"))==null || RSFICHAJE_DIA.wasNull())?"":RSFICHAJE_DIA_data)%> - 
@@ -808,21 +808,21 @@ return "";
 								    <td colspan=2 align="center" bgcolor="#E0E7FE">
 								   	<table width="100%"  border="1" cellspacing="1" cellpadding="4">
 								    <tr align="center"> <td colspan="14"><div align="center">
-                                          <p><b>Permisos en el día</b>:<b> <%= RSFICHAJE_DIA__MMColParam2 %></b></p>
+                                          <p><b>Permisos en el dï¿½a</b>:<b> <%= RSFICHAJE_DIA__MMColParam2 %></b></p>
                                           </div></td>
 								    </tr>
 								    <tr> 
-                                         <td width="15%" colspan=1 bgcolor="#E5E7E9" align="center">Año</td>
+                                         <td width="15%" colspan=1 bgcolor="#E5E7E9" align="center">Aï¿½o</td>
                                          <td width="15%" colspan=1 bgcolor="#E5E7E9" align="center">Tipo</td>
                                         <td width="15%" colspan=1 bgcolor="#E5E7E9" align="center">Fecha Inicio</td>
                                         <td width="15%" colspan=1 bgcolor="#D7DBDD" align="center">Fecha Fin</td>
                                         <td width="15%" colspan=1 bgcolor="#E5E7E9" align="center">Estado </td>
-                                        <td width="15%" colspan=1 bgcolor="#D7DBDD" align="center">Número días</td>
+                                        <td width="15%" colspan=1 bgcolor="#D7DBDD" align="center">Nï¿½mero dï¿½as</td>
                                          <td width="15%" colspan=1 bgcolor="#E5E7E9" align="center">Justificado</td>
                                         
                                       </tr>
                                       
-                                      <tr> <td nowrap width="17%"  bgcolor="#FFFFFF" align="center"><%=(((RSPERMISO_DIA_data = RSPERMISO_DIA.getObject("AÑO"))==null || RSPERMISO_DIA.wasNull())?"":RSPERMISO_DIA_data)%></td>                                                                                   
+                                      <tr> <td nowrap width="17%"  bgcolor="#FFFFFF" align="center"><%=(((RSPERMISO_DIA_data = RSPERMISO_DIA.getObject("Aï¿½O"))==null || RSPERMISO_DIA.wasNull())?"":RSPERMISO_DIA_data)%></td>                                                                                   
                                            <td nowrap width="17%"  bgcolor="#FFFFFF" align="center"><%=(((RSPERMISO_DIA_data = RSPERMISO_DIA.getObject("DESC_TIPO_PERMISO"))==null || RSPERMISO_DIA.wasNull())?"":RSPERMISO_DIA_data)%></td>                                        
                                           <td nowrap width="17%"  bgcolor="#FFFFFF" align="center"><%=(((RSPERMISO_DIA_data = RSPERMISO_DIA.getObject("FECHA_INICIO"))==null || RSPERMISO_DIA.wasNull())?"":RSPERMISO_DIA_data)%></td>
                                           <td nowrap width="17%"   bgcolor="#FFFFFF" align="center"><%=(((RSPERMISO_DIA_data = RSPERMISO_DIA.getObject("FECHA_FIN"))==null || RSPERMISO_DIA.wasNull())?"":RSPERMISO_DIA_data)%></td>
@@ -839,7 +839,7 @@ return "";
 								    <td colspan=2 align="center" >
 								   	<table width="50%"  border="1" cellspacing="1" cellpadding="4"  bgcolor="#FCE4E4" >
 								    <tr align="center"> <td colspan="14"><div align="center">
-                                          <p><b>Incidencias en el día</b>:<b> <%= RSFICHAJE_DIA__MMColParam2 %></b></p>
+                                          <p><b>Incidencias en el dï¿½a</b>:<b> <%= RSFICHAJE_DIA__MMColParam2 %></b></p>
                                           </div></td>
 								    </tr>
 								    <tr> 
@@ -862,7 +862,7 @@ return "";
                <table width="100%" border="0" cellspacing="0" cellpadding="2">
                                       <tr>
                                         <td colspan=2 width="35%" align="right"><div align="right">										
-										 <td align="right"><a href="javascript:añadir();"><img src="../../imagen/new.png" alt="Añadir transacción"	width="20" height="20" border="0"></a>
+										 <td align="right"><a href="javascript:aï¿½adir();"><img src="../../imagen/new.png" alt="Aï¿½adir transacciï¿½n"	width="20" height="20" border="0"></a>
 										     <a href="javascript:regenera( <%=  RS_total %>  );"><img src="../../imagen/regenerar.jpg" alt="Regenerar Fichajes"	width="20" height="20" border="0"></a>
 										    </div> 
 										    <table width="100%" border="0" cellspacing="1" cellpadding="4">
@@ -873,7 +873,7 @@ return "";
                       <% if (!RSAUSE_TOTAL_isEmpty ) { %>
 								<tr bgcolor="#EFEFEF"  align="center"> 
                                         <td colspan="4"><div align="center">
-                                          <p><b>Ausencias o compensatorios en el día</b></p></td>
+                                          <p><b>Ausencias o compensatorios en el dï¿½a</b></p></td>
                                           </tr>
                                           <tr bgcolor="#EFEFEF"> 
                                           <td colspan="1" align="center">Tipo</td>
